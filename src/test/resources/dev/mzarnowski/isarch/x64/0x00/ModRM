@@ -1,0 +1,85 @@
+# OP ModRM
+{   00 00 | ADD BYTE PTR [rax], al   }
+{   00 01 | ADD BYTE PTR [rcx], al   }
+{   00 02 | ADD BYTE PTR [rdx], al   }
+{   00 03 | ADD BYTE PTR [rbx], al   }
+#   00 04 SIB
+#   00 05 disp32
+{   00 06 | ADD BYTE PTR [rsi], al   }
+{   00 07 | ADD BYTE PTR [rdi], al   }
+{   00 08 | ADD BYTE PTR [rax], cl   }
+{   00 09 | ADD BYTE PTR [rcx], cl   }
+{   00 0a | ADD BYTE PTR [rdx], cl   }
+{   00 0b | ADD BYTE PTR [rbx], cl   }
+#   00 0c SIB
+#   00 0d disp32
+{   00 0e | ADD BYTE PTR [rsi], cl   }
+{   00 0f | ADD BYTE PTR [rdx], cl   }
+
+{   00 10 | ADD BYTE PTR [rax], dl   }
+{   00 11 | ADD BYTE PTR [rcx], dl   }
+{   00 12 | ADD BYTE PTR [rdx], dl   }
+#   00 13 SIB
+#   00 14 disp32
+{   00 13 | ADD BYTE PTR [rbx], dl   }
+{   00 16 | ADD BYTE PTR [rsi], dl   }
+{   00 17 | ADD BYTE PTR [rdi], dl   }
+{   00 18 | ADD BYTE PTR [rax], bl   }
+{   00 19 | ADD BYTE PTR [rcx], bl   }
+{   00 1a | ADD BYTE PTR [rdx], bl   }
+{   00 1b | ADD BYTE PTR [rbx], bl   }
+#   00 1c SIB
+#   00 1d disp32
+{   00 1e | ADD BYTE PTR [rsi], bl   }
+{   00 1f | ADD BYTE PTR [rdi], bl   }
+
+{   00 20 | ADD BYTE PTR [rax], ah   }
+{   00 21 | ADD BYTE PTR [rcx], ah   }
+{   00 22 | ADD BYTE PTR [rdx], ah   }
+{   00 23 | ADD BYTE PTR [rbx], ah   }
+#   00 23 SIB
+#   00 24 disp32
+{   00 26 | ADD BYTE PTR [rsi], ah   }
+{   00 27 | ADD BYTE PTR [rdi], ah   }
+{   00 28 | ADD BYTE PTR [rax], ch   }
+{   00 29 | ADD BYTE PTR [rcx], ch   }
+{   00 2a | ADD BYTE PTR [rdx], ch   }
+{   00 2b | ADD BYTE PTR [rbx], ch   }
+#   00 2c SIB
+#   00 2d disp32
+{   00 2e | ADD BYTE PTR [rsi], ch   }
+{   00 2f | ADD BYTE PTR [rdi], ch   }
+
+{   00 30 | ADD BYTE PTR [rax], dh   }
+{   00 31 | ADD BYTE PTR [rcx], dh   }
+{   00 32 | ADD BYTE PTR [rdx], dh   }
+{   00 33 | ADD BYTE PTR [rbx], dh   }
+#   00 33 SIB
+#   00 34 disp32
+{   00 36 | ADD BYTE PTR [rsi], dh   }
+{   00 37 | ADD BYTE PTR [rdi], dh   }
+{   00 38 | ADD BYTE PTR [rax], bh   }
+{   00 39 | ADD BYTE PTR [rcx], bh   }
+{   00 3a | ADD BYTE PTR [rdx], bh   }
+{   00 3b | ADD BYTE PTR [rbx], bh   }
+#   00 2c SIB
+#   00 2d disp32
+{   00 3e | ADD BYTE PTR [rsi], bh   }
+{   00 3f | ADD BYTE PTR [rdi], bh   }
+
+{   00 c0 | ADD al, al   }{   00 d0 | ADD al, dl   }{   00 e0 | ADD al, ah   }{   00 f0 | ADD al, dh   }
+{   00 c1 | ADD cl, al   }{   00 d1 | ADD cl, dl   }{   00 e1 | ADD cl, ah   }{   00 f1 | ADD cl, dh   }
+{   00 c2 | ADD dl, al   }{   00 d2 | ADD dl, dl   }{   00 e2 | ADD dl, ah   }{   00 f2 | ADD dl, dh   }
+{   00 c3 | ADD bl, al   }{   00 d3 | ADD bl, dl   }{   00 e3 | ADD bl, ah   }{   00 f3 | ADD bl, dh   }
+{   00 c4 | ADD ah, al   }{   00 d4 | ADD ah, dl   }{   00 e4 | ADD ah, ah   }{   00 f4 | ADD ah, dh   }
+{   00 c5 | ADD ch, al   }{   00 d5 | ADD ch, dl   }{   00 e5 | ADD ch, ah   }{   00 f5 | ADD ch, dh   }
+{   00 c6 | ADD dh, al   }{   00 d6 | ADD dh, dl   }{   00 e6 | ADD dh, ah   }{   00 f6 | ADD dh, dh   }
+{   00 c7 | ADD bh, al   }{   00 d7 | ADD bh, dl   }{   00 e7 | ADD bh, ah   }{   00 f7 | ADD bh, dh   }
+{   00 c8 | ADD al, cl   }{   00 d8 | ADD al, bl   }{   00 e8 | ADD al, ch   }{   00 f8 | ADD al, bh   }
+{   00 c9 | ADD cl, cl   }{   00 d9 | ADD cl, bl   }{   00 e9 | ADD cl, ch   }{   00 f9 | ADD cl, bh   }
+{   00 ca | ADD dl, cl   }{   00 da | ADD dl, bl   }{   00 ea | ADD dl, ch   }{   00 fa | ADD dl, bh   }
+{   00 cb | ADD bl, cl   }{   00 db | ADD bl, bl   }{   00 eb | ADD bl, ch   }{   00 fb | ADD bl, bh   }
+{   00 cc | ADD ah, cl   }{   00 dc | ADD ah, bl   }{   00 ec | ADD ah, ch   }{   00 fc | ADD ah, bh   }
+{   00 cd | ADD ch, cl   }{   00 dd | ADD ch, bl   }{   00 ed | ADD ch, ch   }{   00 fd | ADD ch, bh   }
+{   00 ce | ADD dh, cl   }{   00 de | ADD dh, bl   }{   00 ee | ADD dh, ch   }{   00 fe | ADD dh, bh   }
+{   00 cf | ADD bh, cl   }{   00 df | ADD bh, bl   }{   00 ef | ADD bh, ch   }{   00 ff | ADD bh, bh   }

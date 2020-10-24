@@ -1,0 +1,71 @@
+# PREFIX OP reg16
+{   66 01 c0 | ADD ax, ax   }{   66 01 d0 | ADD ax, dx   }{   66 01 e0 | ADD ax, sp   }{   66 01 f0 | ADD ax, si   }
+{   66 01 c1 | ADD cx, ax   }{   66 01 d1 | ADD cx, dx   }{   66 01 e1 | ADD cx, sp   }{   66 01 f1 | ADD cx, si   }
+{   66 01 c2 | ADD dx, ax   }{   66 01 d2 | ADD dx, dx   }{   66 01 e2 | ADD dx, sp   }{   66 01 f2 | ADD dx, si   }
+{   66 01 c3 | ADD bx, ax   }{   66 01 d3 | ADD bx, dx   }{   66 01 e3 | ADD bx, sp   }{   66 01 f3 | ADD bx, si   }
+{   66 01 c4 | ADD sp, ax   }{   66 01 d4 | ADD sp, dx   }{   66 01 e4 | ADD sp, sp   }{   66 01 f4 | ADD sp, si   }
+{   66 01 c5 | ADD bp, ax   }{   66 01 d5 | ADD bp, dx   }{   66 01 e5 | ADD bp, sp   }{   66 01 f5 | ADD bp, si   }
+{   66 01 c6 | ADD si, ax   }{   66 01 d6 | ADD si, dx   }{   66 01 e6 | ADD si, sp   }{   66 01 f6 | ADD si, si   }
+{   66 01 c7 | ADD di, ax   }{   66 01 d7 | ADD di, dx   }{   66 01 e7 | ADD di, sp   }{   66 01 f7 | ADD di, si   }
+{   66 01 c8 | ADD ax, cx   }{   66 01 d8 | ADD ax, bx   }{   66 01 e8 | ADD ax, bp   }{   66 01 f8 | ADD ax, di   }
+{   66 01 c9 | ADD cx, cx   }{   66 01 d9 | ADD cx, bx   }{   66 01 e9 | ADD cx, bp   }{   66 01 f9 | ADD cx, di   }
+{   66 01 ca | ADD dx, cx   }{   66 01 da | ADD dx, bx   }{   66 01 ea | ADD dx, bp   }{   66 01 fa | ADD dx, di   }
+{   66 01 cb | ADD bx, cx   }{   66 01 db | ADD bx, bx   }{   66 01 eb | ADD bx, bp   }{   66 01 fb | ADD bx, di   }
+{   66 01 cc | ADD sp, cx   }{   66 01 dc | ADD sp, bx   }{   66 01 ec | ADD sp, bp   }{   66 01 fc | ADD sp, di   }
+{   66 01 cd | ADD bp, cx   }{   66 01 dd | ADD bp, bx   }{   66 01 ed | ADD bp, bp   }{   66 01 fd | ADD bp, di   }
+{   66 01 ce | ADD si, cx   }{   66 01 de | ADD si, bx   }{   66 01 ee | ADD si, bp   }{   66 01 fe | ADD si, di   }
+{   66 01 cf | ADD di, cx   }{   66 01 df | ADD di, bx   }{   66 01 ef | ADD di, bp   }{   66 01 ff | ADD di, di   }
+
+# PREFIX REX.B OP reg16
+{   66 41 01 c0 | ADD r8w , ax   }{   66 41 01 d0 | ADD r8w , dx   }{   66 41 01 e0 | ADD r8w , sp   }{   66 41 01 f0 | ADD r8w , si   }
+{   66 41 01 c1 | ADD r9w , ax   }{   66 41 01 d1 | ADD r9w , dx   }{   66 41 01 e1 | ADD r9w , sp   }{   66 41 01 f1 | ADD r9w , si   }
+{   66 41 01 c2 | ADD r10w, ax   }{   66 41 01 d2 | ADD r10w, dx   }{   66 41 01 e2 | ADD r10w, sp   }{   66 41 01 f2 | ADD r10w, si   }
+{   66 41 01 c3 | ADD r11w, ax   }{   66 41 01 d3 | ADD r11w, dx   }{   66 41 01 e3 | ADD r11w, sp   }{   66 41 01 f3 | ADD r11w, si   }
+{   66 41 01 c4 | ADD r12w, ax   }{   66 41 01 d4 | ADD r12w, dx   }{   66 41 01 e4 | ADD r12w, sp   }{   66 41 01 f4 | ADD r12w, si   }
+{   66 41 01 c5 | ADD r13w, ax   }{   66 41 01 d5 | ADD r13w, dx   }{   66 41 01 e5 | ADD r13w, sp   }{   66 41 01 f5 | ADD r13w, si   }
+{   66 41 01 c6 | ADD r14w, ax   }{   66 41 01 d6 | ADD r14w, dx   }{   66 41 01 e6 | ADD r14w, sp   }{   66 41 01 f6 | ADD r14w, si   }
+{   66 41 01 c7 | ADD r15w, ax   }{   66 41 01 d7 | ADD r15w, dx   }{   66 41 01 e7 | ADD r15w, sp   }{   66 41 01 f7 | ADD r15w, si   }
+{   66 41 01 c8 | ADD r8w , cx   }{   66 41 01 d8 | ADD r8w , bx   }{   66 41 01 e8 | ADD r8w , bp   }{   66 41 01 f8 | ADD r8w , di   }
+{   66 41 01 c9 | ADD r9w , cx   }{   66 41 01 d9 | ADD r9w , bx   }{   66 41 01 e9 | ADD r9w , bp   }{   66 41 01 f9 | ADD r9w , di   }
+{   66 41 01 ca | ADD r10w, cx   }{   66 41 01 da | ADD r10w, bx   }{   66 41 01 ea | ADD r10w, bp   }{   66 41 01 fa | ADD r10w, di   }
+{   66 41 01 cb | ADD r11w, cx   }{   66 41 01 db | ADD r11w, bx   }{   66 41 01 eb | ADD r11w, bp   }{   66 41 01 fb | ADD r11w, di   }
+{   66 41 01 cc | ADD r12w, cx   }{   66 41 01 dc | ADD r12w, bx   }{   66 41 01 ec | ADD r12w, bp   }{   66 41 01 fc | ADD r12w, di   }
+{   66 41 01 cd | ADD r13w, cx   }{   66 41 01 dd | ADD r13w, bx   }{   66 41 01 ed | ADD r13w, bp   }{   66 41 01 fd | ADD r13w, di   }
+{   66 41 01 ce | ADD r14w, cx   }{   66 41 01 de | ADD r14w, bx   }{   66 41 01 ee | ADD r14w, bp   }{   66 41 01 fe | ADD r14w, di   }
+{   66 41 01 cf | ADD r15w, cx   }{   66 41 01 df | ADD r15w, bx   }{   66 41 01 ef | ADD r15w, bp   }{   66 41 01 ff | ADD r15w, di   }
+
+# PREFIX REX.R OP reg16
+{   66 44 01 c0 | ADD ax, r8w   }{   66 44 01 d0 | ADD ax, r10w   }{   66 44 01 e0 | ADD ax, r12w   }{   66 44 01 f0 | ADD ax, r14w   }
+{   66 44 01 c1 | ADD cx, r8w   }{   66 44 01 d1 | ADD cx, r10w   }{   66 44 01 e1 | ADD cx, r12w   }{   66 44 01 f1 | ADD cx, r14w   }
+{   66 44 01 c2 | ADD dx, r8w   }{   66 44 01 d2 | ADD dx, r10w   }{   66 44 01 e2 | ADD dx, r12w   }{   66 44 01 f2 | ADD dx, r14w   }
+{   66 44 01 c3 | ADD bx, r8w   }{   66 44 01 d3 | ADD bx, r10w   }{   66 44 01 e3 | ADD bx, r12w   }{   66 44 01 f3 | ADD bx, r14w   }
+{   66 44 01 c4 | ADD sp, r8w   }{   66 44 01 d4 | ADD sp, r10w   }{   66 44 01 e4 | ADD sp, r12w   }{   66 44 01 f4 | ADD sp, r14w   }
+{   66 44 01 c5 | ADD bp, r8w   }{   66 44 01 d5 | ADD bp, r10w   }{   66 44 01 e5 | ADD bp, r12w   }{   66 44 01 f5 | ADD bp, r14w   }
+{   66 44 01 c6 | ADD si, r8w   }{   66 44 01 d6 | ADD si, r10w   }{   66 44 01 e6 | ADD si, r12w   }{   66 44 01 f6 | ADD si, r14w   }
+{   66 44 01 c7 | ADD di, r8w   }{   66 44 01 d7 | ADD di, r10w   }{   66 44 01 e7 | ADD di, r12w   }{   66 44 01 f7 | ADD di, r14w   }
+{   66 44 01 c8 | ADD ax, r9w   }{   66 44 01 d8 | ADD ax, r11w   }{   66 44 01 e8 | ADD ax, r13w   }{   66 44 01 f8 | ADD ax, r15w   }
+{   66 44 01 c9 | ADD cx, r9w   }{   66 44 01 d9 | ADD cx, r11w   }{   66 44 01 e9 | ADD cx, r13w   }{   66 44 01 f9 | ADD cx, r15w   }
+{   66 44 01 ca | ADD dx, r9w   }{   66 44 01 da | ADD dx, r11w   }{   66 44 01 ea | ADD dx, r13w   }{   66 44 01 fa | ADD dx, r15w   }
+{   66 44 01 cb | ADD bx, r9w   }{   66 44 01 db | ADD bx, r11w   }{   66 44 01 eb | ADD bx, r13w   }{   66 44 01 fb | ADD bx, r15w   }
+{   66 44 01 cc | ADD sp, r9w   }{   66 44 01 dc | ADD sp, r11w   }{   66 44 01 ec | ADD sp, r13w   }{   66 44 01 fc | ADD sp, r15w   }
+{   66 44 01 cd | ADD bp, r9w   }{   66 44 01 dd | ADD bp, r11w   }{   66 44 01 ed | ADD bp, r13w   }{   66 44 01 fd | ADD bp, r15w   }
+{   66 44 01 ce | ADD si, r9w   }{   66 44 01 de | ADD si, r11w   }{   66 44 01 ee | ADD si, r13w   }{   66 44 01 fe | ADD si, r15w   }
+{   66 44 01 cf | ADD di, r9w   }{   66 44 01 df | ADD di, r11w   }{   66 44 01 ef | ADD di, r13w   }{   66 44 01 ff | ADD di, r15w   }
+
+# PREFIX REX.RB OP reg16
+{   66 45 01 c0 | ADD r8w , r8w   }{   66 45 01 d0 | ADD r8w , r10w   }{   66 45 01 e0 | ADD r8w , r12w   }{   66 45 01 f0 | ADD r8w , r14w   }
+{   66 45 01 c1 | ADD r9w , r8w   }{   66 45 01 d1 | ADD r9w , r10w   }{   66 45 01 e1 | ADD r9w , r12w   }{   66 45 01 f1 | ADD r9w , r14w   }
+{   66 45 01 c2 | ADD r10w, r8w   }{   66 45 01 d2 | ADD r10w, r10w   }{   66 45 01 e2 | ADD r10w, r12w   }{   66 45 01 f2 | ADD r10w, r14w   }
+{   66 45 01 c3 | ADD r11w, r8w   }{   66 45 01 d3 | ADD r11w, r10w   }{   66 45 01 e3 | ADD r11w, r12w   }{   66 45 01 f3 | ADD r11w, r14w   }
+{   66 45 01 c4 | ADD r12w, r8w   }{   66 45 01 d4 | ADD r12w, r10w   }{   66 45 01 e4 | ADD r12w, r12w   }{   66 45 01 f4 | ADD r12w, r14w   }
+{   66 45 01 c5 | ADD r13w, r8w   }{   66 45 01 d5 | ADD r13w, r10w   }{   66 45 01 e5 | ADD r13w, r12w   }{   66 45 01 f5 | ADD r13w, r14w   }
+{   66 45 01 c6 | ADD r14w, r8w   }{   66 45 01 d6 | ADD r14w, r10w   }{   66 45 01 e6 | ADD r14w, r12w   }{   66 45 01 f6 | ADD r14w, r14w   }
+{   66 45 01 c7 | ADD r15w, r8w   }{   66 45 01 d7 | ADD r15w, r10w   }{   66 45 01 e7 | ADD r15w, r12w   }{   66 45 01 f7 | ADD r15w, r14w   }
+{   66 45 01 c8 | ADD r8w , r9w   }{   66 45 01 d8 | ADD r8w , r11w   }{   66 45 01 e8 | ADD r8w , r13w   }{   66 45 01 f8 | ADD r8w , r15w   }
+{   66 45 01 c9 | ADD r9w , r9w   }{   66 45 01 d9 | ADD r9w , r11w   }{   66 45 01 e9 | ADD r9w , r13w   }{   66 45 01 f9 | ADD r9w , r15w   }
+{   66 45 01 ca | ADD r10w, r9w   }{   66 45 01 da | ADD r10w, r11w   }{   66 45 01 ea | ADD r10w, r13w   }{   66 45 01 fa | ADD r10w, r15w   }
+{   66 45 01 cb | ADD r11w, r9w   }{   66 45 01 db | ADD r11w, r11w   }{   66 45 01 eb | ADD r11w, r13w   }{   66 45 01 fb | ADD r11w, r15w   }
+{   66 45 01 cc | ADD r12w, r9w   }{   66 45 01 dc | ADD r12w, r11w   }{   66 45 01 ec | ADD r12w, r13w   }{   66 45 01 fc | ADD r12w, r15w   }
+{   66 45 01 cd | ADD r13w, r9w   }{   66 45 01 dd | ADD r13w, r11w   }{   66 45 01 ed | ADD r13w, r13w   }{   66 45 01 fd | ADD r13w, r15w   }
+{   66 45 01 ce | ADD r14w, r9w   }{   66 45 01 de | ADD r14w, r11w   }{   66 45 01 ee | ADD r14w, r13w   }{   66 45 01 fe | ADD r14w, r15w   }
+{   66 45 01 cf | ADD r15w, r9w   }{   66 45 01 df | ADD r15w, r11w   }{   66 45 01 ef | ADD r15w, r13w   }{   66 45 01 ff | ADD r15w, r15w   }

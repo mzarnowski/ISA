@@ -1,0 +1,71 @@
+# REX.W OP reg64
+{   48 01 c0 | ADD rax, rax   }{   48 01 d0 | ADD rax, rdx   }{   48 01 e0 | ADD rax, rsp   }{   48 01 f0 | ADD rax, rsi   }
+{   48 01 c1 | ADD rcx, rax   }{   48 01 d1 | ADD rcx, rdx   }{   48 01 e1 | ADD rcx, rsp   }{   48 01 f1 | ADD rcx, rsi   }
+{   48 01 c2 | ADD rdx, rax   }{   48 01 d2 | ADD rdx, rdx   }{   48 01 e2 | ADD rdx, rsp   }{   48 01 f2 | ADD rdx, rsi   }
+{   48 01 c3 | ADD rbx, rax   }{   48 01 d3 | ADD rbx, rdx   }{   48 01 e3 | ADD rbx, rsp   }{   48 01 f3 | ADD rbx, rsi   }
+{   48 01 c4 | ADD rsp, rax   }{   48 01 d4 | ADD rsp, rdx   }{   48 01 e4 | ADD rsp, rsp   }{   48 01 f4 | ADD rsp, rsi   }
+{   48 01 c5 | ADD rbp, rax   }{   48 01 d5 | ADD rbp, rdx   }{   48 01 e5 | ADD rbp, rsp   }{   48 01 f5 | ADD rbp, rsi   }
+{   48 01 c6 | ADD rsi, rax   }{   48 01 d6 | ADD rsi, rdx   }{   48 01 e6 | ADD rsi, rsp   }{   48 01 f6 | ADD rsi, rsi   }
+{   48 01 c7 | ADD rdi, rax   }{   48 01 d7 | ADD rdi, rdx   }{   48 01 e7 | ADD rdi, rsp   }{   48 01 f7 | ADD rdi, rsi   }
+{   48 01 c8 | ADD rax, rcx   }{   48 01 d8 | ADD rax, rbx   }{   48 01 e8 | ADD rax, rbp   }{   48 01 f8 | ADD rax, rdi   }
+{   48 01 c9 | ADD rcx, rcx   }{   48 01 d9 | ADD rcx, rbx   }{   48 01 e9 | ADD rcx, rbp   }{   48 01 f9 | ADD rcx, rdi   }
+{   48 01 ca | ADD rdx, rcx   }{   48 01 da | ADD rdx, rbx   }{   48 01 ea | ADD rdx, rbp   }{   48 01 fa | ADD rdx, rdi   }
+{   48 01 cb | ADD rbx, rcx   }{   48 01 db | ADD rbx, rbx   }{   48 01 eb | ADD rbx, rbp   }{   48 01 fb | ADD rbx, rdi   }
+{   48 01 cc | ADD rsp, rcx   }{   48 01 dc | ADD rsp, rbx   }{   48 01 ec | ADD rsp, rbp   }{   48 01 fc | ADD rsp, rdi   }
+{   48 01 cd | ADD rbp, rcx   }{   48 01 dd | ADD rbp, rbx   }{   48 01 ed | ADD rbp, rbp   }{   48 01 fd | ADD rbp, rdi   }
+{   48 01 ce | ADD rsi, rcx   }{   48 01 de | ADD rsi, rbx   }{   48 01 ee | ADD rsi, rbp   }{   48 01 fe | ADD rsi, rdi   }
+{   48 01 cf | ADD rdi, rcx   }{   48 01 df | ADD rdi, rbx   }{   48 01 ef | ADD rdi, rbp   }{   48 01 ff | ADD rdi, rdi   }
+
+# REX.WB OP reg64
+{   49 01 c0 | ADD r8 , rax   }{   49 01 d0 | ADD r8 , rdx   }{   49 01 e0 | ADD r8 , rsp   }{   49 01 f0 | ADD r8 , rsi   }
+{   49 01 c1 | ADD r9 , rax   }{   49 01 d1 | ADD r9 , rdx   }{   49 01 e1 | ADD r9 , rsp   }{   49 01 f1 | ADD r9 , rsi   }
+{   49 01 c2 | ADD r10, rax   }{   49 01 d2 | ADD r10, rdx   }{   49 01 e2 | ADD r10, rsp   }{   49 01 f2 | ADD r10, rsi   }
+{   49 01 c3 | ADD r11, rax   }{   49 01 d3 | ADD r11, rdx   }{   49 01 e3 | ADD r11, rsp   }{   49 01 f3 | ADD r11, rsi   }
+{   49 01 c4 | ADD r12, rax   }{   49 01 d4 | ADD r12, rdx   }{   49 01 e4 | ADD r12, rsp   }{   49 01 f4 | ADD r12, rsi   }
+{   49 01 c5 | ADD r13, rax   }{   49 01 d5 | ADD r13, rdx   }{   49 01 e5 | ADD r13, rsp   }{   49 01 f5 | ADD r13, rsi   }
+{   49 01 c6 | ADD r14, rax   }{   49 01 d6 | ADD r14, rdx   }{   49 01 e6 | ADD r14, rsp   }{   49 01 f6 | ADD r14, rsi   }
+{   49 01 c7 | ADD r15, rax   }{   49 01 d7 | ADD r15, rdx   }{   49 01 e7 | ADD r15, rsp   }{   49 01 f7 | ADD r15, rsi   }
+{   49 01 c8 | ADD r8 , rcx   }{   49 01 d8 | ADD r8 , rbx   }{   49 01 e8 | ADD r8 , rbp   }{   49 01 f8 | ADD r8 , rdi   }
+{   49 01 c9 | ADD r9 , rcx   }{   49 01 d9 | ADD r9 , rbx   }{   49 01 e9 | ADD r9 , rbp   }{   49 01 f9 | ADD r9 , rdi   }
+{   49 01 ca | ADD r10, rcx   }{   49 01 da | ADD r10, rbx   }{   49 01 ea | ADD r10, rbp   }{   49 01 fa | ADD r10, rdi   }
+{   49 01 cb | ADD r11, rcx   }{   49 01 db | ADD r11, rbx   }{   49 01 eb | ADD r11, rbp   }{   49 01 fb | ADD r11, rdi   }
+{   49 01 cc | ADD r12, rcx   }{   49 01 dc | ADD r12, rbx   }{   49 01 ec | ADD r12, rbp   }{   49 01 fc | ADD r12, rdi   }
+{   49 01 cd | ADD r13, rcx   }{   49 01 dd | ADD r13, rbx   }{   49 01 ed | ADD r13, rbp   }{   49 01 fd | ADD r13, rdi   }
+{   49 01 ce | ADD r14, rcx   }{   49 01 de | ADD r14, rbx   }{   49 01 ee | ADD r14, rbp   }{   49 01 fe | ADD r14, rdi   }
+{   49 01 cf | ADD r15, rcx   }{   49 01 df | ADD r15, rbx   }{   49 01 ef | ADD r15, rbp   }{   49 01 ff | ADD r15, rdi   }
+
+# REX.WR OP reg64
+{   4c 01 c0 | ADD rax, r8    }{   4c 01 d0 | ADD rax, r10   }{   4c 01 e0 | ADD rax, r12   }{   4c 01 f0 | ADD rax, r14   }
+{   4c 01 c1 | ADD rcx, r8    }{   4c 01 d1 | ADD rcx, r10   }{   4c 01 e1 | ADD rcx, r12   }{   4c 01 f1 | ADD rcx, r14   }
+{   4c 01 c2 | ADD rdx, r8    }{   4c 01 d2 | ADD rdx, r10   }{   4c 01 e2 | ADD rdx, r12   }{   4c 01 f2 | ADD rdx, r14   }
+{   4c 01 c3 | ADD rbx, r8    }{   4c 01 d3 | ADD rbx, r10   }{   4c 01 e3 | ADD rbx, r12   }{   4c 01 f3 | ADD rbx, r14   }
+{   4c 01 c4 | ADD rsp, r8    }{   4c 01 d4 | ADD rsp, r10   }{   4c 01 e4 | ADD rsp, r12   }{   4c 01 f4 | ADD rsp, r14   }
+{   4c 01 c5 | ADD rbp, r8    }{   4c 01 d5 | ADD rbp, r10   }{   4c 01 e5 | ADD rbp, r12   }{   4c 01 f5 | ADD rbp, r14   }
+{   4c 01 c6 | ADD rsi, r8    }{   4c 01 d6 | ADD rsi, r10   }{   4c 01 e6 | ADD rsi, r12   }{   4c 01 f6 | ADD rsi, r14   }
+{   4c 01 c7 | ADD rdi, r8    }{   4c 01 d7 | ADD rdi, r10   }{   4c 01 e7 | ADD rdi, r12   }{   4c 01 f7 | ADD rdi, r14   }
+{   4c 01 c8 | ADD rax, r9    }{   4c 01 d8 | ADD rax, r11   }{   4c 01 e8 | ADD rax, r13   }{   4c 01 f8 | ADD rax, r15   }
+{   4c 01 c9 | ADD rcx, r9    }{   4c 01 d9 | ADD rcx, r11   }{   4c 01 e9 | ADD rcx, r13   }{   4c 01 f9 | ADD rcx, r15   }
+{   4c 01 ca | ADD rdx, r9    }{   4c 01 da | ADD rdx, r11   }{   4c 01 ea | ADD rdx, r13   }{   4c 01 fa | ADD rdx, r15   }
+{   4c 01 cb | ADD rbx, r9    }{   4c 01 db | ADD rbx, r11   }{   4c 01 eb | ADD rbx, r13   }{   4c 01 fb | ADD rbx, r15   }
+{   4c 01 cc | ADD rsp, r9    }{   4c 01 dc | ADD rsp, r11   }{   4c 01 ec | ADD rsp, r13   }{   4c 01 fc | ADD rsp, r15   }
+{   4c 01 cd | ADD rbp, r9    }{   4c 01 dd | ADD rbp, r11   }{   4c 01 ed | ADD rbp, r13   }{   4c 01 fd | ADD rbp, r15   }
+{   4c 01 ce | ADD rsi, r9    }{   4c 01 de | ADD rsi, r11   }{   4c 01 ee | ADD rsi, r13   }{   4c 01 fe | ADD rsi, r15   }
+{   4c 01 cf | ADD rdi, r9    }{   4c 01 df | ADD rdi, r11   }{   4c 01 ef | ADD rdi, r13   }{   4c 01 ff | ADD rdi, r15   }
+
+# REX.WRB OP reg64
+{   4d 01 c0 | ADD r8 , r8    }{   4d 01 d0 | ADD r8 , r10   }{   4d 01 e0 | ADD r8 , r12   }{   4d 01 f0 | ADD r8 , r14   }
+{   4d 01 c1 | ADD r9 , r8    }{   4d 01 d1 | ADD r9 , r10   }{   4d 01 e1 | ADD r9 , r12   }{   4d 01 f1 | ADD r9 , r14   }
+{   4d 01 c2 | ADD r10, r8    }{   4d 01 d2 | ADD r10, r10   }{   4d 01 e2 | ADD r10, r12   }{   4d 01 f2 | ADD r10, r14   }
+{   4d 01 c3 | ADD r11, r8    }{   4d 01 d3 | ADD r11, r10   }{   4d 01 e3 | ADD r11, r12   }{   4d 01 f3 | ADD r11, r14   }
+{   4d 01 c4 | ADD r12, r8    }{   4d 01 d4 | ADD r12, r10   }{   4d 01 e4 | ADD r12, r12   }{   4d 01 f4 | ADD r12, r14   }
+{   4d 01 c5 | ADD r13, r8    }{   4d 01 d5 | ADD r13, r10   }{   4d 01 e5 | ADD r13, r12   }{   4d 01 f5 | ADD r13, r14   }
+{   4d 01 c6 | ADD r14, r8    }{   4d 01 d6 | ADD r14, r10   }{   4d 01 e6 | ADD r14, r12   }{   4d 01 f6 | ADD r14, r14   }
+{   4d 01 c7 | ADD r15, r8    }{   4d 01 d7 | ADD r15, r10   }{   4d 01 e7 | ADD r15, r12   }{   4d 01 f7 | ADD r15, r14   }
+{   4d 01 c8 | ADD r8 , r9    }{   4d 01 d8 | ADD r8 , r11   }{   4d 01 e8 | ADD r8 , r13   }{   4d 01 f8 | ADD r8 , r15   }
+{   4d 01 c9 | ADD r9 , r9    }{   4d 01 d9 | ADD r9 , r11   }{   4d 01 e9 | ADD r9 , r13   }{   4d 01 f9 | ADD r9 , r15   }
+{   4d 01 ca | ADD r10, r9    }{   4d 01 da | ADD r10, r11   }{   4d 01 ea | ADD r10, r13   }{   4d 01 fa | ADD r10, r15   }
+{   4d 01 cb | ADD r11, r9    }{   4d 01 db | ADD r11, r11   }{   4d 01 eb | ADD r11, r13   }{   4d 01 fb | ADD r11, r15   }
+{   4d 01 cc | ADD r12, r9    }{   4d 01 dc | ADD r12, r11   }{   4d 01 ec | ADD r12, r13   }{   4d 01 fc | ADD r12, r15   }
+{   4d 01 cd | ADD r13, r9    }{   4d 01 dd | ADD r13, r11   }{   4d 01 ed | ADD r13, r13   }{   4d 01 fd | ADD r13, r15   }
+{   4d 01 ce | ADD r14, r9    }{   4d 01 de | ADD r14, r11   }{   4d 01 ee | ADD r14, r13   }{   4d 01 fe | ADD r14, r15   }
+{   4d 01 cf | ADD r15, r9    }{   4d 01 df | ADD r15, r11   }{   4d 01 ef | ADD r15, r13   }{   4d 01 ff | ADD r15, r15   }

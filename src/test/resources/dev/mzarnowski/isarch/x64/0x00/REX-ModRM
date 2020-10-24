@@ -1,0 +1,53 @@
+# REX.B OP reg8
+{   41 00 c0 | ADD r8b , al   }{   41 00 d0 | ADD r8b , dl   }{   41 00 e0 | ADD r8b , ah   }{   41 00 f0 | ADD r8b , dh   }
+{   41 00 c1 | ADD r9b , al   }{   41 00 d1 | ADD r9b , dl   }{   41 00 e1 | ADD r9b , ah   }{   41 00 f1 | ADD r9b , dh   }
+{   41 00 c2 | ADD r10b, al   }{   41 00 d2 | ADD r10b, dl   }{   41 00 e2 | ADD r10b, ah   }{   41 00 f2 | ADD r10b, dh   }
+{   41 00 c3 | ADD r11b, al   }{   41 00 d3 | ADD r11b, dl   }{   41 00 e3 | ADD r11b, ah   }{   41 00 f3 | ADD r11b, dh   }
+{   41 00 c4 | ADD r12b, al   }{   41 00 d4 | ADD r12b, dl   }{   41 00 e4 | ADD r12b, ah   }{   41 00 f4 | ADD r12b, dh   }
+{   41 00 c5 | ADD r13b, al   }{   41 00 d5 | ADD r13b, dl   }{   41 00 e5 | ADD r13b, ah   }{   41 00 f5 | ADD r13b, dh   }
+{   41 00 c6 | ADD r14b, al   }{   41 00 d6 | ADD r14b, dl   }{   41 00 e6 | ADD r14b, ah   }{   41 00 f6 | ADD r14b, dh   }
+{   41 00 c7 | ADD r15b, al   }{   41 00 d7 | ADD r15b, dl   }{   41 00 e7 | ADD r15b, ah   }{   41 00 f7 | ADD r15b, dh   }
+{   41 00 c8 | ADD r8b , cl   }{   41 00 d8 | ADD r8b , bl   }{   41 00 e8 | ADD r8b , ch   }{   41 00 f8 | ADD r8b , bh   }
+{   41 00 c9 | ADD r9b , cl   }{   41 00 d9 | ADD r9b , bl   }{   41 00 e9 | ADD r9b , ch   }{   41 00 f9 | ADD r9b , bh   }
+{   41 00 ca | ADD r10b, cl   }{   41 00 da | ADD r10b, bl   }{   41 00 ea | ADD r10b, ch   }{   41 00 fa | ADD r10b, bh   }
+{   41 00 cb | ADD r11b, cl   }{   41 00 db | ADD r11b, bl   }{   41 00 eb | ADD r11b, ch   }{   41 00 fb | ADD r11b, bh   }
+{   41 00 cc | ADD r12b, cl   }{   41 00 dc | ADD r12b, bl   }{   41 00 ec | ADD r12b, ch   }{   41 00 fc | ADD r12b, bh   }
+{   41 00 cd | ADD r13b, cl   }{   41 00 dd | ADD r13b, bl   }{   41 00 ed | ADD r13b, ch   }{   41 00 fd | ADD r13b, bh   }
+{   41 00 ce | ADD r14b, cl   }{   41 00 de | ADD r14b, bl   }{   41 00 ee | ADD r14b, ch   }{   41 00 fe | ADD r14b, bh   }
+{   41 00 cf | ADD r15b, cl   }{   41 00 df | ADD r15b, bl   }{   41 00 ef | ADD r15b, ch   }{   41 00 ff | ADD r15b, bh   }
+
+# REX.R OP reg8
+{   44 00 c0 | ADD al, r8b   }{   44 00 d0 | ADD al, r10b   }{   44 00 e0 | ADD al, r12b   }{   44 00 f0 | ADD al, r14b   }
+{   44 00 c1 | ADD cl, r8b   }{   44 00 d1 | ADD cl, r10b   }{   44 00 e1 | ADD cl, r12b   }{   44 00 f1 | ADD cl, r14b   }
+{   44 00 c2 | ADD dl, r8b   }{   44 00 d2 | ADD dl, r10b   }{   44 00 e2 | ADD dl, r12b   }{   44 00 f2 | ADD dl, r14b   }
+{   44 00 c3 | ADD bl, r8b   }{   44 00 d3 | ADD bl, r10b   }{   44 00 e3 | ADD bl, r12b   }{   44 00 f3 | ADD bl, r14b   }
+{   44 00 c4 | ADD ah, r8b   }{   44 00 d4 | ADD ah, r10b   }{   44 00 e4 | ADD ah, r12b   }{   44 00 f4 | ADD ah, r14b   }
+{   44 00 c5 | ADD ch, r8b   }{   44 00 d5 | ADD ch, r10b   }{   44 00 e5 | ADD ch, r12b   }{   44 00 f5 | ADD ch, r14b   }
+{   44 00 c6 | ADD dh, r8b   }{   44 00 d6 | ADD dh, r10b   }{   44 00 e6 | ADD dh, r12b   }{   44 00 f6 | ADD dh, r14b   }
+{   44 00 c7 | ADD bh, r8b   }{   44 00 d7 | ADD bh, r10b   }{   44 00 e7 | ADD bh, r12b   }{   44 00 f7 | ADD bh, r14b   }
+{   44 00 c8 | ADD al, r9b   }{   44 00 d8 | ADD al, r11b   }{   44 00 e8 | ADD al, r13b   }{   44 00 f8 | ADD al, r15b   }
+{   44 00 c9 | ADD cl, r9b   }{   44 00 d9 | ADD cl, r11b   }{   44 00 e9 | ADD cl, r13b   }{   44 00 f9 | ADD cl, r15b   }
+{   44 00 ca | ADD dl, r9b   }{   44 00 da | ADD dl, r11b   }{   44 00 ea | ADD dl, r13b   }{   44 00 fa | ADD dl, r15b   }
+{   44 00 cb | ADD bl, r9b   }{   44 00 db | ADD bl, r11b   }{   44 00 eb | ADD bl, r13b   }{   44 00 fb | ADD bl, r15b   }
+{   44 00 cc | ADD ah, r9b   }{   44 00 dc | ADD ah, r11b   }{   44 00 ec | ADD ah, r13b   }{   44 00 fc | ADD ah, r15b   }
+{   44 00 cd | ADD ch, r9b   }{   44 00 dd | ADD ch, r11b   }{   44 00 ed | ADD ch, r13b   }{   44 00 fd | ADD ch, r15b   }
+{   44 00 ce | ADD dh, r9b   }{   44 00 de | ADD dh, r11b   }{   44 00 ee | ADD dh, r13b   }{   44 00 fe | ADD dh, r15b   }
+{   44 00 cf | ADD bh, r9b   }{   44 00 df | ADD bh, r11b   }{   44 00 ef | ADD bh, r13b   }{   44 00 ff | ADD bh, r15b   }
+
+# REX.RB OP reg8
+{   45 00 c0 | ADD r8b , r8b   }{   45 00 d0 | ADD r8b , r10b   }{   45 00 e0 | ADD r8b , r12b   }{   45 00 f0 | ADD r8b , r14b   }
+{   45 00 c1 | ADD r9b , r8b   }{   45 00 d1 | ADD r9b , r10b   }{   45 00 e1 | ADD r9b , r12b   }{   45 00 f1 | ADD r9b , r14b   }
+{   45 00 c2 | ADD r10b, r8b   }{   45 00 d2 | ADD r10b, r10b   }{   45 00 e2 | ADD r10b, r12b   }{   45 00 f2 | ADD r10b, r14b   }
+{   45 00 c3 | ADD r11b, r8b   }{   45 00 d3 | ADD r11b, r10b   }{   45 00 e3 | ADD r11b, r12b   }{   45 00 f3 | ADD r11b, r14b   }
+{   45 00 c4 | ADD r12b, r8b   }{   45 00 d4 | ADD r12b, r10b   }{   45 00 e4 | ADD r12b, r12b   }{   45 00 f4 | ADD r12b, r14b   }
+{   45 00 c5 | ADD r13b, r8b   }{   45 00 d5 | ADD r13b, r10b   }{   45 00 e5 | ADD r13b, r12b   }{   45 00 f5 | ADD r13b, r14b   }
+{   45 00 c6 | ADD r14b, r8b   }{   45 00 d6 | ADD r14b, r10b   }{   45 00 e6 | ADD r14b, r12b   }{   45 00 f6 | ADD r14b, r14b   }
+{   45 00 c7 | ADD r15b, r8b   }{   45 00 d7 | ADD r15b, r10b   }{   45 00 e7 | ADD r15b, r12b   }{   45 00 f7 | ADD r15b, r14b   }
+{   45 00 c8 | ADD r8b , r9b   }{   45 00 d8 | ADD r8b , r11b   }{   45 00 e8 | ADD r8b , r13b   }{   45 00 f8 | ADD r8b , r15b   }
+{   45 00 c9 | ADD r9b , r9b   }{   45 00 d9 | ADD r9b , r11b   }{   45 00 e9 | ADD r9b , r13b   }{   45 00 f9 | ADD r9b , r15b   }
+{   45 00 ca | ADD r10b, r9b   }{   45 00 da | ADD r10b, r11b   }{   45 00 ea | ADD r10b, r13b   }{   45 00 fa | ADD r10b, r15b   }
+{   45 00 cb | ADD r11b, r9b   }{   45 00 db | ADD r11b, r11b   }{   45 00 eb | ADD r11b, r13b   }{   45 00 fb | ADD r11b, r15b   }
+{   45 00 cc | ADD r12b, r9b   }{   45 00 dc | ADD r12b, r11b   }{   45 00 ec | ADD r12b, r13b   }{   45 00 fc | ADD r12b, r15b   }
+{   45 00 cd | ADD r13b, r9b   }{   45 00 dd | ADD r13b, r11b   }{   45 00 ed | ADD r13b, r13b   }{   45 00 fd | ADD r13b, r15b   }
+{   45 00 ce | ADD r14b, r9b   }{   45 00 de | ADD r14b, r11b   }{   45 00 ee | ADD r14b, r13b   }{   45 00 fe | ADD r14b, r15b   }
+{   45 00 cf | ADD r15b, r9b   }{   45 00 df | ADD r15b, r11b   }{   45 00 ef | ADD r15b, r13b   }{   45 00 ff | ADD r15b, r15b   }
