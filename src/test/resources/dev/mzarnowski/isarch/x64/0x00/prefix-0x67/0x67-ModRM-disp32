@@ -1,4 +1,4 @@
-# OP ModRM disp32
+# 0x67 OP ModRM disp32
 67 00 05 12 34 56 78 | ADD BYTE PTR [eip + 0x78563412] | al |
 67 00 0d 12 34 56 78 | ADD BYTE PTR [eip + 0x78563412] | cl |
 67 00 15 12 34 56 78 | ADD BYTE PTR [eip + 0x78563412] | dl |
@@ -8,7 +8,7 @@
 67 00 35 12 34 56 78 | ADD BYTE PTR [eip + 0x78563412] | dh |
 67 00 3d 12 34 56 78 | ADD BYTE PTR [eip + 0x78563412] | bh |
 
-# OP ModRM disp32
+# 0x67 OP ModRM disp32
 67 00 80 12 34 56 78 | ADD BYTE PTR [eax + 0x78563412] | al |
 67 00 81 12 34 56 78 | ADD BYTE PTR [ecx + 0x78563412] | al |
 67 00 82 12 34 56 78 | ADD BYTE PTR [edx + 0x78563412] | al |

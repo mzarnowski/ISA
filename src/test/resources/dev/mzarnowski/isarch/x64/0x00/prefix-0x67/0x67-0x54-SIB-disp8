@@ -1,4 +1,4 @@
-# OP ModRM SIB disp8
+# 0x67 OP ModRM SIB disp8
 
 67 00 54 00 12 | ADD BYTE PTR [eax + eax * 1 + 0x12] | dl |
 67 00 54 01 12 | ADD BYTE PTR [ecx + eax * 1 + 0x12] | dl |

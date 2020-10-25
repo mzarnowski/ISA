@@ -1,4 +1,4 @@
-# OP ModRM disp8
+# 0x67 OP ModRM disp8
 67 00 40 12 | ADD BYTE PTR [eax + 0x12] | al |
 67 00 41 12 | ADD BYTE PTR [ecx + 0x12] | al |
 67 00 42 12 | ADD BYTE PTR [edx + 0x12] | al |

@@ -1,0 +1,266 @@
+#  rex.R OP ModRM SIB disp32
+
+44 00 a4 00 12 34 56 78 | ADD BYTE PTR [rax + rax * 1 + 0x78563412] | r12b |
+44 00 a4 01 12 34 56 78 | ADD BYTE PTR [rcx + rax * 1 + 0x78563412] | r12b |
+44 00 a4 02 12 34 56 78 | ADD BYTE PTR [rdx + rax * 1 + 0x78563412] | r12b |
+44 00 a4 03 12 34 56 78 | ADD BYTE PTR [rbx + rax * 1 + 0x78563412] | r12b |
+44 00 a4 04 12 34 56 78 | ADD BYTE PTR [rsp + rax * 1 + 0x78563412] | r12b |
+44 00 a4 06 12 34 56 78 | ADD BYTE PTR [rsi + rax * 1 + 0x78563412] | r12b |
+44 00 a4 07 12 34 56 78 | ADD BYTE PTR [rdi + rax * 1 + 0x78563412] | r12b |
+
+44 00 a4 08 12 34 56 78 | ADD BYTE PTR [rax + rcx * 1 + 0x78563412] | r12b |
+44 00 a4 09 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 1 + 0x78563412] | r12b |
+44 00 a4 0a 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 1 + 0x78563412] | r12b |
+44 00 a4 0b 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 1 + 0x78563412] | r12b |
+44 00 a4 0c 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 1 + 0x78563412] | r12b |
+44 00 a4 0e 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 1 + 0x78563412] | r12b |
+44 00 a4 0f 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 1 + 0x78563412] | r12b |
+
+44 00 a4 10 12 34 56 78 | ADD BYTE PTR [rax + rdx * 1 + 0x78563412] | r12b |
+44 00 a4 11 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 1 + 0x78563412] | r12b |
+44 00 a4 12 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 1 + 0x78563412] | r12b |
+44 00 a4 13 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 1 + 0x78563412] | r12b |
+44 00 a4 14 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 1 + 0x78563412] | r12b |
+44 00 a4 16 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 1 + 0x78563412] | r12b |
+44 00 a4 17 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 1 + 0x78563412] | r12b |
+
+44 00 a4 18 12 34 56 78 | ADD BYTE PTR [rax + rbx * 1 + 0x78563412] | r12b |
+44 00 a4 19 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 1 + 0x78563412] | r12b |
+44 00 a4 1a 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 1 + 0x78563412] | r12b |
+44 00 a4 1b 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 1 + 0x78563412] | r12b |
+44 00 a4 1c 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 1 + 0x78563412] | r12b |
+44 00 a4 1e 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 1 + 0x78563412] | r12b |
+44 00 a4 1f 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 1 + 0x78563412] | r12b |
+
+#TODO
+44 00 a4 20 12 34 56 78 |
+44 00 a4 21 12 34 56 78 |
+44 00 a4 22 12 34 56 78 |
+44 00 a4 23 12 34 56 78 |
+44 00 a4 24 12 34 56 78 |
+44 00 a4 25 12 34 56 78 |
+44 00 a4 26 12 34 56 78 |
+44 00 a4 27 12 34 56 78 |
+
+44 00 a4 28 12 34 56 78 | ADD BYTE PTR [rax + rbp * 1 + 0x78563412] | r12b |
+44 00 a4 29 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 1 + 0x78563412] | r12b |
+44 00 a4 2a 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 1 + 0x78563412] | r12b |
+44 00 a4 2b 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 1 + 0x78563412] | r12b |
+44 00 a4 2c 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 1 + 0x78563412] | r12b |
+44 00 a4 2e 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 1 + 0x78563412] | r12b |
+44 00 a4 2f 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 1 + 0x78563412] | r12b |
+
+44 00 a4 30 12 34 56 78 | ADD BYTE PTR [rax + rsi * 1 + 0x78563412] | r12b |
+44 00 a4 31 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 1 + 0x78563412] | r12b |
+44 00 a4 32 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 1 + 0x78563412] | r12b |
+44 00 a4 33 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 1 + 0x78563412] | r12b |
+44 00 a4 34 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 1 + 0x78563412] | r12b |
+44 00 a4 36 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 1 + 0x78563412] | r12b |
+44 00 a4 37 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 1 + 0x78563412] | r12b |
+
+44 00 a4 38 12 34 56 78 | ADD BYTE PTR [rax + rdi * 1 + 0x78563412] | r12b |
+44 00 a4 39 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 1 + 0x78563412] | r12b |
+44 00 a4 3a 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 1 + 0x78563412] | r12b |
+44 00 a4 3b 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 1 + 0x78563412] | r12b |
+44 00 a4 3c 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 1 + 0x78563412] | r12b |
+44 00 a4 3e 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 1 + 0x78563412] | r12b |
+44 00 a4 3f 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 1 + 0x78563412] | r12b |
+
+44 00 a4 40 12 34 56 78 | ADD BYTE PTR [rax + rax * 2 + 0x78563412] | r12b |
+44 00 a4 41 12 34 56 78 | ADD BYTE PTR [rcx + rax * 2 + 0x78563412] | r12b |
+44 00 a4 42 12 34 56 78 | ADD BYTE PTR [rdx + rax * 2 + 0x78563412] | r12b |
+44 00 a4 43 12 34 56 78 | ADD BYTE PTR [rbx + rax * 2 + 0x78563412] | r12b |
+44 00 a4 44 12 34 56 78 | ADD BYTE PTR [rsp + rax * 2 + 0x78563412] | r12b |
+44 00 a4 46 12 34 56 78 | ADD BYTE PTR [rsi + rax * 2 + 0x78563412] | r12b |
+44 00 a4 47 12 34 56 78 | ADD BYTE PTR [rdi + rax * 2 + 0x78563412] | r12b |
+
+44 00 a4 48 12 34 56 78 | ADD BYTE PTR [rax + rcx * 2 + 0x78563412] | r12b |
+44 00 a4 49 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 2 + 0x78563412] | r12b |
+44 00 a4 4a 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 2 + 0x78563412] | r12b |
+44 00 a4 4b 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 2 + 0x78563412] | r12b |
+44 00 a4 4c 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 2 + 0x78563412] | r12b |
+44 00 a4 4e 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 2 + 0x78563412] | r12b |
+44 00 a4 4f 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 2 + 0x78563412] | r12b |
+
+44 00 a4 50 12 34 56 78 | ADD BYTE PTR [rax + rdx * 2 + 0x78563412] | r12b |
+44 00 a4 51 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 2 + 0x78563412] | r12b |
+44 00 a4 52 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 2 + 0x78563412] | r12b |
+44 00 a4 53 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 2 + 0x78563412] | r12b |
+44 00 a4 54 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 2 + 0x78563412] | r12b |
+44 00 a4 56 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 2 + 0x78563412] | r12b |
+44 00 a4 57 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 2 + 0x78563412] | r12b |
+
+44 00 a4 58 12 34 56 78 | ADD BYTE PTR [rax + rbx * 2 + 0x78563412] | r12b |
+44 00 a4 59 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 2 + 0x78563412] | r12b |
+44 00 a4 5a 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 2 + 0x78563412] | r12b |
+44 00 a4 5b 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 2 + 0x78563412] | r12b |
+44 00 a4 5c 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 2 + 0x78563412] | r12b |
+44 00 a4 5e 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 2 + 0x78563412] | r12b |
+44 00 a4 5f 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 2 + 0x78563412] | r12b |
+
+# TODO
+44 00 a4 60 12 34 56 78 |
+44 00 a4 61 12 34 56 78 |
+44 00 a4 62 12 34 56 78 |
+44 00 a4 63 12 34 56 78 |
+44 00 a4 64 12 34 56 78 |
+44 00 a4 65 12 34 56 78 |
+44 00 a4 66 12 34 56 78 |
+44 00 a4 67 12 34 56 78 |
+
+44 00 a4 68 12 34 56 78 | ADD BYTE PTR [rax + rbp * 2 + 0x78563412] | r12b |
+44 00 a4 69 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 2 + 0x78563412] | r12b |
+44 00 a4 6a 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 2 + 0x78563412] | r12b |
+44 00 a4 6b 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 2 + 0x78563412] | r12b |
+44 00 a4 6c 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 2 + 0x78563412] | r12b |
+44 00 a4 6e 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 2 + 0x78563412] | r12b |
+44 00 a4 6f 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 2 + 0x78563412] | r12b |
+
+44 00 a4 70 12 34 56 78 | ADD BYTE PTR [rax + rsi * 2 + 0x78563412] | r12b |
+44 00 a4 71 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 2 + 0x78563412] | r12b |
+44 00 a4 72 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 2 + 0x78563412] | r12b |
+44 00 a4 73 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 2 + 0x78563412] | r12b |
+44 00 a4 74 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 2 + 0x78563412] | r12b |
+44 00 a4 76 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 2 + 0x78563412] | r12b |
+44 00 a4 77 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 2 + 0x78563412] | r12b |
+
+44 00 a4 78 12 34 56 78 | ADD BYTE PTR [rax + rdi * 2 + 0x78563412] | r12b |
+44 00 a4 79 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 2 + 0x78563412] | r12b |
+44 00 a4 7a 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 2 + 0x78563412] | r12b |
+44 00 a4 7b 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 2 + 0x78563412] | r12b |
+44 00 a4 7c 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 2 + 0x78563412] | r12b |
+44 00 a4 7e 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 2 + 0x78563412] | r12b |
+44 00 a4 7f 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 2 + 0x78563412] | r12b |
+
+44 00 a4 80 12 34 56 78 | ADD BYTE PTR [rax + rax * 4 + 0x78563412] | r12b |
+44 00 a4 81 12 34 56 78 | ADD BYTE PTR [rcx + rax * 4 + 0x78563412] | r12b |
+44 00 a4 82 12 34 56 78 | ADD BYTE PTR [rdx + rax * 4 + 0x78563412] | r12b |
+44 00 a4 83 12 34 56 78 | ADD BYTE PTR [rbx + rax * 4 + 0x78563412] | r12b |
+44 00 a4 84 12 34 56 78 | ADD BYTE PTR [rsp + rax * 4 + 0x78563412] | r12b |
+44 00 a4 86 12 34 56 78 | ADD BYTE PTR [rsi + rax * 4 + 0x78563412] | r12b |
+44 00 a4 87 12 34 56 78 | ADD BYTE PTR [rdi + rax * 4 + 0x78563412] | r12b |
+
+44 00 a4 88 12 34 56 78 | ADD BYTE PTR [rax + rcx * 4 + 0x78563412] | r12b |
+44 00 a4 89 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 4 + 0x78563412] | r12b |
+44 00 a4 8a 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 4 + 0x78563412] | r12b |
+44 00 a4 8b 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 4 + 0x78563412] | r12b |
+44 00 a4 8c 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 4 + 0x78563412] | r12b |
+44 00 a4 8e 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 4 + 0x78563412] | r12b |
+44 00 a4 8f 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 4 + 0x78563412] | r12b |
+
+44 00 a4 90 12 34 56 78 | ADD BYTE PTR [rax + rdx * 4 + 0x78563412] | r12b |
+44 00 a4 91 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 4 + 0x78563412] | r12b |
+44 00 a4 92 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 4 + 0x78563412] | r12b |
+44 00 a4 93 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 4 + 0x78563412] | r12b |
+44 00 a4 94 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 4 + 0x78563412] | r12b |
+44 00 a4 96 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 4 + 0x78563412] | r12b |
+44 00 a4 97 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 4 + 0x78563412] | r12b |
+
+44 00 a4 98 12 34 56 78 | ADD BYTE PTR [rax + rbx * 4 + 0x78563412] | r12b |
+44 00 a4 99 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 4 + 0x78563412] | r12b |
+44 00 a4 9a 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 4 + 0x78563412] | r12b |
+44 00 a4 9b 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 4 + 0x78563412] | r12b |
+44 00 a4 9c 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 4 + 0x78563412] | r12b |
+44 00 a4 9e 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 4 + 0x78563412] | r12b |
+44 00 a4 9f 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 4 + 0x78563412] | r12b |
+
+# TODO
+44 00 a4 a0 12 34 56 78 |
+44 00 a4 a1 12 34 56 78 |
+44 00 a4 a2 12 34 56 78 |
+44 00 a4 a3 12 34 56 78 |
+44 00 a4 a4 12 34 56 78 |
+44 00 a4 a5 12 34 56 78 |
+44 00 a4 a6 12 34 56 78 |
+44 00 a4 a7 12 34 56 78 |
+
+44 00 a4 a8 12 34 56 78 | ADD BYTE PTR [rax + rbp * 4 + 0x78563412] | r12b |
+44 00 a4 a9 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 4 + 0x78563412] | r12b |
+44 00 a4 aa 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 4 + 0x78563412] | r12b |
+44 00 a4 ab 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 4 + 0x78563412] | r12b |
+44 00 a4 ac 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 4 + 0x78563412] | r12b |
+44 00 a4 ae 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 4 + 0x78563412] | r12b |
+44 00 a4 af 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 4 + 0x78563412] | r12b |
+
+44 00 a4 b0 12 34 56 78 | ADD BYTE PTR [rax + rsi * 4 + 0x78563412] | r12b |
+44 00 a4 b1 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 4 + 0x78563412] | r12b |
+44 00 a4 b2 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 4 + 0x78563412] | r12b |
+44 00 a4 b3 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 4 + 0x78563412] | r12b |
+44 00 a4 b4 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 4 + 0x78563412] | r12b |
+44 00 a4 b6 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 4 + 0x78563412] | r12b |
+44 00 a4 b7 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 4 + 0x78563412] | r12b |
+
+44 00 a4 b8 12 34 56 78 | ADD BYTE PTR [rax + rdi * 4 + 0x78563412] | r12b |
+44 00 a4 b9 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 4 + 0x78563412] | r12b |
+44 00 a4 ba 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 4 + 0x78563412] | r12b |
+44 00 a4 bb 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 4 + 0x78563412] | r12b |
+44 00 a4 bc 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 4 + 0x78563412] | r12b |
+44 00 a4 be 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 4 + 0x78563412] | r12b |
+44 00 a4 bf 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 4 + 0x78563412] | r12b |
+
+
+44 00 a4 c0 12 34 56 78 | ADD BYTE PTR [rax + rax * 8 + 0x78563412] | r12b |
+44 00 a4 c1 12 34 56 78 | ADD BYTE PTR [rcx + rax * 8 + 0x78563412] | r12b |
+44 00 a4 c2 12 34 56 78 | ADD BYTE PTR [rdx + rax * 8 + 0x78563412] | r12b |
+44 00 a4 c3 12 34 56 78 | ADD BYTE PTR [rbx + rax * 8 + 0x78563412] | r12b |
+44 00 a4 c4 12 34 56 78 | ADD BYTE PTR [rsp + rax * 8 + 0x78563412] | r12b |
+44 00 a4 c6 12 34 56 78 | ADD BYTE PTR [rsi + rax * 8 + 0x78563412] | r12b |
+44 00 a4 c7 12 34 56 78 | ADD BYTE PTR [rdi + rax * 8 + 0x78563412] | r12b |
+
+44 00 a4 c8 12 34 56 78 | ADD BYTE PTR [rax + rcx * 8 + 0x78563412] | r12b |
+44 00 a4 c9 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 8 + 0x78563412] | r12b |
+44 00 a4 ca 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 8 + 0x78563412] | r12b |
+44 00 a4 cb 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 8 + 0x78563412] | r12b |
+44 00 a4 cc 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 8 + 0x78563412] | r12b |
+44 00 a4 ce 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 8 + 0x78563412] | r12b |
+44 00 a4 cf 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 8 + 0x78563412] | r12b |
+
+44 00 a4 d0 12 34 56 78 | ADD BYTE PTR [rax + rdx * 8 + 0x78563412] | r12b |
+44 00 a4 d1 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 8 + 0x78563412] | r12b |
+44 00 a4 d2 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 8 + 0x78563412] | r12b |
+44 00 a4 d3 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 8 + 0x78563412] | r12b |
+44 00 a4 d4 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 8 + 0x78563412] | r12b |
+44 00 a4 d6 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 8 + 0x78563412] | r12b |
+44 00 a4 d7 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 8 + 0x78563412] | r12b |
+
+44 00 a4 d8 12 34 56 78 | ADD BYTE PTR [rax + rbx * 8 + 0x78563412] | r12b |
+44 00 a4 d9 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 8 + 0x78563412] | r12b |
+44 00 a4 da 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 8 + 0x78563412] | r12b |
+44 00 a4 db 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 8 + 0x78563412] | r12b |
+44 00 a4 dc 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 8 + 0x78563412] | r12b |
+44 00 a4 de 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 8 + 0x78563412] | r12b |
+44 00 a4 df 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 8 + 0x78563412] | r12b |
+
+# TODO
+44 00 a4 e0 12 34 56 78 |
+44 00 a4 e1 12 34 56 78 |
+44 00 a4 e2 12 34 56 78 |
+44 00 a4 e3 12 34 56 78 |
+44 00 a4 e4 12 34 56 78 |
+44 00 a4 e5 12 34 56 78 |
+44 00 a4 e6 12 34 56 78 |
+44 00 a4 e7 12 34 56 78 |
+
+44 00 a4 e8 12 34 56 78 | ADD BYTE PTR [rax + rbp * 8 + 0x78563412] | r12b |
+44 00 a4 e9 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 8 + 0x78563412] | r12b |
+44 00 a4 ea 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 8 + 0x78563412] | r12b |
+44 00 a4 eb 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 8 + 0x78563412] | r12b |
+44 00 a4 ec 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 8 + 0x78563412] | r12b |
+44 00 a4 ee 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 8 + 0x78563412] | r12b |
+44 00 a4 ef 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 8 + 0x78563412] | r12b |
+
+44 00 a4 f0 12 34 56 78 | ADD BYTE PTR [rax + rsi * 8 + 0x78563412] | r12b |
+44 00 a4 f1 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 8 + 0x78563412] | r12b |
+44 00 a4 f2 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 8 + 0x78563412] | r12b |
+44 00 a4 f3 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 8 + 0x78563412] | r12b |
+44 00 a4 f4 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 8 + 0x78563412] | r12b |
+44 00 a4 f6 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 8 + 0x78563412] | r12b |
+44 00 a4 f7 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 8 + 0x78563412] | r12b |
+
+44 00 a4 f8 12 34 56 78 | ADD BYTE PTR [rax + rdi * 8 + 0x78563412] | r12b |
+44 00 a4 f9 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 8 + 0x78563412] | r12b |
+44 00 a4 fa 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 8 + 0x78563412] | r12b |
+44 00 a4 fb 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 8 + 0x78563412] | r12b |
+44 00 a4 fc 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 8 + 0x78563412] | r12b |
+44 00 a4 fe 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 8 + 0x78563412] | r12b |
+44 00 a4 ff 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 8 + 0x78563412] | r12b |

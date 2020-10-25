@@ -1,0 +1,65 @@
+# rex.B OP ModRM disp8
+
+41 00 40 12 | ADD BYTE PTR [r8 + 0x12] | al |
+41 00 41 12 | ADD BYTE PTR [r9 + 0x12] | al |
+41 00 42 12 | ADD BYTE PTR [r10 + 0x12] | al |
+41 00 43 12 | ADD BYTE PTR [r11 + 0x12] | al |
+41 00 45 12 | ADD BYTE PTR [r13 + 0x12] | al |
+41 00 46 12 | ADD BYTE PTR [r14 + 0x12] | al |
+41 00 47 12 | ADD BYTE PTR [r15 + 0x12] | al |
+
+41 00 48 12 | ADD BYTE PTR [r8 + 0x12] | cl |
+41 00 49 12 | ADD BYTE PTR [r9 + 0x12] | cl |
+41 00 4a 12 | ADD BYTE PTR [r10 + 0x12] | cl |
+41 00 4b 12 | ADD BYTE PTR [r11 + 0x12] | cl |
+41 00 4d 12 | ADD BYTE PTR [r13 + 0x12] | cl |
+41 00 4e 12 | ADD BYTE PTR [r14 + 0x12] | cl |
+41 00 4f 12 | ADD BYTE PTR [r15 + 0x12] | cl |
+
+41 00 50 12 | ADD BYTE PTR [r8 + 0x12] | dl |
+41 00 51 12 | ADD BYTE PTR [r9 + 0x12] | dl |
+41 00 52 12 | ADD BYTE PTR [r10 + 0x12] | dl |
+41 00 53 12 | ADD BYTE PTR [r11 + 0x12] | dl |
+41 00 55 12 | ADD BYTE PTR [r13 + 0x12] | dl |
+41 00 56 12 | ADD BYTE PTR [r14 + 0x12] | dl |
+41 00 57 12 | ADD BYTE PTR [r15 + 0x12] | dl |
+
+41 00 58 12 | ADD BYTE PTR [r8 + 0x12] | bl |
+41 00 59 12 | ADD BYTE PTR [r9 + 0x12] | bl |
+41 00 5a 12 | ADD BYTE PTR [r10 + 0x12] | bl |
+41 00 5b 12 | ADD BYTE PTR [r11 + 0x12] | bl |
+41 00 5d 12 | ADD BYTE PTR [r13 + 0x12] | bl |
+41 00 5e 12 | ADD BYTE PTR [r14 + 0x12] | bl |
+41 00 5f 12 | ADD BYTE PTR [r15 + 0x12] | bl |
+
+41 00 60 12 | ADD BYTE PTR [r8 + 0x12] | ah |
+41 00 61 12 | ADD BYTE PTR [r9 + 0x12] | ah |
+41 00 62 12 | ADD BYTE PTR [r10 + 0x12] | ah |
+41 00 63 12 | ADD BYTE PTR [r11 + 0x12] | ah |
+41 00 65 12 | ADD BYTE PTR [r13 + 0x12] | ah |
+41 00 66 12 | ADD BYTE PTR [r14 + 0x12] | ah |
+41 00 67 12 | ADD BYTE PTR [r15 + 0x12] | ah |
+
+41 00 68 12 | ADD BYTE PTR [r8 + 0x12] | ch |
+41 00 69 12 | ADD BYTE PTR [r9 + 0x12] | ch |
+41 00 6a 12 | ADD BYTE PTR [r10 + 0x12] | ch |
+41 00 6b 12 | ADD BYTE PTR [r11 + 0x12] | ch |
+41 00 6d 12 | ADD BYTE PTR [r13 + 0x12] | ch |
+41 00 6e 12 | ADD BYTE PTR [r14 + 0x12] | ch |
+41 00 6f 12 | ADD BYTE PTR [r15 + 0x12] | ch |
+
+41 00 70 12 | ADD BYTE PTR [r8 + 0x12] | sil |
+41 00 71 12 | ADD BYTE PTR [r9 + 0x12] | sil |
+41 00 72 12 | ADD BYTE PTR [r10 + 0x12] | sil |
+41 00 73 12 | ADD BYTE PTR [r11 + 0x12] | sil |
+41 00 75 12 | ADD BYTE PTR [r13 + 0x12] | sil |
+41 00 76 12 | ADD BYTE PTR [r14 + 0x12] | sil |
+41 00 77 12 | ADD BYTE PTR [r15 + 0x12] | sil |
+
+41 00 78 12 | ADD BYTE PTR [r8 + 0x12] | dil |
+41 00 79 12 | ADD BYTE PTR [r9 + 0x12] | dil |
+41 00 7a 12 | ADD BYTE PTR [r10 + 0x12] | dil |
+41 00 7b 12 | ADD BYTE PTR [r11 + 0x12] | dil |
+41 00 7d 12 | ADD BYTE PTR [r13 + 0x12] | dil |
+41 00 7e 12 | ADD BYTE PTR [r14 + 0x12] | dil |
+41 00 7f 12 | ADD BYTE PTR [r15 + 0x12] | dil |

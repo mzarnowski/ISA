@@ -1,0 +1,124 @@
+# rex.B OP ModRM
+
+41 00 00 | ADD BYTE PTR [r8 ] | al |
+41 00 01 | ADD BYTE PTR [r9 ] | al |
+41 00 02 | ADD BYTE PTR [r10] | al |
+41 00 03 | ADD BYTE PTR [r11] | al |
+41 00 06 | ADD BYTE PTR [r14] | al |
+41 00 07 | ADD BYTE PTR [r15] | al |
+
+41 00 08 | ADD BYTE PTR [r8 ] | cl |
+41 00 09 | ADD BYTE PTR [r9 ] | cl |
+41 00 0a | ADD BYTE PTR [r10] | cl |
+41 00 0b | ADD BYTE PTR [r11] | cl |
+41 00 0e | ADD BYTE PTR [r14] | cl |
+41 00 0f | ADD BYTE PTR [r10] | cl |
+
+41 00 10 | ADD BYTE PTR [r8 ] | dl |
+41 00 11 | ADD BYTE PTR [r9 ] | dl |
+41 00 12 | ADD BYTE PTR [r10] | dl |
+41 00 13 | ADD BYTE PTR [r11] | dl |
+41 00 16 | ADD BYTE PTR [r14] | dl |
+41 00 17 | ADD BYTE PTR [r15] | dl |
+
+41 00 18 | ADD BYTE PTR [r8 ] | bl |
+41 00 19 | ADD BYTE PTR [r9 ] | bl |
+41 00 1a | ADD BYTE PTR [r10] | bl |
+41 00 1b | ADD BYTE PTR [r11] | bl |
+41 00 1e | ADD BYTE PTR [r14] | bl |
+41 00 1f | ADD BYTE PTR [r15] | bl |
+
+41 00 20 | ADD BYTE PTR [r8 ] | ah |
+41 00 21 | ADD BYTE PTR [r9 ] | ah |
+41 00 22 | ADD BYTE PTR [r10] | ah |
+41 00 26 | ADD BYTE PTR [r14] | ah |
+41 00 27 | ADD BYTE PTR [r15] | ah |
+
+41 00 28 | ADD BYTE PTR [r8 ] | ch |
+41 00 29 | ADD BYTE PTR [r9 ] | ch |
+41 00 2a | ADD BYTE PTR [r10] | ch |
+41 00 2b | ADD BYTE PTR [r11] | ch |
+41 00 2e | ADD BYTE PTR [r14] | ch |
+41 00 2f | ADD BYTE PTR [r15] | ch |
+
+41 00 30 | ADD BYTE PTR [r8 ] | sil |
+41 00 31 | ADD BYTE PTR [r9 ] | sil |
+41 00 32 | ADD BYTE PTR [r10] | sil |
+41 00 33 | ADD BYTE PTR [r11] | sil |
+41 00 36 | ADD BYTE PTR [r14] | sil |
+41 00 37 | ADD BYTE PTR [r15] | sil |
+
+41 00 38 | ADD BYTE PTR [r8 ] | dil |
+41 00 39 | ADD BYTE PTR [r9 ] | dil |
+41 00 3a | ADD BYTE PTR [r10] | dil |
+41 00 3b | ADD BYTE PTR [r11] | dil |
+41 00 3c | ADD BYTE PTR [r14] | dil |
+41 00 3d | ADD BYTE PTR [r15] | dil |
+
+41 00 c0 | r8b  | al |
+41 00 c1 | r9b  | al |
+41 00 c2 | r10b | al |
+41 00 c3 | r11b | al |
+41 00 c4 | r12b | al |
+41 00 c5 | r13b | al |
+41 00 c6 | r14b | al |
+41 00 c7 | r15b | al |
+41 00 c8 | r8b  | cl |
+41 00 c9 | r9b  | cl |
+41 00 ca | r10b | cl |
+41 00 cb | r11b | cl |
+41 00 cc | r12b | cl |
+41 00 cd | r13b | cl |
+41 00 ce | r14b | cl |
+41 00 cf | r15b | cl |
+
+41 00 d0 | r8b  | dl |
+41 00 d1 | r9b  | dl |
+41 00 d2 | r10b | dl |
+41 00 d3 | r11b | dl |
+41 00 d4 | r12b | dl |
+41 00 d5 | r13b | dl |
+41 00 d6 | r14b | dl |
+41 00 d7 | r15b | dl |
+41 00 d8 | r8b  | bl |
+41 00 d9 | r9b  | bl |
+41 00 da | r10b | bl |
+41 00 db | r11b | bl |
+41 00 dc | r12b | bl |
+41 00 dd | r13b | bl |
+41 00 de | r14b | bl |
+41 00 df | r15b | bl |
+
+41 00 e0 | r8b  | ah |
+41 00 e1 | r9b  | ah |
+41 00 e2 | r10b | ah |
+41 00 e3 | r11b | ah |
+41 00 e4 | r12b | ah |
+41 00 e5 | r13b | ah |
+41 00 e6 | r14b | ah |
+41 00 e7 | r15b | ah |
+41 00 e8 | r8b  | ch |
+41 00 e9 | r9b  | ch |
+41 00 ea | r10b | ch |
+41 00 eb | r11b | ch |
+41 00 ec | r12b | ch |
+41 00 ed | r13b | ch |
+41 00 ee | r14b | ch |
+41 00 ef | r15b | ch |
+
+41 00 f0 | r8b  | sil |
+41 00 f1 | r9b  | sil |
+41 00 f2 | r10b | sil |
+41 00 f3 | r11b | sil |
+41 00 f4 | r12b | sil |
+41 00 f5 | r13b | sil |
+41 00 f6 | r14b | sil |
+41 00 f7 | r15b | sil |
+41 00 f8 | r8b  | dil |
+41 00 f9 | r9b  | dil |
+41 00 fa | r10b | dil |
+41 00 fb | r11b | dil |
+41 00 fc | r12b | dil |
+41 00 fd | r13b | dil |
+41 00 fe | r14b | dil |
+41 00 ff | r15b | dil |

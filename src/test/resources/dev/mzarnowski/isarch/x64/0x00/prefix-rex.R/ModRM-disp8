@@ -1,0 +1,65 @@
+#  rex.R OP ModRM disp8
+
+44 00 40 12 | ADD BYTE PTR [rax + 0x12] | r8b  |
+44 00 41 12 | ADD BYTE PTR [rcx + 0x12] | r8b  |
+44 00 42 12 | ADD BYTE PTR [rdx + 0x12] | r8b  |
+44 00 43 12 | ADD BYTE PTR [rbx + 0x12] | r8b  |
+44 00 45 12 | ADD BYTE PTR [rbp + 0x12] | r8b  |
+44 00 46 12 | ADD BYTE PTR [rsi + 0x12] | r8b  |
+44 00 47 12 | ADD BYTE PTR [rdi + 0x12] | r8b  |
+
+44 00 48 12 | ADD BYTE PTR [rax + 0x12] | r9b  |
+44 00 49 12 | ADD BYTE PTR [rcx + 0x12] | r9b  |
+44 00 4a 12 | ADD BYTE PTR [rdx + 0x12] | r9b  |
+44 00 4b 12 | ADD BYTE PTR [rbx + 0x12] | r9b  |
+44 00 4d 12 | ADD BYTE PTR [rbp + 0x12] | r9b  |
+44 00 4e 12 | ADD BYTE PTR [rsi + 0x12] | r9b  |
+44 00 4f 12 | ADD BYTE PTR [rdi + 0x12] | r9b  |
+
+44 00 50 12 | ADD BYTE PTR [rax + 0x12] | r10b |
+44 00 51 12 | ADD BYTE PTR [rcx + 0x12] | r10b |
+44 00 52 12 | ADD BYTE PTR [rdx + 0x12] | r10b |
+44 00 53 12 | ADD BYTE PTR [rbx + 0x12] | r10b |
+44 00 55 12 | ADD BYTE PTR [rbp + 0x12] | r10b |
+44 00 56 12 | ADD BYTE PTR [rsi + 0x12] | r10b |
+44 00 57 12 | ADD BYTE PTR [rdi + 0x12] | r10b |
+
+44 00 58 12 | ADD BYTE PTR [rax + 0x12] | r11b |
+44 00 59 12 | ADD BYTE PTR [rcx + 0x12] | r11b |
+44 00 5a 12 | ADD BYTE PTR [rdx + 0x12] | r11b |
+44 00 5b 12 | ADD BYTE PTR [rbx + 0x12] | r11b |
+44 00 5d 12 | ADD BYTE PTR [rbp + 0x12] | r11b |
+44 00 5e 12 | ADD BYTE PTR [rsi + 0x12] | r11b |
+44 00 5f 12 | ADD BYTE PTR [rdi + 0x12] | r11b |
+
+44 00 60 12 | ADD BYTE PTR [rax + 0x12] | r12b |
+44 00 61 12 | ADD BYTE PTR [rcx + 0x12] | r12b |
+44 00 62 12 | ADD BYTE PTR [rdx + 0x12] | r12b |
+44 00 63 12 | ADD BYTE PTR [rbx + 0x12] | r12b |
+44 00 65 12 | ADD BYTE PTR [rbp + 0x12] | r12b |
+44 00 66 12 | ADD BYTE PTR [rsi + 0x12] | r12b |
+44 00 67 12 | ADD BYTE PTR [rdi + 0x12] | r12b |
+
+44 00 68 12 | ADD BYTE PTR [rax + 0x12] | r13b |
+44 00 69 12 | ADD BYTE PTR [rcx + 0x12] | r13b |
+44 00 6a 12 | ADD BYTE PTR [rdx + 0x12] | r13b |
+44 00 6b 12 | ADD BYTE PTR [rbx + 0x12] | r13b |
+44 00 6d 12 | ADD BYTE PTR [rbp + 0x12] | r13b |
+44 00 6e 12 | ADD BYTE PTR [rsi + 0x12] | r13b |
+44 00 6f 12 | ADD BYTE PTR [rdi + 0x12] | r13b |
+
+44 00 70 12 | ADD BYTE PTR [rax + 0x12] | r14b |
+44 00 71 12 | ADD BYTE PTR [rcx + 0x12] | r14b |
+44 00 72 12 | ADD BYTE PTR [rdx + 0x12] | r14b |
+44 00 73 12 | ADD BYTE PTR [rbx + 0x12] | r14b |
+44 00 75 12 | ADD BYTE PTR [rbp + 0x12] | r14b |
+44 00 76 12 | ADD BYTE PTR [rsi + 0x12] | r14b |
+44 00 77 12 | ADD BYTE PTR [rdi + 0x12] | r14b |
+
+44 00 78 12 | ADD BYTE PTR [rax + 0x12] | r15b |
+44 00 79 12 | ADD BYTE PTR [rcx + 0x12] | r15b |
+44 00 7a 12 | ADD BYTE PTR [rdx + 0x12] | r15b |
+44 00 7b 12 | ADD BYTE PTR [rbx + 0x12] | r15b |
+44 00 7d 12 | ADD BYTE PTR [rbp + 0x12] | r15b |
+44 00 7e 12 | ADD BYTE PTR [rsi + 0x12] | r15b |
+44 00 7f 12 | ADD BYTE PTR [rdi + 0x12] | r15b |

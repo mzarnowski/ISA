@@ -1,4 +1,4 @@
-# OP ModRM SIB
+# 0x67 OP ModRM SIB
 67 00 3c 00 | ADD BYTE PTR [eax + eax * 1] | bh |
 67 00 3c 01 | ADD BYTE PTR [ecx + eax * 1] | bh |
 67 00 3c 02 | ADD BYTE PTR [edx + eax * 1] | bh |

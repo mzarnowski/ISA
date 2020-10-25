@@ -1,0 +1,265 @@
+# rex.B OP ModRM SIB
+
+41 00 1c 00 | ADD BYTE PTR [r8 + rax * 1] | bl |
+41 00 1c 01 | ADD BYTE PTR [r9 + rax * 1] | bl |
+41 00 1c 02 | ADD BYTE PTR [r10 + rax * 1] | bl |
+41 00 1c 03 | ADD BYTE PTR [r11 + rax * 1] | bl |
+41 00 1c 04 | ADD BYTE PTR [r12 + rax * 1] | bl |
+41 00 1c 06 | ADD BYTE PTR [r14 + rax * 1] | bl |
+41 00 1c 07 | ADD BYTE PTR [r15 + rax * 1] | bl |
+
+41 00 1c 08 | ADD BYTE PTR [r8 + rcx * 1] | bl |
+41 00 1c 09 | ADD BYTE PTR [r9 + rcx * 1] | bl |
+41 00 1c 0a | ADD BYTE PTR [r10 + rcx * 1] | bl |
+41 00 1c 0b | ADD BYTE PTR [r11 + rcx * 1] | bl |
+41 00 1c 0c | ADD BYTE PTR [r12 + rcx * 1] | bl |
+41 00 1c 0e | ADD BYTE PTR [r14 + rcx * 1] | bl |
+41 00 1c 0f | ADD BYTE PTR [r15 + rcx * 1] | bl |
+
+41 00 1c 10 | ADD BYTE PTR [r8 + rdx * 1] | bl |
+41 00 1c 11 | ADD BYTE PTR [r9 + rdx * 1] | bl |
+41 00 1c 12 | ADD BYTE PTR [r10 + rdx * 1] | bl |
+41 00 1c 13 | ADD BYTE PTR [r11 + rdx * 1] | bl |
+41 00 1c 14 | ADD BYTE PTR [r12 + rdx * 1] | bl |
+41 00 1c 16 | ADD BYTE PTR [r14 + rdx * 1] | bl |
+41 00 1c 17 | ADD BYTE PTR [r15 + rdx * 1] | bl |
+
+41 00 1c 18 | ADD BYTE PTR [r8 + rbx * 1] | bl |
+41 00 1c 19 | ADD BYTE PTR [r9 + rbx * 1] | bl |
+41 00 1c 1a | ADD BYTE PTR [r10 + rbx * 1] | bl |
+41 00 1c 1b | ADD BYTE PTR [r11 + rbx * 1] | bl |
+41 00 1c 1c | ADD BYTE PTR [r12 + rbx * 1] | bl |
+41 00 1c 1e | ADD BYTE PTR [r14 + rbx * 1] | bl |
+41 00 1c 1f | ADD BYTE PTR [r15 + rbx * 1] | bl |
+
+#TODO
+41 00 1c 20 |
+41 00 1c 21 |
+41 00 1c 22 |
+41 00 1c 23 |
+41 00 1c 24 |
+41 00 1c 25 |
+41 00 1c 26 |
+41 00 1c 27 |
+
+41 00 1c 28 | ADD BYTE PTR [r8 + rbp * 1] | bl |
+41 00 1c 29 | ADD BYTE PTR [r9 + rbp * 1] | bl |
+41 00 1c 2a | ADD BYTE PTR [r10 + rbp * 1] | bl |
+41 00 1c 2b | ADD BYTE PTR [r11 + rbp * 1] | bl |
+41 00 1c 2c | ADD BYTE PTR [r12 + rbp * 1] | bl |
+41 00 1c 2e | ADD BYTE PTR [r14 + rbp * 1] | bl |
+41 00 1c 2f | ADD BYTE PTR [r15 + rbp * 1] | bl |
+
+41 00 1c 30 | ADD BYTE PTR [r8 + rsi * 1] | bl |
+41 00 1c 31 | ADD BYTE PTR [r9 + rsi * 1] | bl |
+41 00 1c 32 | ADD BYTE PTR [r10 + rsi * 1] | bl |
+41 00 1c 33 | ADD BYTE PTR [r11 + rsi * 1] | bl |
+41 00 1c 34 | ADD BYTE PTR [r12 + rsi * 1] | bl |
+41 00 1c 36 | ADD BYTE PTR [r14 + rsi * 1] | bl |
+41 00 1c 37 | ADD BYTE PTR [r15 + rsi * 1] | bl |
+
+41 00 1c 38 | ADD BYTE PTR [r8 + rdi * 1] | bl |
+41 00 1c 39 | ADD BYTE PTR [r9 + rdi * 1] | bl |
+41 00 1c 3a | ADD BYTE PTR [r10 + rdi * 1] | bl |
+41 00 1c 3b | ADD BYTE PTR [r11 + rdi * 1] | bl |
+41 00 1c 3c | ADD BYTE PTR [r12 + rdi * 1] | bl |
+41 00 1c 3e | ADD BYTE PTR [r14 + rdi * 1] | bl |
+41 00 1c 3f | ADD BYTE PTR [r15 + rdi * 1] | bl |
+
+41 00 1c 40 | ADD BYTE PTR [r8 + rax * 2] | bl |
+41 00 1c 41 | ADD BYTE PTR [r9 + rax * 2] | bl |
+41 00 1c 42 | ADD BYTE PTR [r10 + rax * 2] | bl |
+41 00 1c 43 | ADD BYTE PTR [r11 + rax * 2] | bl |
+41 00 1c 44 | ADD BYTE PTR [r12 + rax * 2] | bl |
+41 00 1c 46 | ADD BYTE PTR [r14 + rax * 2] | bl |
+41 00 1c 47 | ADD BYTE PTR [r15 + rax * 2] | bl |
+
+41 00 1c 48 | ADD BYTE PTR [r8 + rcx * 2] | bl |
+41 00 1c 49 | ADD BYTE PTR [r9 + rcx * 2] | bl |
+41 00 1c 4a | ADD BYTE PTR [r10 + rcx * 2] | bl |
+41 00 1c 4b | ADD BYTE PTR [r11 + rcx * 2] | bl |
+41 00 1c 4c | ADD BYTE PTR [r12 + rcx * 2] | bl |
+41 00 1c 4e | ADD BYTE PTR [r14 + rcx * 2] | bl |
+41 00 1c 4f | ADD BYTE PTR [r15 + rcx * 2] | bl |
+
+41 00 1c 50 | ADD BYTE PTR [r8 + rdx * 2] | bl |
+41 00 1c 51 | ADD BYTE PTR [r9 + rdx * 2] | bl |
+41 00 1c 52 | ADD BYTE PTR [r10 + rdx * 2] | bl |
+41 00 1c 53 | ADD BYTE PTR [r11 + rdx * 2] | bl |
+41 00 1c 54 | ADD BYTE PTR [r12 + rdx * 2] | bl |
+41 00 1c 56 | ADD BYTE PTR [r14 + rdx * 2] | bl |
+41 00 1c 57 | ADD BYTE PTR [r15 + rdx * 2] | bl |
+
+41 00 1c 58 | ADD BYTE PTR [r8 + rbx * 2] | bl |
+41 00 1c 59 | ADD BYTE PTR [r9 + rbx * 2] | bl |
+41 00 1c 5a | ADD BYTE PTR [r10 + rbx * 2] | bl |
+41 00 1c 5b | ADD BYTE PTR [r11 + rbx * 2] | bl |
+41 00 1c 5c | ADD BYTE PTR [r12 + rbx * 2] | bl |
+41 00 1c 5e | ADD BYTE PTR [r14 + rbx * 2] | bl |
+41 00 1c 5f | ADD BYTE PTR [r15 + rbx * 2] | bl |
+
+# TODO
+41 00 1c 60 |
+41 00 1c 61 |
+41 00 1c 62 |
+41 00 1c 63 |
+41 00 1c 64 |
+41 00 1c 65 |
+41 00 1c 66 |
+41 00 1c 67 |
+
+41 00 1c 68 | ADD BYTE PTR [r8 + rbp * 2] | bl |
+41 00 1c 69 | ADD BYTE PTR [r9 + rbp * 2] | bl |
+41 00 1c 6a | ADD BYTE PTR [r10 + rbp * 2] | bl |
+41 00 1c 6b | ADD BYTE PTR [r11 + rbp * 2] | bl |
+41 00 1c 6c | ADD BYTE PTR [r12 + rbp * 2] | bl |
+41 00 1c 6e | ADD BYTE PTR [r14 + rbp * 2] | bl |
+41 00 1c 6f | ADD BYTE PTR [r15 + rbp * 2] | bl |
+
+41 00 1c 70 | ADD BYTE PTR [r8 + rsi * 2] | bl |
+41 00 1c 71 | ADD BYTE PTR [r9 + rsi * 2] | bl |
+41 00 1c 72 | ADD BYTE PTR [r10 + rsi * 2] | bl |
+41 00 1c 73 | ADD BYTE PTR [r11 + rsi * 2] | bl |
+41 00 1c 74 | ADD BYTE PTR [r12 + rsi * 2] | bl |
+41 00 1c 76 | ADD BYTE PTR [r14 + rsi * 2] | bl |
+41 00 1c 77 | ADD BYTE PTR [r15 + rsi * 2] | bl |
+
+41 00 1c 78 | ADD BYTE PTR [r8 + rdi * 2] | bl |
+41 00 1c 79 | ADD BYTE PTR [r9 + rdi * 2] | bl |
+41 00 1c 7a | ADD BYTE PTR [r10 + rdi * 2] | bl |
+41 00 1c 7b | ADD BYTE PTR [r11 + rdi * 2] | bl |
+41 00 1c 7c | ADD BYTE PTR [r12 + rdi * 2] | bl |
+41 00 1c 7e | ADD BYTE PTR [r14 + rdi * 2] | bl |
+41 00 1c 7f | ADD BYTE PTR [r15 + rdi * 2] | bl |
+
+41 00 1c 80 | ADD BYTE PTR [r8 + rax * 4] | bl |
+41 00 1c 81 | ADD BYTE PTR [r9 + rax * 4] | bl |
+41 00 1c 82 | ADD BYTE PTR [r10 + rax * 4] | bl |
+41 00 1c 83 | ADD BYTE PTR [r11 + rax * 4] | bl |
+41 00 1c 84 | ADD BYTE PTR [r12 + rax * 4] | bl |
+41 00 1c 86 | ADD BYTE PTR [r14 + rax * 4] | bl |
+41 00 1c 87 | ADD BYTE PTR [r15 + rax * 4] | bl |
+
+41 00 1c 88 | ADD BYTE PTR [r8 + rcx * 4] | bl |
+41 00 1c 89 | ADD BYTE PTR [r9 + rcx * 4] | bl |
+41 00 1c 8a | ADD BYTE PTR [r10 + rcx * 4] | bl |
+41 00 1c 8b | ADD BYTE PTR [r11 + rcx * 4] | bl |
+41 00 1c 8c | ADD BYTE PTR [r12 + rcx * 4] | bl |
+41 00 1c 8e | ADD BYTE PTR [r14 + rcx * 4] | bl |
+41 00 1c 8f | ADD BYTE PTR [r15 + rcx * 4] | bl |
+
+41 00 1c 90 | ADD BYTE PTR [r8 + rdx * 4] | bl |
+41 00 1c 91 | ADD BYTE PTR [r9 + rdx * 4] | bl |
+41 00 1c 92 | ADD BYTE PTR [r10 + rdx * 4] | bl |
+41 00 1c 93 | ADD BYTE PTR [r11 + rdx * 4] | bl |
+41 00 1c 94 | ADD BYTE PTR [r12 + rdx * 4] | bl |
+41 00 1c 96 | ADD BYTE PTR [r14 + rdx * 4] | bl |
+41 00 1c 97 | ADD BYTE PTR [r15 + rdx * 4] | bl |
+
+41 00 1c 98 | ADD BYTE PTR [r8 + rbx * 4] | bl |
+41 00 1c 99 | ADD BYTE PTR [r9 + rbx * 4] | bl |
+41 00 1c 9a | ADD BYTE PTR [r10 + rbx * 4] | bl |
+41 00 1c 9b | ADD BYTE PTR [r11 + rbx * 4] | bl |
+41 00 1c 9c | ADD BYTE PTR [r12 + rbx * 4] | bl |
+41 00 1c 9e | ADD BYTE PTR [r14 + rbx * 4] | bl |
+41 00 1c 9f | ADD BYTE PTR [r15 + rbx * 4] | bl |
+
+# TODO
+41 00 1c a0 |
+41 00 1c a1 |
+41 00 1c a2 |
+41 00 1c a3 |
+41 00 1c a4 |
+41 00 1c a5 |
+41 00 1c a6 |
+41 00 1c a7 |
+
+41 00 1c a8 | ADD BYTE PTR [r8 + rbp * 4] | bl |
+41 00 1c a9 | ADD BYTE PTR [r9 + rbp * 4] | bl |
+41 00 1c aa | ADD BYTE PTR [r10 + rbp * 4] | bl |
+41 00 1c ab | ADD BYTE PTR [r11 + rbp * 4] | bl |
+41 00 1c ac | ADD BYTE PTR [r12 + rbp * 4] | bl |
+41 00 1c ae | ADD BYTE PTR [r14 + rbp * 4] | bl |
+41 00 1c af | ADD BYTE PTR [r15 + rbp * 4] | bl |
+
+41 00 1c b0 | ADD BYTE PTR [r8 + rsi * 4] | bl |
+41 00 1c b1 | ADD BYTE PTR [r9 + rsi * 4] | bl |
+41 00 1c b2 | ADD BYTE PTR [r10 + rsi * 4] | bl |
+41 00 1c b3 | ADD BYTE PTR [r11 + rsi * 4] | bl |
+41 00 1c b4 | ADD BYTE PTR [r12 + rsi * 4] | bl |
+41 00 1c b6 | ADD BYTE PTR [r14 + rsi * 4] | bl |
+41 00 1c b7 | ADD BYTE PTR [r15 + rsi * 4] | bl |
+
+41 00 1c b8 | ADD BYTE PTR [r8 + rdi * 4] | bl |
+41 00 1c b9 | ADD BYTE PTR [r9 + rdi * 4] | bl |
+41 00 1c ba | ADD BYTE PTR [r10 + rdi * 4] | bl |
+41 00 1c bb | ADD BYTE PTR [r11 + rdi * 4] | bl |
+41 00 1c bc | ADD BYTE PTR [r12 + rdi * 4] | bl |
+41 00 1c be | ADD BYTE PTR [r14 + rdi * 4] | bl |
+41 00 1c bf | ADD BYTE PTR [r15 + rdi * 4] | bl |
+
+41 00 1c c0 | ADD BYTE PTR [r8 + rax * 8] | bl |
+41 00 1c c1 | ADD BYTE PTR [r9 + rax * 8] | bl |
+41 00 1c c2 | ADD BYTE PTR [r10 + rax * 8] | bl |
+41 00 1c c3 | ADD BYTE PTR [r11 + rax * 8] | bl |
+41 00 1c c4 | ADD BYTE PTR [r12 + rax * 8] | bl |
+41 00 1c c6 | ADD BYTE PTR [r14 + rax * 8] | bl |
+41 00 1c c7 | ADD BYTE PTR [r15 + rax * 8] | bl |
+
+41 00 1c c8 | ADD BYTE PTR [r8 + rcx * 8] | bl |
+41 00 1c c9 | ADD BYTE PTR [r9 + rcx * 8] | bl |
+41 00 1c ca | ADD BYTE PTR [r10 + rcx * 8] | bl |
+41 00 1c cb | ADD BYTE PTR [r11 + rcx * 8] | bl |
+41 00 1c cc | ADD BYTE PTR [r12 + rcx * 8] | bl |
+41 00 1c ce | ADD BYTE PTR [r14 + rcx * 8] | bl |
+41 00 1c cf | ADD BYTE PTR [r15 + rcx * 8] | bl |
+
+41 00 1c d0 | ADD BYTE PTR [r8 + rdx * 8] | bl |
+41 00 1c d1 | ADD BYTE PTR [r9 + rdx * 8] | bl |
+41 00 1c d2 | ADD BYTE PTR [r10 + rdx * 8] | bl |
+41 00 1c d3 | ADD BYTE PTR [r11 + rdx * 8] | bl |
+41 00 1c d4 | ADD BYTE PTR [r12 + rdx * 8] | bl |
+41 00 1c d6 | ADD BYTE PTR [r14 + rdx * 8] | bl |
+41 00 1c d7 | ADD BYTE PTR [r15 + rdx * 8] | bl |
+
+41 00 1c d8 | ADD BYTE PTR [r8 + rbx * 8] | bl |
+41 00 1c d9 | ADD BYTE PTR [r9 + rbx * 8] | bl |
+41 00 1c da | ADD BYTE PTR [r10 + rbx * 8] | bl |
+41 00 1c db | ADD BYTE PTR [r11 + rbx * 8] | bl |
+41 00 1c dc | ADD BYTE PTR [r12 + rbx * 8] | bl |
+41 00 1c de | ADD BYTE PTR [r14 + rbx * 8] | bl |
+41 00 1c df | ADD BYTE PTR [r15 + rbx * 8] | bl |
+
+# TODO
+41 00 1c e0 |
+41 00 1c e1 |
+41 00 1c e2 |
+41 00 1c e3 |
+41 00 1c e4 |
+41 00 1c e5 |
+41 00 1c e6 |
+41 00 1c e7 |
+
+41 00 1c e8 | ADD BYTE PTR [r8 + rbp * 8] | bl |
+41 00 1c e9 | ADD BYTE PTR [r9 + rbp * 8] | bl |
+41 00 1c ea | ADD BYTE PTR [r10 + rbp * 8] | bl |
+41 00 1c eb | ADD BYTE PTR [r11 + rbp * 8] | bl |
+41 00 1c ec | ADD BYTE PTR [r12 + rbp * 8] | bl |
+41 00 1c ee | ADD BYTE PTR [r14 + rbp * 8] | bl |
+41 00 1c ef | ADD BYTE PTR [r15 + rbp * 8] | bl |
+
+41 00 1c f0 | ADD BYTE PTR [r8 + rsi * 8] | bl |
+41 00 1c f1 | ADD BYTE PTR [r9 + rsi * 8] | bl |
+41 00 1c f2 | ADD BYTE PTR [r10 + rsi * 8] | bl |
+41 00 1c f3 | ADD BYTE PTR [r11 + rsi * 8] | bl |
+41 00 1c f4 | ADD BYTE PTR [r12 + rsi * 8] | bl |
+41 00 1c f6 | ADD BYTE PTR [r14 + rsi * 8] | bl |
+41 00 1c f7 | ADD BYTE PTR [r15 + rsi * 8] | bl |
+
+41 00 1c f8 | ADD BYTE PTR [r8 + rdi * 8] | bl |
+41 00 1c f9 | ADD BYTE PTR [r9 + rdi * 8] | bl |
+41 00 1c fa | ADD BYTE PTR [r10 + rdi * 8] | bl |
+41 00 1c fb | ADD BYTE PTR [r11 + rdi * 8] | bl |
+41 00 1c fc | ADD BYTE PTR [r12 + rdi * 8] | bl |
+41 00 1c fe | ADD BYTE PTR [r14 + rdi * 8] | bl |
+41 00 1c ff | ADD BYTE PTR [r15 + rdi * 8] | bl |

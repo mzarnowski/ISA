@@ -1,0 +1,265 @@
+# rex.B OP ModRM SIB
+
+41 00 3c 00 | ADD BYTE PTR [r8 + rax * 1] | dil |
+41 00 3c 01 | ADD BYTE PTR [r9 + rax * 1] | dil |
+41 00 3c 02 | ADD BYTE PTR [r10 + rax * 1] | dil |
+41 00 3c 03 | ADD BYTE PTR [r11 + rax * 1] | dil |
+41 00 3c 04 | ADD BYTE PTR [r12 + rax * 1] | dil |
+41 00 3c 06 | ADD BYTE PTR [r14 + rax * 1] | dil |
+41 00 3c 07 | ADD BYTE PTR [r15 + rax * 1] | dil |
+
+41 00 3c 08 | ADD BYTE PTR [r8 + rcx * 1] | dil |
+41 00 3c 09 | ADD BYTE PTR [r9 + rcx * 1] | dil |
+41 00 3c 0a | ADD BYTE PTR [r10 + rcx * 1] | dil |
+41 00 3c 0b | ADD BYTE PTR [r11 + rcx * 1] | dil |
+41 00 3c 0c | ADD BYTE PTR [r12 + rcx * 1] | dil |
+41 00 3c 0e | ADD BYTE PTR [r14 + rcx * 1] | dil |
+41 00 3c 0f | ADD BYTE PTR [r15 + rcx * 1] | dil |
+
+41 00 3c 10 | ADD BYTE PTR [r8 + rdx * 1] | dil |
+41 00 3c 11 | ADD BYTE PTR [r9 + rdx * 1] | dil |
+41 00 3c 12 | ADD BYTE PTR [r10 + rdx * 1] | dil |
+41 00 3c 13 | ADD BYTE PTR [r11 + rdx * 1] | dil |
+41 00 3c 14 | ADD BYTE PTR [r12 + rdx * 1] | dil |
+41 00 3c 16 | ADD BYTE PTR [r14 + rdx * 1] | dil |
+41 00 3c 17 | ADD BYTE PTR [r15 + rdx * 1] | dil |
+
+41 00 3c 18 | ADD BYTE PTR [r8 + rbx * 1] | dil |
+41 00 3c 19 | ADD BYTE PTR [r9 + rbx * 1] | dil |
+41 00 3c 1a | ADD BYTE PTR [r10 + rbx * 1] | dil |
+41 00 3c 1b | ADD BYTE PTR [r11 + rbx * 1] | dil |
+41 00 3c 1c | ADD BYTE PTR [r12 + rbx * 1] | dil |
+41 00 3c 1e | ADD BYTE PTR [r14 + rbx * 1] | dil |
+41 00 3c 1f | ADD BYTE PTR [r15 + rbx * 1] | dil |
+
+#TODO
+41 00 3c b0 |
+41 00 3c b1 |
+41 00 3c b2 |
+41 00 3c b3 |
+41 00 3c b4 |
+41 00 3c b5 |
+41 00 3c b6 |
+41 00 3c b7 |
+
+41 00 3c 28 | ADD BYTE PTR [r8 + rbp * 1] | dil |
+41 00 3c 29 | ADD BYTE PTR [r9 + rbp * 1] | dil |
+41 00 3c 2a | ADD BYTE PTR [r10 + rbp * 1] | dil |
+41 00 3c 2b | ADD BYTE PTR [r11 + rbp * 1] | dil |
+41 00 3c 2c | ADD BYTE PTR [r12 + rbp * 1] | dil |
+41 00 3c 2e | ADD BYTE PTR [r14 + rbp * 1] | dil |
+41 00 3c 2f | ADD BYTE PTR [r15 + rbp * 1] | dil |
+
+41 00 3c 30 | ADD BYTE PTR [r8 + rsi * 1] | dil |
+41 00 3c 31 | ADD BYTE PTR [r9 + rsi * 1] | dil |
+41 00 3c 32 | ADD BYTE PTR [r10 + rsi * 1] | dil |
+41 00 3c 33 | ADD BYTE PTR [r11 + rsi * 1] | dil |
+41 00 3c 34 | ADD BYTE PTR [r12 + rsi * 1] | dil |
+41 00 3c 36 | ADD BYTE PTR [r14 + rsi * 1] | dil |
+41 00 3c 37 | ADD BYTE PTR [r15 + rsi * 1] | dil |
+
+41 00 3c 38 | ADD BYTE PTR [r8 + rdi * 1] | dil |
+41 00 3c 39 | ADD BYTE PTR [r9 + rdi * 1] | dil |
+41 00 3c 3a | ADD BYTE PTR [r10 + rdi * 1] | dil |
+41 00 3c 3b | ADD BYTE PTR [r11 + rdi * 1] | dil |
+41 00 3c 3c | ADD BYTE PTR [r12 + rdi * 1] | dil |
+41 00 3c 3e | ADD BYTE PTR [r14 + rdi * 1] | dil |
+41 00 3c 3f | ADD BYTE PTR [r15 + rdi * 1] | dil |
+
+41 00 3c 40 | ADD BYTE PTR [r8 + rax * 2] | dil |
+41 00 3c 41 | ADD BYTE PTR [r9 + rax * 2] | dil |
+41 00 3c 42 | ADD BYTE PTR [r10 + rax * 2] | dil |
+41 00 3c 43 | ADD BYTE PTR [r11 + rax * 2] | dil |
+41 00 3c 44 | ADD BYTE PTR [r12 + rax * 2] | dil |
+41 00 3c 46 | ADD BYTE PTR [r14 + rax * 2] | dil |
+41 00 3c 47 | ADD BYTE PTR [r15 + rax * 2] | dil |
+
+41 00 3c 48 | ADD BYTE PTR [r8 + rcx * 2] | dil |
+41 00 3c 49 | ADD BYTE PTR [r9 + rcx * 2] | dil |
+41 00 3c 4a | ADD BYTE PTR [r10 + rcx * 2] | dil |
+41 00 3c 4b | ADD BYTE PTR [r11 + rcx * 2] | dil |
+41 00 3c 4c | ADD BYTE PTR [r12 + rcx * 2] | dil |
+41 00 3c 4e | ADD BYTE PTR [r14 + rcx * 2] | dil |
+41 00 3c 4f | ADD BYTE PTR [r15 + rcx * 2] | dil |
+
+41 00 3c 50 | ADD BYTE PTR [r8 + rdx * 2] | dil |
+41 00 3c 51 | ADD BYTE PTR [r9 + rdx * 2] | dil |
+41 00 3c 52 | ADD BYTE PTR [r10 + rdx * 2] | dil |
+41 00 3c 53 | ADD BYTE PTR [r11 + rdx * 2] | dil |
+41 00 3c 54 | ADD BYTE PTR [r12 + rdx * 2] | dil |
+41 00 3c 56 | ADD BYTE PTR [r14 + rdx * 2] | dil |
+41 00 3c 57 | ADD BYTE PTR [r15 + rdx * 2] | dil |
+
+41 00 3c 58 | ADD BYTE PTR [r8 + rbx * 2] | dil |
+41 00 3c 59 | ADD BYTE PTR [r9 + rbx * 2] | dil |
+41 00 3c 5a | ADD BYTE PTR [r10 + rbx * 2] | dil |
+41 00 3c 5b | ADD BYTE PTR [r11 + rbx * 2] | dil |
+41 00 3c 5c | ADD BYTE PTR [r12 + rbx * 2] | dil |
+41 00 3c 5e | ADD BYTE PTR [r14 + rbx * 2] | dil |
+41 00 3c 5f | ADD BYTE PTR [r15 + rbx * 2] | dil |
+
+# TODO
+41 00 3c b0 |
+41 00 3c b1 |
+41 00 3c b2 |
+41 00 3c b3 |
+41 00 3c b4 |
+41 00 3c b5 |
+41 00 3c b6 |
+41 00 3c b7 |
+
+41 00 3c 68 | ADD BYTE PTR [r8 + rbp * 2] | dil |
+41 00 3c 69 | ADD BYTE PTR [r9 + rbp * 2] | dil |
+41 00 3c 6a | ADD BYTE PTR [r10 + rbp * 2] | dil |
+41 00 3c 6b | ADD BYTE PTR [r11 + rbp * 2] | dil |
+41 00 3c 6c | ADD BYTE PTR [r12 + rbp * 2] | dil |
+41 00 3c 6e | ADD BYTE PTR [r14 + rbp * 2] | dil |
+41 00 3c 6f | ADD BYTE PTR [r15 + rbp * 2] | dil |
+
+41 00 3c 70 | ADD BYTE PTR [r8 + rsi * 2] | dil |
+41 00 3c 71 | ADD BYTE PTR [r9 + rsi * 2] | dil |
+41 00 3c 72 | ADD BYTE PTR [r10 + rsi * 2] | dil |
+41 00 3c 73 | ADD BYTE PTR [r11 + rsi * 2] | dil |
+41 00 3c 74 | ADD BYTE PTR [r12 + rsi * 2] | dil |
+41 00 3c 76 | ADD BYTE PTR [r14 + rsi * 2] | dil |
+41 00 3c 77 | ADD BYTE PTR [r15 + rsi * 2] | dil |
+
+41 00 3c 78 | ADD BYTE PTR [r8 + rdi * 2] | dil |
+41 00 3c 79 | ADD BYTE PTR [r9 + rdi * 2] | dil |
+41 00 3c 7a | ADD BYTE PTR [r10 + rdi * 2] | dil |
+41 00 3c 7b | ADD BYTE PTR [r11 + rdi * 2] | dil |
+41 00 3c 7c | ADD BYTE PTR [r12 + rdi * 2] | dil |
+41 00 3c 7e | ADD BYTE PTR [r14 + rdi * 2] | dil |
+41 00 3c 7f | ADD BYTE PTR [r15 + rdi * 2] | dil |
+
+41 00 3c 80 | ADD BYTE PTR [r8 + rax * 4] | dil |
+41 00 3c 81 | ADD BYTE PTR [r9 + rax * 4] | dil |
+41 00 3c 82 | ADD BYTE PTR [r10 + rax * 4] | dil |
+41 00 3c 83 | ADD BYTE PTR [r11 + rax * 4] | dil |
+41 00 3c 84 | ADD BYTE PTR [r12 + rax * 4] | dil |
+41 00 3c 86 | ADD BYTE PTR [r14 + rax * 4] | dil |
+41 00 3c 87 | ADD BYTE PTR [r15 + rax * 4] | dil |
+
+41 00 3c 88 | ADD BYTE PTR [r8 + rcx * 4] | dil |
+41 00 3c 89 | ADD BYTE PTR [r9 + rcx * 4] | dil |
+41 00 3c 8a | ADD BYTE PTR [r10 + rcx * 4] | dil |
+41 00 3c 8b | ADD BYTE PTR [r11 + rcx * 4] | dil |
+41 00 3c 8c | ADD BYTE PTR [r12 + rcx * 4] | dil |
+41 00 3c 8e | ADD BYTE PTR [r14 + rcx * 4] | dil |
+41 00 3c 8f | ADD BYTE PTR [r15 + rcx * 4] | dil |
+
+41 00 3c 90 | ADD BYTE PTR [r8 + rdx * 4] | dil |
+41 00 3c 91 | ADD BYTE PTR [r9 + rdx * 4] | dil |
+41 00 3c 92 | ADD BYTE PTR [r10 + rdx * 4] | dil |
+41 00 3c 93 | ADD BYTE PTR [r11 + rdx * 4] | dil |
+41 00 3c 94 | ADD BYTE PTR [r12 + rdx * 4] | dil |
+41 00 3c 96 | ADD BYTE PTR [r14 + rdx * 4] | dil |
+41 00 3c 97 | ADD BYTE PTR [r15 + rdx * 4] | dil |
+
+41 00 3c 98 | ADD BYTE PTR [r8 + rbx * 4] | dil |
+41 00 3c 99 | ADD BYTE PTR [r9 + rbx * 4] | dil |
+41 00 3c 9a | ADD BYTE PTR [r10 + rbx * 4] | dil |
+41 00 3c 9b | ADD BYTE PTR [r11 + rbx * 4] | dil |
+41 00 3c 9c | ADD BYTE PTR [r12 + rbx * 4] | dil |
+41 00 3c 9e | ADD BYTE PTR [r14 + rbx * 4] | dil |
+41 00 3c 9f | ADD BYTE PTR [r15 + rbx * 4] | dil |
+
+# TODO
+41 00 3c b0 |
+41 00 3c b1 |
+41 00 3c b2 |
+41 00 3c b3 |
+41 00 3c b4 |
+41 00 3c b5 |
+41 00 3c b6 |
+41 00 3c b7 |
+
+41 00 3c a8 | ADD BYTE PTR [r8 + rbp * 4] | dil |
+41 00 3c a9 | ADD BYTE PTR [r9 + rbp * 4] | dil |
+41 00 3c aa | ADD BYTE PTR [r10 + rbp * 4] | dil |
+41 00 3c ab | ADD BYTE PTR [r11 + rbp * 4] | dil |
+41 00 3c ac | ADD BYTE PTR [r12 + rbp * 4] | dil |
+41 00 3c ae | ADD BYTE PTR [r14 + rbp * 4] | dil |
+41 00 3c af | ADD BYTE PTR [r15 + rbp * 4] | dil |
+
+41 00 3c b0 | ADD BYTE PTR [r8 + rsi * 4] | dil |
+41 00 3c b1 | ADD BYTE PTR [r9 + rsi * 4] | dil |
+41 00 3c b2 | ADD BYTE PTR [r10 + rsi * 4] | dil |
+41 00 3c b3 | ADD BYTE PTR [r11 + rsi * 4] | dil |
+41 00 3c b4 | ADD BYTE PTR [r12 + rsi * 4] | dil |
+41 00 3c b6 | ADD BYTE PTR [r14 + rsi * 4] | dil |
+41 00 3c b7 | ADD BYTE PTR [r15 + rsi * 4] | dil |
+
+41 00 3c b8 | ADD BYTE PTR [r8 + rdi * 4] | dil |
+41 00 3c b9 | ADD BYTE PTR [r9 + rdi * 4] | dil |
+41 00 3c ba | ADD BYTE PTR [r10 + rdi * 4] | dil |
+41 00 3c bb | ADD BYTE PTR [r11 + rdi * 4] | dil |
+41 00 3c bc | ADD BYTE PTR [r12 + rdi * 4] | dil |
+41 00 3c be | ADD BYTE PTR [r14 + rdi * 4] | dil |
+41 00 3c bf | ADD BYTE PTR [r15 + rdi * 4] | dil |
+
+41 00 3c c0 | ADD BYTE PTR [r8 + rax * 8] | dil |
+41 00 3c c1 | ADD BYTE PTR [r9 + rax * 8] | dil |
+41 00 3c c2 | ADD BYTE PTR [r10 + rax * 8] | dil |
+41 00 3c c3 | ADD BYTE PTR [r11 + rax * 8] | dil |
+41 00 3c c4 | ADD BYTE PTR [r12 + rax * 8] | dil |
+41 00 3c c6 | ADD BYTE PTR [r14 + rax * 8] | dil |
+41 00 3c c7 | ADD BYTE PTR [r15 + rax * 8] | dil |
+
+41 00 3c c8 | ADD BYTE PTR [r8 + rcx * 8] | dil |
+41 00 3c c9 | ADD BYTE PTR [r9 + rcx * 8] | dil |
+41 00 3c ca | ADD BYTE PTR [r10 + rcx * 8] | dil |
+41 00 3c cb | ADD BYTE PTR [r11 + rcx * 8] | dil |
+41 00 3c cc | ADD BYTE PTR [r12 + rcx * 8] | dil |
+41 00 3c ce | ADD BYTE PTR [r14 + rcx * 8] | dil |
+41 00 3c cf | ADD BYTE PTR [r15 + rcx * 8] | dil |
+
+41 00 3c d0 | ADD BYTE PTR [r8 + rdx * 8] | dil |
+41 00 3c d1 | ADD BYTE PTR [r9 + rdx * 8] | dil |
+41 00 3c d2 | ADD BYTE PTR [r10 + rdx * 8] | dil |
+41 00 3c d3 | ADD BYTE PTR [r11 + rdx * 8] | dil |
+41 00 3c d4 | ADD BYTE PTR [r12 + rdx * 8] | dil |
+41 00 3c d6 | ADD BYTE PTR [r14 + rdx * 8] | dil |
+41 00 3c d7 | ADD BYTE PTR [r15 + rdx * 8] | dil |
+
+41 00 3c d8 | ADD BYTE PTR [r8 + rbx * 8] | dil |
+41 00 3c d9 | ADD BYTE PTR [r9 + rbx * 8] | dil |
+41 00 3c da | ADD BYTE PTR [r10 + rbx * 8] | dil |
+41 00 3c db | ADD BYTE PTR [r11 + rbx * 8] | dil |
+41 00 3c dc | ADD BYTE PTR [r12 + rbx * 8] | dil |
+41 00 3c de | ADD BYTE PTR [r14 + rbx * 8] | dil |
+41 00 3c df | ADD BYTE PTR [r15 + rbx * 8] | dil |
+
+# TODO
+41 00 3c b0 |
+41 00 3c b1 |
+41 00 3c b2 |
+41 00 3c b3 |
+41 00 3c b4 |
+41 00 3c b5 |
+41 00 3c b6 |
+41 00 3c b7 |
+
+41 00 3c e8 | ADD BYTE PTR [r8 + rbp * 8] | dil |
+41 00 3c e9 | ADD BYTE PTR [r9 + rbp * 8] | dil |
+41 00 3c ea | ADD BYTE PTR [r10 + rbp * 8] | dil |
+41 00 3c eb | ADD BYTE PTR [r11 + rbp * 8] | dil |
+41 00 3c ec | ADD BYTE PTR [r12 + rbp * 8] | dil |
+41 00 3c ee | ADD BYTE PTR [r14 + rbp * 8] | dil |
+41 00 3c ef | ADD BYTE PTR [r15 + rbp * 8] | dil |
+
+41 00 3c f0 | ADD BYTE PTR [r8 + rsi * 8] | dil |
+41 00 3c f1 | ADD BYTE PTR [r9 + rsi * 8] | dil |
+41 00 3c f2 | ADD BYTE PTR [r10 + rsi * 8] | dil |
+41 00 3c f3 | ADD BYTE PTR [r11 + rsi * 8] | dil |
+41 00 3c f4 | ADD BYTE PTR [r12 + rsi * 8] | dil |
+41 00 3c f6 | ADD BYTE PTR [r14 + rsi * 8] | dil |
+41 00 3c f7 | ADD BYTE PTR [r15 + rsi * 8] | dil |
+
+41 00 3c f8 | ADD BYTE PTR [r8 + rdi * 8] | dil |
+41 00 3c f9 | ADD BYTE PTR [r9 + rdi * 8] | dil |
+41 00 3c fa | ADD BYTE PTR [r10 + rdi * 8] | dil |
+41 00 3c fb | ADD BYTE PTR [r11 + rdi * 8] | dil |
+41 00 3c fc | ADD BYTE PTR [r12 + rdi * 8] | dil |
+41 00 3c fe | ADD BYTE PTR [r14 + rdi * 8] | dil |
+41 00 3c ff | ADD BYTE PTR [r15 + rdi * 8] | dil |

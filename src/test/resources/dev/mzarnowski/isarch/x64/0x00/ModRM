@@ -15,53 +15,60 @@
 # 00 33 | Error: missing SIB byte           |
 # 00 34 | Error: missing 32bit displacement |
 
-00 00 | BYTE PTR [rax] | al |
-00 01 | BYTE PTR [rcx] | al |
-00 02 | BYTE PTR [rdx] | al |
-00 03 | BYTE PTR [rbx] | al |
-00 06 | BYTE PTR [rsi] | al |
-00 07 | BYTE PTR [rdi] | al |
+00 00 | ADD BYTE PTR [rax] | al |
+00 01 | ADD BYTE PTR [rcx] | al |
+00 02 | ADD BYTE PTR [rdx] | al |
+00 03 | ADD BYTE PTR [rbx] | al |
+00 06 | ADD BYTE PTR [rsi] | al |
+00 07 | ADD BYTE PTR [rdi] | al |
 
-00 08 | BYTE PTR [rax] | cl |
-00 09 | BYTE PTR [rcx] | cl |
-00 0a | BYTE PTR [rdx] | cl |
-00 0b | BYTE PTR [rbx] | cl |
-00 0e | BYTE PTR [rsi] | cl |
-00 0f | BYTE PTR [rdx] | cl |
+00 08 | ADD BYTE PTR [rax] | cl |
+00 09 | ADD BYTE PTR [rcx] | cl |
+00 0a | ADD BYTE PTR [rdx] | cl |
+00 0b | ADD BYTE PTR [rbx] | cl |
+00 0e | ADD BYTE PTR [rsi] | cl |
+00 0f | ADD BYTE PTR [rdx] | cl |
 
-00 10 | BYTE PTR [rax] | dl |
-00 11 | BYTE PTR [rcx] | dl |
-00 12 | BYTE PTR [rdx] | dl |
-00 13 | BYTE PTR [rbx] | dl |
-00 16 | BYTE PTR [rsi] | dl |
-00 17 | BYTE PTR [rdi] | dl |
+00 10 | ADD BYTE PTR [rax] | dl |
+00 11 | ADD BYTE PTR [rcx] | dl |
+00 12 | ADD BYTE PTR [rdx] | dl |
+00 13 | ADD BYTE PTR [rbx] | dl |
+00 16 | ADD BYTE PTR [rsi] | dl |
+00 17 | ADD BYTE PTR [rdi] | dl |
 
-00 18 | BYTE PTR [rax] | bl |
-00 19 | BYTE PTR [rcx] | bl |
-00 1a | BYTE PTR [rdx] | bl |
-00 1b | BYTE PTR [rbx] | bl |
-00 1e | BYTE PTR [rsi] | bl |
-00 1f | BYTE PTR [rdi] | bl |
+00 18 | ADD BYTE PTR [rax] | bl |
+00 19 | ADD BYTE PTR [rcx] | bl |
+00 1a | ADD BYTE PTR [rdx] | bl |
+00 1b | ADD BYTE PTR [rbx] | bl |
+00 1e | ADD BYTE PTR [rsi] | bl |
+00 1f | ADD BYTE PTR [rdi] | bl |
 
-00 20 | BYTE PTR [rax] | ah |
-00 21 | BYTE PTR [rcx] | ah |
-00 22 | BYTE PTR [rdx] | ah |
-00 26 | BYTE PTR [rsi] | ah |
-00 27 | BYTE PTR [rdi] | ah |
+00 20 | ADD BYTE PTR [rax] | ah |
+00 21 | ADD BYTE PTR [rcx] | ah |
+00 22 | ADD BYTE PTR [rdx] | ah |
+00 26 | ADD BYTE PTR [rsi] | ah |
+00 27 | ADD BYTE PTR [rdi] | ah |
 
-00 28 | BYTE PTR [rax] | ch |
-00 29 | BYTE PTR [rcx] | ch |
-00 2a | BYTE PTR [rdx] | ch |
-00 2b | BYTE PTR [rbx] | ch |
-00 2e | BYTE PTR [rsi] | ch |
-00 2f | BYTE PTR [rdi] | ch |
+00 28 | ADD BYTE PTR [rax] | ch |
+00 29 | ADD BYTE PTR [rcx] | ch |
+00 2a | ADD BYTE PTR [rdx] | ch |
+00 2b | ADD BYTE PTR [rbx] | ch |
+00 2e | ADD BYTE PTR [rsi] | ch |
+00 2f | ADD BYTE PTR [rdi] | ch |
 
-00 30 | BYTE PTR [rax] | dh |
-00 31 | BYTE PTR [rcx] | dh |
-00 32 | BYTE PTR [rdx] | dh |
-00 33 | BYTE PTR [rbx] | dh |
-00 36 | BYTE PTR [rsi] | dh |
-00 37 | BYTE PTR [rdi] | dh |
+00 30 | ADD BYTE PTR [rax] | dh |
+00 31 | ADD BYTE PTR [rcx] | dh |
+00 32 | ADD BYTE PTR [rdx] | dh |
+00 33 | ADD BYTE PTR [rbx] | dh |
+00 36 | ADD BYTE PTR [rsi] | dh |
+00 37 | ADD BYTE PTR [rdi] | dh |
+
+67 00 38 | ADD BYTE PTR [rax] | bh |
+67 00 39 | ADD BYTE PTR [rcx] | bh |
+67 00 3a | ADD BYTE PTR [rdx] | bh |
+67 00 3b | ADD BYTE PTR [rbx] | bh |
+67 00 3c | ADD BYTE PTR [rsi] | bh |
+67 00 3d | ADD BYTE PTR [rdi] | bh |
 
 00 c0 | al | al |
 00 c1 | cl | al |

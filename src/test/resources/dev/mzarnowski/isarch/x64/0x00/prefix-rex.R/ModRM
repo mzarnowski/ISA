@@ -1,0 +1,124 @@
+#  rex.R OP ModRM
+
+44 00 00 | ADD BYTE PTR [rax ] | r8b  |
+44 00 01 | ADD BYTE PTR [rcx ] | r8b  |
+44 00 02 | ADD BYTE PTR [rdx] | r8b  |
+44 00 03 | ADD BYTE PTR [rbx] | r8b  |
+44 00 06 | ADD BYTE PTR [rsi] | r8b  |
+44 00 07 | ADD BYTE PTR [rdi] | r8b  |
+
+44 00 08 | ADD BYTE PTR [rax ] | r9b  |
+44 00 09 | ADD BYTE PTR [rcx ] | r9b  |
+44 00 0a | ADD BYTE PTR [rdx] | r9b  |
+44 00 0b | ADD BYTE PTR [rbx] | r9b  |
+44 00 0e | ADD BYTE PTR [rsi] | r9b  |
+44 00 0f | ADD BYTE PTR [rdx] | r9b  |
+
+44 00 10 | ADD BYTE PTR [rax ] | r10b |
+44 00 11 | ADD BYTE PTR [rcx ] | r10b |
+44 00 12 | ADD BYTE PTR [rdx] | r10b |
+44 00 13 | ADD BYTE PTR [rbx] | r10b |
+44 00 16 | ADD BYTE PTR [rsi] | r10b |
+44 00 17 | ADD BYTE PTR [rdi] | r10b |
+
+44 00 18 | ADD BYTE PTR [rax ] | r11b |
+44 00 19 | ADD BYTE PTR [rcx ] | r11b |
+44 00 1a | ADD BYTE PTR [rdx] | r11b |
+44 00 1b | ADD BYTE PTR [rbx] | r11b |
+44 00 1e | ADD BYTE PTR [rsi] | r11b |
+44 00 1f | ADD BYTE PTR [rdi] | r11b |
+
+44 00 20 | ADD BYTE PTR [rax ] | r12b |
+44 00 21 | ADD BYTE PTR [rcx ] | r12b |
+44 00 22 | ADD BYTE PTR [rdx] | r12b |
+44 00 26 | ADD BYTE PTR [rsi] | r12b |
+44 00 27 | ADD BYTE PTR [rdi] | r12b |
+
+44 00 28 | ADD BYTE PTR [rax ] | r13b |
+44 00 29 | ADD BYTE PTR [rcx ] | r13b |
+44 00 2a | ADD BYTE PTR [rdx] | r13b |
+44 00 2b | ADD BYTE PTR [rbx] | r13b |
+44 00 2e | ADD BYTE PTR [rsi] | r13b |
+44 00 2f | ADD BYTE PTR [rdi] | r13b |
+
+44 00 30 | ADD BYTE PTR [rax ] | r14b |
+44 00 31 | ADD BYTE PTR [rcx ] | r14b |
+44 00 32 | ADD BYTE PTR [rdx] | r14b |
+44 00 33 | ADD BYTE PTR [rbx] | r14b |
+44 00 36 | ADD BYTE PTR [rsi] | r14b |
+44 00 37 | ADD BYTE PTR [rdi] | r14b |
+
+44 00 38 | ADD BYTE PTR [rax ] | r15b |
+44 00 39 | ADD BYTE PTR [rcx ] | r15b |
+44 00 3a | ADD BYTE PTR [rdx] | r15b |
+44 00 3b | ADD BYTE PTR [rbx] | r15b |
+44 00 3c | ADD BYTE PTR [rsi] | r15b |
+44 00 3d | ADD BYTE PTR [rdi] | r15b |
+
+44 00 c0 | al  | r8b |
+44 00 c1 | cl  | r8b |
+44 00 c2 | dl  | r8b |
+44 00 c3 | bl  | r8b |
+44 00 c4 | ah  | r8b |
+44 00 c5 | ch  | r8b |
+44 00 c6 | sil | r8b |
+44 00 c7 | dil | r8b |
+44 00 c8 | al  | r9b |
+44 00 c9 | cl  | r9b |
+44 00 ca | dl  | r9b |
+44 00 cb | bl  | r9b |
+44 00 cc | ah  | r9b |
+44 00 cd | ch  | r9b |
+44 00 ce | sil | r9b |
+44 00 cf | dil | r9b |
+
+44 00 d0 | al  | r10b |
+44 00 d1 | cl  | r10b |
+44 00 d2 | dl  | r10b |
+44 00 d3 | bl  | r10b |
+44 00 d4 | ah  | r10b |
+44 00 d5 | ch  | r10b |
+44 00 d6 | sil | r10b |
+44 00 d7 | dil | r10b |
+44 00 d8 | al  | r11b |
+44 00 d9 | cl  | r11b |
+44 00 da | dl  | r11b |
+44 00 db | bl  | r11b |
+44 00 dc | ah  | r11b |
+44 00 dd | ch  | r11b |
+44 00 de | sil | r11b |
+44 00 df | dil | r11b |
+
+44 00 e0 | al  | r12b |
+44 00 e1 | cl  | r12b |
+44 00 e2 | dl  | r12b |
+44 00 e3 | bl  | r12b |
+44 00 e4 | ah  | r12b |
+44 00 e5 | ch  | r12b |
+44 00 e6 | sil | r12b |
+44 00 e7 | dil | r12b |
+44 00 e8 | al  | r13b |
+44 00 e9 | cl  | r13b |
+44 00 ea | dl  | r13b |
+44 00 eb | bl  | r13b |
+44 00 ec | ah  | r13b |
+44 00 ed | ch  | r13b |
+44 00 ee | sil | r13b |
+44 00 ef | dil | r13b |
+
+44 00 f0 | al  | r14b |
+44 00 f1 | cl  | r14b |
+44 00 f2 | dl  | r14b |
+44 00 f3 | bl  | r14b |
+44 00 f4 | ah  | r14b |
+44 00 f5 | ch  | r14b |
+44 00 f6 | sil | r14b |
+44 00 f7 | dil | r14b |
+44 00 f8 | al  | r15b |
+44 00 f9 | cl  | r15b |
+44 00 fa | dl  | r15b |
+44 00 fb | bl  | r15b |
+44 00 fc | ah  | r15b |
+44 00 fd | ch  | r15b |
+44 00 fe | sil | r15b |
+44 00 ff | dil | r15b |
