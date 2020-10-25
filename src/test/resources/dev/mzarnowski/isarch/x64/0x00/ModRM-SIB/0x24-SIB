@@ -1,0 +1,292 @@
+# OP ModRM SIB
+{   00 24 00 | ADD BYTE PTR [rax + rax * 1], ah   }
+{   00 24 01 | ADD BYTE PTR [rcx + rax * 1], ah   }
+{   00 24 02 | ADD BYTE PTR [rdx + rax * 1], ah   }
+{   00 24 03 | ADD BYTE PTR [rbx + rax * 1], ah   }
+{   00 24 04 | ADD BYTE PTR [rsp + rax * 1], ah   }
+#   00 24 05 | --------ModRM-SIB-disp32--------   }
+{   00 24 06 | ADD BYTE PTR [rsi + rax * 1], ah   }
+{   00 24 07 | ADD BYTE PTR [rdi + rax * 1], ah   }
+
+{   00 24 08 | ADD BYTE PTR [rax + rcx * 1], ah   }
+{   00 24 09 | ADD BYTE PTR [rcx + rcx * 1], ah   }
+{   00 24 0a | ADD BYTE PTR [rdx + rcx * 1], ah   }
+{   00 24 0b | ADD BYTE PTR [rbx + rcx * 1], ah   }
+{   00 24 0c | ADD BYTE PTR [rsp + rcx * 1], ah   }
+#   00 24 0d | --------ModRM-SIB-disp32--------   }
+{   00 24 0e | ADD BYTE PTR [rsi + rcx * 1], ah   }
+{   00 24 0f | ADD BYTE PTR [rdi + rcx * 1], ah   }
+
+{   00 24 10 | ADD BYTE PTR [rax + rdx * 1], ah   }
+{   00 24 11 | ADD BYTE PTR [rcx + rdx * 1], ah   }
+{   00 24 12 | ADD BYTE PTR [rdx + rdx * 1], ah   }
+{   00 24 13 | ADD BYTE PTR [rbx + rdx * 1], ah   }
+{   00 24 14 | ADD BYTE PTR [rsp + rdx * 1], ah   }
+#   00 24 15 | --------ModRM-SIB-disp32--------   }
+{   00 24 16 | ADD BYTE PTR [rsi + rdx * 1], ah   }
+{   00 24 17 | ADD BYTE PTR [rdi + rdx * 1], ah   }
+
+{   00 24 18 | ADD BYTE PTR [rax + rbx * 1], ah   }
+{   00 24 19 | ADD BYTE PTR [rcx + rbx * 1], ah   }
+{   00 24 1a | ADD BYTE PTR [rdx + rbx * 1], ah   }
+{   00 24 1b | ADD BYTE PTR [rbx + rbx * 1], ah   }
+{   00 24 1c | ADD BYTE PTR [rsp + rbx * 1], ah   }
+#   00 24 1d | --------ModRM-SIB-disp32--------   }
+{   00 24 1e | ADD BYTE PTR [rsi + rbx * 1], ah   }
+{   00 24 1f | ADD BYTE PTR [rdi + rbx * 1], ah   }
+
+{   00 24 20 | ADD BYTE PTR [rax + 0x0], ah   }
+{   00 24 21 | ADD BYTE PTR [rcx + 0x0], ah   }
+{   00 24 22 | ADD BYTE PTR [rdx + 0x0], ah   }
+{   00 24 23 | ADD BYTE PTR [rbx + 0x0], ah   }
+{   00 24 24 | ADD BYTE PTR [rsp + 0x0], ah   }
+#   00 24 25 | ------ModRM-SIB-disp32------   }
+{   00 24 26 | ADD BYTE PTR [rsi + 0x0], ah   }
+{   00 24 27 | ADD BYTE PTR [rdi + 0x0], ah   }
+
+{   00 24 28 | ADD BYTE PTR [rax + rbp * 1], ah   }
+{   00 24 29 | ADD BYTE PTR [rcx + rbp * 1], ah   }
+{   00 24 2a | ADD BYTE PTR [rdx + rbp * 1], ah   }
+{   00 24 2b | ADD BYTE PTR [rbx + rbp * 1], ah   }
+{   00 24 2c | ADD BYTE PTR [rsp + rbp * 1], ah   }
+#   00 24 2d | --------ModRM-SIB-disp32--------   }
+{   00 24 2e | ADD BYTE PTR [rsi + rbp * 1], ah   }
+{   00 24 2f | ADD BYTE PTR [rdi + rbp * 1], ah   }
+
+{   00 24 30 | ADD BYTE PTR [rax + rsi * 1], ah   }
+{   00 24 31 | ADD BYTE PTR [rcx + rsi * 1], ah   }
+{   00 24 32 | ADD BYTE PTR [rdx + rsi * 1], ah   }
+{   00 24 33 | ADD BYTE PTR [rbx + rsi * 1], ah   }
+{   00 24 34 | ADD BYTE PTR [rsp + rsi * 1], ah   }
+#   00 24 35 | --------ModRM-SIB-disp32--------   }
+{   00 24 36 | ADD BYTE PTR [rsi + rsi * 1], ah   }
+{   00 24 37 | ADD BYTE PTR [rdi + rsi * 1], ah   }
+
+{   00 24 38 | ADD BYTE PTR [rax + rdi * 1], ah   }
+{   00 24 39 | ADD BYTE PTR [rcx + rdi * 1], ah   }
+{   00 24 3a | ADD BYTE PTR [rdx + rdi * 1], ah   }
+{   00 24 3b | ADD BYTE PTR [rbx + rdi * 1], ah   }
+{   00 24 3c | ADD BYTE PTR [rsp + rdi * 1], ah   }
+#   00 24 3d | --------ModRM-SIB-disp32--------   }
+{   00 24 3e | ADD BYTE PTR [rsi + rdi * 1], ah   }
+{   00 24 3f | ADD BYTE PTR [rdi + rdi * 1], ah   }
+
+{   00 24 40 | ADD BYTE PTR [rax + rax * 2], ah   }
+{   00 24 41 | ADD BYTE PTR [rcx + rax * 2], ah   }
+{   00 24 42 | ADD BYTE PTR [rdx + rax * 2], ah   }
+{   00 24 43 | ADD BYTE PTR [rbx + rax * 2], ah   }
+{   00 24 44 | ADD BYTE PTR [rsp + rax * 2], ah   }
+#   00 24 45 | --------ModRM-SIB-disp32--------   }
+{   00 24 46 | ADD BYTE PTR [rsi + rax * 2], ah   }
+{   00 24 47 | ADD BYTE PTR [rdi + rax * 2], ah   }
+
+{   00 24 48 | ADD BYTE PTR [rax + rcx * 2], ah   }
+{   00 24 49 | ADD BYTE PTR [rcx + rcx * 2], ah   }
+{   00 24 4a | ADD BYTE PTR [rdx + rcx * 2], ah   }
+{   00 24 4b | ADD BYTE PTR [rbx + rcx * 2], ah   }
+{   00 24 4c | ADD BYTE PTR [rsp + rcx * 2], ah   }
+#   00 24 4d | --------ModRM-SIB-disp32--------   }
+{   00 24 4e | ADD BYTE PTR [rsi + rcx * 2], ah   }
+{   00 24 4f | ADD BYTE PTR [rdi + rcx * 2], ah   }
+
+{   00 24 50 | ADD BYTE PTR [rax + rdx * 2], ah   }
+{   00 24 51 | ADD BYTE PTR [rcx + rdx * 2], ah   }
+{   00 24 52 | ADD BYTE PTR [rdx + rdx * 2], ah   }
+{   00 24 53 | ADD BYTE PTR [rbx + rdx * 2], ah   }
+{   00 24 54 | ADD BYTE PTR [rsp + rdx * 2], ah   }
+#   00 24 55 | --------ModRM-SIB-disp32--------   }
+{   00 24 56 | ADD BYTE PTR [rsi + rdx * 2], ah   }
+{   00 24 57 | ADD BYTE PTR [rdi + rdx * 2], ah   }
+
+{   00 24 58 | ADD BYTE PTR [rax + rbx * 2], ah   }
+{   00 24 59 | ADD BYTE PTR [rcx + rbx * 2], ah   }
+{   00 24 5a | ADD BYTE PTR [rdx + rbx * 2], ah   }
+{   00 24 5b | ADD BYTE PTR [rbx + rbx * 2], ah   }
+{   00 24 5c | ADD BYTE PTR [rsp + rbx * 2], ah   }
+#   00 24 5d | --------ModRM-SIB-disp32--------   }
+{   00 24 5e | ADD BYTE PTR [rsi + rbx * 2], ah   }
+{   00 24 5f | ADD BYTE PTR [rdi + rbx * 2], ah   }
+
+# TODO
+{   00 24 60 | ----------------------------   }
+{   00 24 61 | ----------------------------   }
+{   00 24 62 | ----------------------------   }
+{   00 24 63 | ----------------------------   }
+{   00 24 64 | ----------------------------   }
+#   00 24 65 | ----------------------------   }
+{   00 24 66 | ----------------------------   }
+{   00 24 67 | ----------------------------   }
+
+{   00 24 68 | ADD BYTE PTR [rax + rbp * 2], ah   }
+{   00 24 69 | ADD BYTE PTR [rcx + rbp * 2], ah   }
+{   00 24 6a | ADD BYTE PTR [rdx + rbp * 2], ah   }
+{   00 24 6b | ADD BYTE PTR [rbx + rbp * 2], ah   }
+{   00 24 6c | ADD BYTE PTR [rsp + rbp * 2], ah   }
+#   00 24 6d | --------ModRM-SIB-disp32--------   }
+{   00 24 6e | ADD BYTE PTR [rsi + rbp * 2], ah   }
+{   00 24 6f | ADD BYTE PTR [rdi + rbp * 2], ah   }
+
+{   00 24 70 | ADD BYTE PTR [rax + rsi * 2], ah   }
+{   00 24 71 | ADD BYTE PTR [rcx + rsi * 2], ah   }
+{   00 24 72 | ADD BYTE PTR [rdx + rsi * 2], ah   }
+{   00 24 73 | ADD BYTE PTR [rbx + rsi * 2], ah   }
+{   00 24 74 | ADD BYTE PTR [rsp + rsi * 2], ah   }
+#   00 24 75 | --------ModRM-SIB-disp32--------   }
+{   00 24 76 | ADD BYTE PTR [rsi + rsi * 2], ah   }
+{   00 24 77 | ADD BYTE PTR [rdi + rsi * 2], ah   }
+
+{   00 24 78 | ADD BYTE PTR [rax + rdi * 2], ah   }
+{   00 24 79 | ADD BYTE PTR [rcx + rdi * 2], ah   }
+{   00 24 7a | ADD BYTE PTR [rdx + rdi * 2], ah   }
+{   00 24 7b | ADD BYTE PTR [rbx + rdi * 2], ah   }
+{   00 24 7c | ADD BYTE PTR [rsp + rdi * 2], ah   }
+#   00 24 7d | --------ModRM-SIB-disp32--------   }
+{   00 24 7e | ADD BYTE PTR [rsi + rdi * 2], ah   }
+{   00 24 7f | ADD BYTE PTR [rdi + rdi * 2], ah   }
+
+{   00 24 80 | ADD BYTE PTR [rax + rax * 4], ah   }
+{   00 24 81 | ADD BYTE PTR [rcx + rax * 4], ah   }
+{   00 24 82 | ADD BYTE PTR [rdx + rax * 4], ah   }
+{   00 24 83 | ADD BYTE PTR [rbx + rax * 4], ah   }
+{   00 24 84 | ADD BYTE PTR [rsp + rax * 4], ah   }
+#   00 24 85 | --------ModRM-SIB-disp32--------   }
+{   00 24 86 | ADD BYTE PTR [rsi + rax * 4], ah   }
+{   00 24 87 | ADD BYTE PTR [rdi + rax * 4], ah   }
+
+{   00 24 88 | ADD BYTE PTR [rax + rcx * 4], ah   }
+{   00 24 89 | ADD BYTE PTR [rcx + rcx * 4], ah   }
+{   00 24 8a | ADD BYTE PTR [rdx + rcx * 4], ah   }
+{   00 24 8b | ADD BYTE PTR [rbx + rcx * 4], ah   }
+{   00 24 8c | ADD BYTE PTR [rsp + rcx * 4], ah   }
+#   00 24 8d | --------ModRM-SIB-disp32--------   }
+{   00 24 8e | ADD BYTE PTR [rsi + rcx * 4], ah   }
+{   00 24 8f | ADD BYTE PTR [rdi + rcx * 4], ah   }
+
+{   00 24 90 | ADD BYTE PTR [rax + rdx * 4], ah   }
+{   00 24 91 | ADD BYTE PTR [rcx + rdx * 4], ah   }
+{   00 24 92 | ADD BYTE PTR [rdx + rdx * 4], ah   }
+{   00 24 93 | ADD BYTE PTR [rbx + rdx * 4], ah   }
+{   00 24 94 | ADD BYTE PTR [rsp + rdx * 4], ah   }
+#   00 24 95 | --------ModRM-SIB-disp32--------   }
+{   00 24 96 | ADD BYTE PTR [rsi + rdx * 4], ah   }
+{   00 24 97 | ADD BYTE PTR [rdi + rdx * 4], ah   }
+
+{   00 24 98 | ADD BYTE PTR [rax + rbx * 4], ah   }
+{   00 24 99 | ADD BYTE PTR [rcx + rbx * 4], ah   }
+{   00 24 9a | ADD BYTE PTR [rdx + rbx * 4], ah   }
+{   00 24 9b | ADD BYTE PTR [rbx + rbx * 4], ah   }
+{   00 24 9c | ADD BYTE PTR [rsp + rbx * 4], ah   }
+#   00 24 9d | --------ModRM-SIB-disp32--------   }
+{   00 24 9e | ADD BYTE PTR [rsi + rbx * 4], ah   }
+{   00 24 9f | ADD BYTE PTR [rdi + rbx * 4], ah   }
+
+# TODO
+{   00 24 a0 | ----------------------------   }
+{   00 24 a1 | ----------------------------   }
+{   00 24 a2 | ----------------------------   }
+{   00 24 a3 | ----------------------------   }
+{   00 24 a4 | ----------------------------   }
+#   00 24 a5 | ----------------------------   }
+{   00 24 a6 | ----------------------------   }
+{   00 24 a7 | ----------------------------   }
+
+{   00 24 a8 | ADD BYTE PTR [rax + rbp * 4], ah   }
+{   00 24 a9 | ADD BYTE PTR [rcx + rbp * 4], ah   }
+{   00 24 aa | ADD BYTE PTR [rdx + rbp * 4], ah   }
+{   00 24 ab | ADD BYTE PTR [rbx + rbp * 4], ah   }
+{   00 24 ac | ADD BYTE PTR [rsp + rbp * 4], ah   }
+#   00 24 ad | --------ModRM-SIB-disp32--------   }
+{   00 24 ae | ADD BYTE PTR [rsi + rbp * 4], ah   }
+{   00 24 af | ADD BYTE PTR [rdi + rbp * 4], ah   }
+
+{   00 24 b0 | ADD BYTE PTR [rax + rsi * 4], ah   }
+{   00 24 b1 | ADD BYTE PTR [rcx + rsi * 4], ah   }
+{   00 24 b2 | ADD BYTE PTR [rdx + rsi * 4], ah   }
+{   00 24 b3 | ADD BYTE PTR [rbx + rsi * 4], ah   }
+{   00 24 b4 | ADD BYTE PTR [rsp + rsi * 4], ah   }
+#   00 24 b5 | --------ModRM-SIB-disp32--------   }
+{   00 24 b6 | ADD BYTE PTR [rsi + rsi * 4], ah   }
+{   00 24 b7 | ADD BYTE PTR [rdi + rsi * 4], ah   }
+
+{   00 24 b8 | ADD BYTE PTR [rax + rdi * 4], ah   }
+{   00 24 b9 | ADD BYTE PTR [rcx + rdi * 4], ah   }
+{   00 24 ba | ADD BYTE PTR [rdx + rdi * 4], ah   }
+{   00 24 bb | ADD BYTE PTR [rbx + rdi * 4], ah   }
+{   00 24 bc | ADD BYTE PTR [rsp + rdi * 4], ah   }
+#   00 24 bd | --------ModRM-SIB-disp32--------   }
+{   00 24 be | ADD BYTE PTR [rsi + rdi * 4], ah   }
+{   00 24 bf | ADD BYTE PTR [rdi + rdi * 4], ah   }
+
+
+{   00 24 c0 | ADD BYTE PTR [rax + rax * 8], ah   }
+{   00 24 c1 | ADD BYTE PTR [rcx + rax * 8], ah   }
+{   00 24 c2 | ADD BYTE PTR [rdx + rax * 8], ah   }
+{   00 24 c3 | ADD BYTE PTR [rbx + rax * 8], ah   }
+{   00 24 c4 | ADD BYTE PTR [rsp + rax * 8], ah   }
+#   00 24 c5 | --------ModRM-SIB-disp32--------   }
+{   00 24 c6 | ADD BYTE PTR [rsi + rax * 8], ah   }
+{   00 24 c7 | ADD BYTE PTR [rdi + rax * 8], ah   }
+
+{   00 24 c8 | ADD BYTE PTR [rax + rcx * 8], ah   }
+{   00 24 c9 | ADD BYTE PTR [rcx + rcx * 8], ah   }
+{   00 24 ca | ADD BYTE PTR [rdx + rcx * 8], ah   }
+{   00 24 cb | ADD BYTE PTR [rbx + rcx * 8], ah   }
+{   00 24 cc | ADD BYTE PTR [rsp + rcx * 8], ah   }
+#   00 24 cd | --------ModRM-SIB-disp32--------   }
+{   00 24 ce | ADD BYTE PTR [rsi + rcx * 8], ah   }
+{   00 24 cf | ADD BYTE PTR [rdi + rcx * 8], ah   }
+
+{   00 24 d0 | ADD BYTE PTR [rax + rdx * 8], ah   }
+{   00 24 d1 | ADD BYTE PTR [rcx + rdx * 8], ah   }
+{   00 24 d2 | ADD BYTE PTR [rdx + rdx * 8], ah   }
+{   00 24 d3 | ADD BYTE PTR [rbx + rdx * 8], ah   }
+{   00 24 d4 | ADD BYTE PTR [rsp + rdx * 8], ah   }
+#   00 24 d5 | --------ModRM-SIB-disp32--------   }
+{   00 24 d6 | ADD BYTE PTR [rsi + rdx * 8], ah   }
+{   00 24 d7 | ADD BYTE PTR [rdi + rdx * 8], ah   }
+
+{   00 24 d8 | ADD BYTE PTR [rax + rbx * 8], ah   }
+{   00 24 d9 | ADD BYTE PTR [rcx + rbx * 8], ah   }
+{   00 24 da | ADD BYTE PTR [rdx + rbx * 8], ah   }
+{   00 24 db | ADD BYTE PTR [rbx + rbx * 8], ah   }
+{   00 24 dc | ADD BYTE PTR [rsp + rbx * 8], ah   }
+#   00 24 dd | --------ModRM-SIB-disp32--------   }
+{   00 24 de | ADD BYTE PTR [rsi + rbx * 8], ah   }
+{   00 24 df | ADD BYTE PTR [rdi + rbx * 8], ah   }
+
+# TODO
+{   00 24 e0 | ----------------------------   }
+{   00 24 e1 | ----------------------------   }
+{   00 24 e2 | ----------------------------   }
+{   00 24 e3 | ----------------------------   }
+{   00 24 e4 | ----------------------------   }
+#   00 24 e5 | ----------------------------   }
+{   00 24 e6 | ----------------------------   }
+{   00 24 e7 | ----------------------------   }
+
+{   00 24 e8 | ADD BYTE PTR [rax + rbp * 8], ah   }
+{   00 24 e9 | ADD BYTE PTR [rcx + rbp * 8], ah   }
+{   00 24 ea | ADD BYTE PTR [rdx + rbp * 8], ah   }
+{   00 24 eb | ADD BYTE PTR [rbx + rbp * 8], ah   }
+{   00 24 ec | ADD BYTE PTR [rsp + rbp * 8], ah   }
+#   00 24 ed | --------ModRM-SIB-disp32--------   }
+{   00 24 ee | ADD BYTE PTR [rsi + rbp * 8], ah   }
+{   00 24 ef | ADD BYTE PTR [rdi + rbp * 8], ah   }
+
+{   00 24 f0 | ADD BYTE PTR [rax + rsi * 8], ah   }
+{   00 24 f1 | ADD BYTE PTR [rcx + rsi * 8], ah   }
+{   00 24 f2 | ADD BYTE PTR [rdx + rsi * 8], ah   }
+{   00 24 f3 | ADD BYTE PTR [rbx + rsi * 8], ah   }
+{   00 24 f4 | ADD BYTE PTR [rsp + rsi * 8], ah   }
+#   00 24 f5 | --------ModRM-SIB-disp32--------   }
+{   00 24 f6 | ADD BYTE PTR [rsi + rsi * 8], ah   }
+{   00 24 f7 | ADD BYTE PTR [rdi + rsi * 8], ah   }
+
+{   00 24 f8 | ADD BYTE PTR [rax + rdi * 8], ah   }
+{   00 24 f9 | ADD BYTE PTR [rcx + rdi * 8], ah   }
+{   00 24 fa | ADD BYTE PTR [rdx + rdi * 8], ah   }
+{   00 24 fb | ADD BYTE PTR [rbx + rdi * 8], ah   }
+{   00 24 fc | ADD BYTE PTR [rsp + rdi * 8], ah   }
+#   00 24 fd | --------ModRM-SIB-disp32--------   }
+{   00 24 fe | ADD BYTE PTR [rsi + rdi * 8], ah   }
+{   00 24 ff | ADD BYTE PTR [rdi + rdi * 8], ah   }
