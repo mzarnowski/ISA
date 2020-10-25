@@ -1,0 +1,294 @@
+# OP ModRM SIB
+
+# 00 2c 05 | Error: missing 32bit displacement |
+# 00 2c 0d | Error: missing 32bit displacement |
+# 00 2c 15 | Error: missing 32bit displacement |
+# 00 2c 1d | Error: missing 32bit displacement |
+# 00 2c 2d | Error: missing 32bit displacement |
+# 00 2c 35 | Error: missing 32bit displacement |
+# 00 2c 3d | Error: missing 32bit displacement |
+# 00 2c 45 | Error: missing 32bit displacement |
+# 00 2c 4d | Error: missing 32bit displacement |
+# 00 2c 55 | Error: missing 32bit displacement |
+# 00 2c 5d | Error: missing 32bit displacement |
+# 00 2c 6d | Error: missing 32bit displacement |
+# 00 2c 75 | Error: missing 32bit displacement |
+# 00 2c 7d | Error: missing 32bit displacement |
+# 00 2c 85 | Error: missing 32bit displacement |
+# 00 2c 8d | Error: missing 32bit displacement |
+# 00 2c 95 | Error: missing 32bit displacement |
+# 00 2c 9d | Error: missing 32bit displacement |
+# 00 2c ad | Error: missing 32bit displacement |
+# 00 2c b5 | Error: missing 32bit displacement |
+# 00 2c bd | Error: missing 32bit displacement |
+# 00 2c c5 | Error: missing 32bit displacement |
+# 00 2c cd | Error: missing 32bit displacement |
+# 00 2c d5 | Error: missing 32bit displacement |
+# 00 2c dd | Error: missing 32bit displacement |
+# 00 2c ed | Error: missing 32bit displacement |
+# 00 2c f5 | Error: missing 32bit displacement |
+# 00 2c fd | Error: missing 32bit displacement |
+
+00 2c 00 | ADD BYTE PTR [rax + rax * 1] | ch |
+00 2c 01 | ADD BYTE PTR [rcx + rax * 1] | ch |
+00 2c 02 | ADD BYTE PTR [rdx + rax * 1] | ch |
+00 2c 03 | ADD BYTE PTR [rbx + rax * 1] | ch |
+00 2c 04 | ADD BYTE PTR [rsp + rax * 1] | ch |
+00 2c 06 | ADD BYTE PTR [rsi + rax * 1] | ch |
+00 2c 07 | ADD BYTE PTR [rdi + rax * 1] | ch |
+
+00 2c 08 | ADD BYTE PTR [rax + rcx * 1] | ch |
+00 2c 09 | ADD BYTE PTR [rcx + rcx * 1] | ch |
+00 2c 0a | ADD BYTE PTR [rdx + rcx * 1] | ch |
+00 2c 0b | ADD BYTE PTR [rbx + rcx * 1] | ch |
+00 2c 0c | ADD BYTE PTR [rsp + rcx * 1] | ch |
+00 2c 0e | ADD BYTE PTR [rsi + rcx * 1] | ch |
+00 2c 0f | ADD BYTE PTR [rdi + rcx * 1] | ch |
+
+00 2c 10 | ADD BYTE PTR [rax + rdx * 1] | ch |
+00 2c 11 | ADD BYTE PTR [rcx + rdx * 1] | ch |
+00 2c 12 | ADD BYTE PTR [rdx + rdx * 1] | ch |
+00 2c 13 | ADD BYTE PTR [rbx + rdx * 1] | ch |
+00 2c 14 | ADD BYTE PTR [rsp + rdx * 1] | ch |
+00 2c 16 | ADD BYTE PTR [rsi + rdx * 1] | ch |
+00 2c 17 | ADD BYTE PTR [rdi + rdx * 1] | ch |
+
+00 2c 18 | ADD BYTE PTR [rax + rbx * 1] | ch |
+00 2c 19 | ADD BYTE PTR [rcx + rbx * 1] | ch |
+00 2c 1a | ADD BYTE PTR [rdx + rbx * 1] | ch |
+00 2c 1b | ADD BYTE PTR [rbx + rbx * 1] | ch |
+00 2c 1c | ADD BYTE PTR [rsp + rbx * 1] | ch |
+00 2c 1e | ADD BYTE PTR [rsi + rbx * 1] | ch |
+00 2c 1f | ADD BYTE PTR [rdi + rbx * 1] | ch |
+
+#TODO
+00 2c 20 |
+00 2c 21 |
+00 2c 22 |
+00 2c 23 |
+00 2c 24 |
+00 2c 25 |
+00 2c 26 |
+00 2c 27 |
+
+00 2c 28 | ADD BYTE PTR [rax + rbp * 1] | ch |
+00 2c 29 | ADD BYTE PTR [rcx + rbp * 1] | ch |
+00 2c 2a | ADD BYTE PTR [rdx + rbp * 1] | ch |
+00 2c 2b | ADD BYTE PTR [rbx + rbp * 1] | ch |
+00 2c 2c | ADD BYTE PTR [rsp + rbp * 1] | ch |
+00 2c 2e | ADD BYTE PTR [rsi + rbp * 1] | ch |
+00 2c 2f | ADD BYTE PTR [rdi + rbp * 1] | ch |
+
+00 2c 30 | ADD BYTE PTR [rax + rsi * 1] | ch |
+00 2c 31 | ADD BYTE PTR [rcx + rsi * 1] | ch |
+00 2c 32 | ADD BYTE PTR [rdx + rsi * 1] | ch |
+00 2c 33 | ADD BYTE PTR [rbx + rsi * 1] | ch |
+00 2c 34 | ADD BYTE PTR [rsp + rsi * 1] | ch |
+00 2c 36 | ADD BYTE PTR [rsi + rsi * 1] | ch |
+00 2c 37 | ADD BYTE PTR [rdi + rsi * 1] | ch |
+
+00 2c 38 | ADD BYTE PTR [rax + rdi * 1] | ch |
+00 2c 39 | ADD BYTE PTR [rcx + rdi * 1] | ch |
+00 2c 3a | ADD BYTE PTR [rdx + rdi * 1] | ch |
+00 2c 3b | ADD BYTE PTR [rbx + rdi * 1] | ch |
+00 2c 3c | ADD BYTE PTR [rsp + rdi * 1] | ch |
+00 2c 3e | ADD BYTE PTR [rsi + rdi * 1] | ch |
+00 2c 3f | ADD BYTE PTR [rdi + rdi * 1] | ch |
+
+00 2c 40 | ADD BYTE PTR [rax + rax * 2] | ch |
+00 2c 41 | ADD BYTE PTR [rcx + rax * 2] | ch |
+00 2c 42 | ADD BYTE PTR [rdx + rax * 2] | ch |
+00 2c 43 | ADD BYTE PTR [rbx + rax * 2] | ch |
+00 2c 44 | ADD BYTE PTR [rsp + rax * 2] | ch |
+00 2c 46 | ADD BYTE PTR [rsi + rax * 2] | ch |
+00 2c 47 | ADD BYTE PTR [rdi + rax * 2] | ch |
+
+00 2c 48 | ADD BYTE PTR [rax + rcx * 2] | ch |
+00 2c 49 | ADD BYTE PTR [rcx + rcx * 2] | ch |
+00 2c 4a | ADD BYTE PTR [rdx + rcx * 2] | ch |
+00 2c 4b | ADD BYTE PTR [rbx + rcx * 2] | ch |
+00 2c 4c | ADD BYTE PTR [rsp + rcx * 2] | ch |
+00 2c 4e | ADD BYTE PTR [rsi + rcx * 2] | ch |
+00 2c 4f | ADD BYTE PTR [rdi + rcx * 2] | ch |
+
+00 2c 50 | ADD BYTE PTR [rax + rdx * 2] | ch |
+00 2c 51 | ADD BYTE PTR [rcx + rdx * 2] | ch |
+00 2c 52 | ADD BYTE PTR [rdx + rdx * 2] | ch |
+00 2c 53 | ADD BYTE PTR [rbx + rdx * 2] | ch |
+00 2c 54 | ADD BYTE PTR [rsp + rdx * 2] | ch |
+00 2c 56 | ADD BYTE PTR [rsi + rdx * 2] | ch |
+00 2c 57 | ADD BYTE PTR [rdi + rdx * 2] | ch |
+
+00 2c 58 | ADD BYTE PTR [rax + rbx * 2] | ch |
+00 2c 59 | ADD BYTE PTR [rcx + rbx * 2] | ch |
+00 2c 5a | ADD BYTE PTR [rdx + rbx * 2] | ch |
+00 2c 5b | ADD BYTE PTR [rbx + rbx * 2] | ch |
+00 2c 5c | ADD BYTE PTR [rsp + rbx * 2] | ch |
+00 2c 5e | ADD BYTE PTR [rsi + rbx * 2] | ch |
+00 2c 5f | ADD BYTE PTR [rdi + rbx * 2] | ch |
+
+# TODO
+00 2c 60 |
+00 2c 61 |
+00 2c 62 |
+00 2c 63 |
+00 2c 64 |
+00 2c 65 |
+00 2c 66 |
+00 2c 67 |
+
+00 2c 68 | ADD BYTE PTR [rax + rbp * 2] | ch |
+00 2c 69 | ADD BYTE PTR [rcx + rbp * 2] | ch |
+00 2c 6a | ADD BYTE PTR [rdx + rbp * 2] | ch |
+00 2c 6b | ADD BYTE PTR [rbx + rbp * 2] | ch |
+00 2c 6c | ADD BYTE PTR [rsp + rbp * 2] | ch |
+00 2c 6e | ADD BYTE PTR [rsi + rbp * 2] | ch |
+00 2c 6f | ADD BYTE PTR [rdi + rbp * 2] | ch |
+
+00 2c 70 | ADD BYTE PTR [rax + rsi * 2] | ch |
+00 2c 71 | ADD BYTE PTR [rcx + rsi * 2] | ch |
+00 2c 72 | ADD BYTE PTR [rdx + rsi * 2] | ch |
+00 2c 73 | ADD BYTE PTR [rbx + rsi * 2] | ch |
+00 2c 74 | ADD BYTE PTR [rsp + rsi * 2] | ch |
+00 2c 76 | ADD BYTE PTR [rsi + rsi * 2] | ch |
+00 2c 77 | ADD BYTE PTR [rdi + rsi * 2] | ch |
+
+00 2c 78 | ADD BYTE PTR [rax + rdi * 2] | ch |
+00 2c 79 | ADD BYTE PTR [rcx + rdi * 2] | ch |
+00 2c 7a | ADD BYTE PTR [rdx + rdi * 2] | ch |
+00 2c 7b | ADD BYTE PTR [rbx + rdi * 2] | ch |
+00 2c 7c | ADD BYTE PTR [rsp + rdi * 2] | ch |
+00 2c 7e | ADD BYTE PTR [rsi + rdi * 2] | ch |
+00 2c 7f | ADD BYTE PTR [rdi + rdi * 2] | ch |
+
+00 2c 80 | ADD BYTE PTR [rax + rax * 4] | ch |
+00 2c 81 | ADD BYTE PTR [rcx + rax * 4] | ch |
+00 2c 82 | ADD BYTE PTR [rdx + rax * 4] | ch |
+00 2c 83 | ADD BYTE PTR [rbx + rax * 4] | ch |
+00 2c 84 | ADD BYTE PTR [rsp + rax * 4] | ch |
+00 2c 86 | ADD BYTE PTR [rsi + rax * 4] | ch |
+00 2c 87 | ADD BYTE PTR [rdi + rax * 4] | ch |
+
+00 2c 88 | ADD BYTE PTR [rax + rcx * 4] | ch |
+00 2c 89 | ADD BYTE PTR [rcx + rcx * 4] | ch |
+00 2c 8a | ADD BYTE PTR [rdx + rcx * 4] | ch |
+00 2c 8b | ADD BYTE PTR [rbx + rcx * 4] | ch |
+00 2c 8c | ADD BYTE PTR [rsp + rcx * 4] | ch |
+00 2c 8e | ADD BYTE PTR [rsi + rcx * 4] | ch |
+00 2c 8f | ADD BYTE PTR [rdi + rcx * 4] | ch |
+
+00 2c 90 | ADD BYTE PTR [rax + rdx * 4] | ch |
+00 2c 91 | ADD BYTE PTR [rcx + rdx * 4] | ch |
+00 2c 92 | ADD BYTE PTR [rdx + rdx * 4] | ch |
+00 2c 93 | ADD BYTE PTR [rbx + rdx * 4] | ch |
+00 2c 94 | ADD BYTE PTR [rsp + rdx * 4] | ch |
+00 2c 96 | ADD BYTE PTR [rsi + rdx * 4] | ch |
+00 2c 97 | ADD BYTE PTR [rdi + rdx * 4] | ch |
+
+00 2c 98 | ADD BYTE PTR [rax + rbx * 4] | ch |
+00 2c 99 | ADD BYTE PTR [rcx + rbx * 4] | ch |
+00 2c 9a | ADD BYTE PTR [rdx + rbx * 4] | ch |
+00 2c 9b | ADD BYTE PTR [rbx + rbx * 4] | ch |
+00 2c 9c | ADD BYTE PTR [rsp + rbx * 4] | ch |
+00 2c 9e | ADD BYTE PTR [rsi + rbx * 4] | ch |
+00 2c 9f | ADD BYTE PTR [rdi + rbx * 4] | ch |
+
+# TODO
+00 2c a0 |
+00 2c a1 |
+00 2c a2 |
+00 2c a3 |
+00 2c a4 |
+00 2c a5 |
+00 2c a6 |
+00 2c a7 |
+
+00 2c a8 | ADD BYTE PTR [rax + rbp * 4] | ch |
+00 2c a9 | ADD BYTE PTR [rcx + rbp * 4] | ch |
+00 2c aa | ADD BYTE PTR [rdx + rbp * 4] | ch |
+00 2c ab | ADD BYTE PTR [rbx + rbp * 4] | ch |
+00 2c ac | ADD BYTE PTR [rsp + rbp * 4] | ch |
+00 2c ae | ADD BYTE PTR [rsi + rbp * 4] | ch |
+00 2c af | ADD BYTE PTR [rdi + rbp * 4] | ch |
+
+00 2c b0 | ADD BYTE PTR [rax + rsi * 4] | ch |
+00 2c b1 | ADD BYTE PTR [rcx + rsi * 4] | ch |
+00 2c b2 | ADD BYTE PTR [rdx + rsi * 4] | ch |
+00 2c b3 | ADD BYTE PTR [rbx + rsi * 4] | ch |
+00 2c b4 | ADD BYTE PTR [rsp + rsi * 4] | ch |
+00 2c b6 | ADD BYTE PTR [rsi + rsi * 4] | ch |
+00 2c b7 | ADD BYTE PTR [rdi + rsi * 4] | ch |
+
+00 2c b8 | ADD BYTE PTR [rax + rdi * 4] | ch |
+00 2c b9 | ADD BYTE PTR [rcx + rdi * 4] | ch |
+00 2c ba | ADD BYTE PTR [rdx + rdi * 4] | ch |
+00 2c bb | ADD BYTE PTR [rbx + rdi * 4] | ch |
+00 2c bc | ADD BYTE PTR [rsp + rdi * 4] | ch |
+00 2c be | ADD BYTE PTR [rsi + rdi * 4] | ch |
+00 2c bf | ADD BYTE PTR [rdi + rdi * 4] | ch |
+
+00 2c c0 | ADD BYTE PTR [rax + rax * 8] | ch |
+00 2c c1 | ADD BYTE PTR [rcx + rax * 8] | ch |
+00 2c c2 | ADD BYTE PTR [rdx + rax * 8] | ch |
+00 2c c3 | ADD BYTE PTR [rbx + rax * 8] | ch |
+00 2c c4 | ADD BYTE PTR [rsp + rax * 8] | ch |
+00 2c c6 | ADD BYTE PTR [rsi + rax * 8] | ch |
+00 2c c7 | ADD BYTE PTR [rdi + rax * 8] | ch |
+
+00 2c c8 | ADD BYTE PTR [rax + rcx * 8] | ch |
+00 2c c9 | ADD BYTE PTR [rcx + rcx * 8] | ch |
+00 2c ca | ADD BYTE PTR [rdx + rcx * 8] | ch |
+00 2c cb | ADD BYTE PTR [rbx + rcx * 8] | ch |
+00 2c cc | ADD BYTE PTR [rsp + rcx * 8] | ch |
+00 2c ce | ADD BYTE PTR [rsi + rcx * 8] | ch |
+00 2c cf | ADD BYTE PTR [rdi + rcx * 8] | ch |
+
+00 2c d0 | ADD BYTE PTR [rax + rdx * 8] | ch |
+00 2c d1 | ADD BYTE PTR [rcx + rdx * 8] | ch |
+00 2c d2 | ADD BYTE PTR [rdx + rdx * 8] | ch |
+00 2c d3 | ADD BYTE PTR [rbx + rdx * 8] | ch |
+00 2c d4 | ADD BYTE PTR [rsp + rdx * 8] | ch |
+00 2c d6 | ADD BYTE PTR [rsi + rdx * 8] | ch |
+00 2c d7 | ADD BYTE PTR [rdi + rdx * 8] | ch |
+
+00 2c d8 | ADD BYTE PTR [rax + rbx * 8] | ch |
+00 2c d9 | ADD BYTE PTR [rcx + rbx * 8] | ch |
+00 2c da | ADD BYTE PTR [rdx + rbx * 8] | ch |
+00 2c db | ADD BYTE PTR [rbx + rbx * 8] | ch |
+00 2c dc | ADD BYTE PTR [rsp + rbx * 8] | ch |
+00 2c de | ADD BYTE PTR [rsi + rbx * 8] | ch |
+00 2c df | ADD BYTE PTR [rdi + rbx * 8] | ch |
+
+# TODO
+00 2c e0 |
+00 2c e1 |
+00 2c e2 |
+00 2c e3 |
+00 2c e4 |
+00 2c e5 |
+00 2c e6 |
+00 2c e7 |
+
+00 2c e8 | ADD BYTE PTR [rax + rbp * 8] | ch |
+00 2c e9 | ADD BYTE PTR [rcx + rbp * 8] | ch |
+00 2c ea | ADD BYTE PTR [rdx + rbp * 8] | ch |
+00 2c eb | ADD BYTE PTR [rbx + rbp * 8] | ch |
+00 2c ec | ADD BYTE PTR [rsp + rbp * 8] | ch |
+00 2c ee | ADD BYTE PTR [rsi + rbp * 8] | ch |
+00 2c ef | ADD BYTE PTR [rdi + rbp * 8] | ch |
+
+00 2c f0 | ADD BYTE PTR [rax + rsi * 8] | ch |
+00 2c f1 | ADD BYTE PTR [rcx + rsi * 8] | ch |
+00 2c f2 | ADD BYTE PTR [rdx + rsi * 8] | ch |
+00 2c f3 | ADD BYTE PTR [rbx + rsi * 8] | ch |
+00 2c f4 | ADD BYTE PTR [rsp + rsi * 8] | ch |
+00 2c f6 | ADD BYTE PTR [rsi + rsi * 8] | ch |
+00 2c f7 | ADD BYTE PTR [rdi + rsi * 8] | ch |
+
+00 2c f8 | ADD BYTE PTR [rax + rdi * 8] | ch |
+00 2c f9 | ADD BYTE PTR [rcx + rdi * 8] | ch |
+00 2c fa | ADD BYTE PTR [rdx + rdi * 8] | ch |
+00 2c fb | ADD BYTE PTR [rbx + rdi * 8] | ch |
+00 2c fc | ADD BYTE PTR [rsp + rdi * 8] | ch |
+00 2c fe | ADD BYTE PTR [rsi + rdi * 8] | ch |
+00 2c ff | ADD BYTE PTR [rdi + rdi * 8] | ch |

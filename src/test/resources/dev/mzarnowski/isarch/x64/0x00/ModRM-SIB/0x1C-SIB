@@ -1,3 +1,5 @@
+# OP ModRM SIB
+
 # 00 1c 05 | Error: missing 32bit displacement |
 # 00 1c 0d | Error: missing 32bit displacement |
 # 00 1c 15 | Error: missing 32bit displacement |
@@ -27,7 +29,6 @@
 # 00 1c f5 | Error: missing 32bit displacement |
 # 00 1c fd | Error: missing 32bit displacement |
 
-# OP ModRM SIB
 00 1c 00 | ADD BYTE PTR [rax + rax * 1] | bl |
 00 1c 01 | ADD BYTE PTR [rcx + rax * 1] | bl |
 00 1c 02 | ADD BYTE PTR [rdx + rax * 1] | bl |
