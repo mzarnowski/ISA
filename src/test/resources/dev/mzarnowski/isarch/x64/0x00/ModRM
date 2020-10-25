@@ -3,50 +3,52 @@
 {   00 01 | ADD BYTE PTR [rcx], al   }
 {   00 02 | ADD BYTE PTR [rdx], al   }
 {   00 03 | ADD BYTE PTR [rbx], al   }
-#   00 04 SIB
-#   00 05 disp32
+#   00 04 | ------ModRM-SIB-------   #
+#   00 05 | -----ModRM-disp32-----   #
 {   00 06 | ADD BYTE PTR [rsi], al   }
 {   00 07 | ADD BYTE PTR [rdi], al   }
+
 {   00 08 | ADD BYTE PTR [rax], cl   }
 {   00 09 | ADD BYTE PTR [rcx], cl   }
 {   00 0a | ADD BYTE PTR [rdx], cl   }
 {   00 0b | ADD BYTE PTR [rbx], cl   }
-#   00 0c SIB
-#   00 0d disp32
+#   00 0c | ------ModRM-SIB-------   #
+#   00 0d | -----ModRM-disp32-----   #
 {   00 0e | ADD BYTE PTR [rsi], cl   }
 {   00 0f | ADD BYTE PTR [rdx], cl   }
 
 {   00 10 | ADD BYTE PTR [rax], dl   }
 {   00 11 | ADD BYTE PTR [rcx], dl   }
 {   00 12 | ADD BYTE PTR [rdx], dl   }
-#   00 13 SIB
-#   00 14 disp32
 {   00 13 | ADD BYTE PTR [rbx], dl   }
+#   00 14 | ------ModRM-SIB-------   #
+#   00 15 | -----ModRM-disp32-----   #
 {   00 16 | ADD BYTE PTR [rsi], dl   }
 {   00 17 | ADD BYTE PTR [rdi], dl   }
+
 {   00 18 | ADD BYTE PTR [rax], bl   }
 {   00 19 | ADD BYTE PTR [rcx], bl   }
 {   00 1a | ADD BYTE PTR [rdx], bl   }
 {   00 1b | ADD BYTE PTR [rbx], bl   }
-#   00 1c SIB
-#   00 1d disp32
+#   00 1c | ------ModRM-SIB-------   #
+#   00 1d | -----ModRM-disp32-----   #
 {   00 1e | ADD BYTE PTR [rsi], bl   }
 {   00 1f | ADD BYTE PTR [rdi], bl   }
 
 {   00 20 | ADD BYTE PTR [rax], ah   }
 {   00 21 | ADD BYTE PTR [rcx], ah   }
 {   00 22 | ADD BYTE PTR [rdx], ah   }
-{   00 23 | ADD BYTE PTR [rbx], ah   }
-#   00 23 SIB
-#   00 24 disp32
+#   00 24 | ------ModRM-SIB-------   #
+#   00 25 | -----ModRM-disp32-----   #
 {   00 26 | ADD BYTE PTR [rsi], ah   }
 {   00 27 | ADD BYTE PTR [rdi], ah   }
+
 {   00 28 | ADD BYTE PTR [rax], ch   }
 {   00 29 | ADD BYTE PTR [rcx], ch   }
 {   00 2a | ADD BYTE PTR [rdx], ch   }
 {   00 2b | ADD BYTE PTR [rbx], ch   }
-#   00 2c SIB
-#   00 2d disp32
+#   00 2c | ------ModRM-SIB-------   #
+#   00 2d | -----ModRM-disp32-----   #
 {   00 2e | ADD BYTE PTR [rsi], ch   }
 {   00 2f | ADD BYTE PTR [rdi], ch   }
 
@@ -54,16 +56,17 @@
 {   00 31 | ADD BYTE PTR [rcx], dh   }
 {   00 32 | ADD BYTE PTR [rdx], dh   }
 {   00 33 | ADD BYTE PTR [rbx], dh   }
-#   00 33 SIB
-#   00 34 disp32
+#   00 33 | ------ModRM-SIB-------   #
+#   00 34 | -----ModRM-disp32-----   #
 {   00 36 | ADD BYTE PTR [rsi], dh   }
 {   00 37 | ADD BYTE PTR [rdi], dh   }
+
 {   00 38 | ADD BYTE PTR [rax], bh   }
 {   00 39 | ADD BYTE PTR [rcx], bh   }
 {   00 3a | ADD BYTE PTR [rdx], bh   }
 {   00 3b | ADD BYTE PTR [rbx], bh   }
-#   00 2c SIB
-#   00 2d disp32
+#   00 3c | ------ModRM-SIB-------   #
+#   00 3d | -----ModRM-disp32-----   #
 {   00 3e | ADD BYTE PTR [rsi], bh   }
 {   00 3f | ADD BYTE PTR [rdi], bh   }
 
