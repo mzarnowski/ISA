@@ -1,0 +1,277 @@
+# OP ModRM SIB disp8
+
+00 74 00 12 | ADD BYTE PTR [0x12 + rax + rax * 1] | dh |
+00 74 01 12 | ADD BYTE PTR [0x12 + rcx + rax * 1] | dh |
+00 74 02 12 | ADD BYTE PTR [0x12 + rdx + rax * 1] | dh |
+00 74 03 12 | ADD BYTE PTR [0x12 + rbx + rax * 1] | dh |
+00 74 04 12 | ADD BYTE PTR [0x12 + rsp + rax * 1] | dh |
+00 74 05 12 | ADD BYTE PTR [0x12 + rbp + rax * 1] | dh |
+00 74 06 12 | ADD BYTE PTR [0x12 + rsi + rax * 1] | dh |
+00 74 07 12 | ADD BYTE PTR [0x12 + rdi + rax * 1] | dh |
+00 74 08 12 | ADD BYTE PTR [0x12 + rax + rcx * 1] | dh |
+00 74 09 12 | ADD BYTE PTR [0x12 + rcx + rcx * 1] | dh |
+00 74 0a 12 | ADD BYTE PTR [0x12 + rdx + rcx * 1] | dh |
+00 74 0b 12 | ADD BYTE PTR [0x12 + rbx + rcx * 1] | dh |
+00 74 0c 12 | ADD BYTE PTR [0x12 + rsp + rcx * 1] | dh |
+00 74 0d 12 | ADD BYTE PTR [0x12 + rbp + rcx * 1] | dh |
+00 74 0e 12 | ADD BYTE PTR [0x12 + rsi + rcx * 1] | dh |
+00 74 0f 12 | ADD BYTE PTR [0x12 + rdi + rcx * 1] | dh |
+
+00 74 10 12 | ADD BYTE PTR [0x12 + rax + rdx * 1] | dh |
+00 74 11 12 | ADD BYTE PTR [0x12 + rcx + rdx * 1] | dh |
+00 74 12 12 | ADD BYTE PTR [0x12 + rdx + rdx * 1] | dh |
+00 74 13 12 | ADD BYTE PTR [0x12 + rbx + rdx * 1] | dh |
+00 74 14 12 | ADD BYTE PTR [0x12 + rsp + rdx * 1] | dh |
+00 74 15 12 | ADD BYTE PTR [0x12 + rbp + rdx * 1] | dh |
+00 74 16 12 | ADD BYTE PTR [0x12 + rsi + rdx * 1] | dh |
+00 74 17 12 | ADD BYTE PTR [0x12 + rdi + rdx * 1] | dh |
+00 74 18 12 | ADD BYTE PTR [0x12 + rax + rbx * 1] | dh |
+00 74 19 12 | ADD BYTE PTR [0x12 + rcx + rbx * 1] | dh |
+00 74 1a 12 | ADD BYTE PTR [0x12 + rdx + rbx * 1] | dh |
+00 74 1b 12 | ADD BYTE PTR [0x12 + rbx + rbx * 1] | dh |
+00 74 1c 12 | ADD BYTE PTR [0x12 + rsp + rbx * 1] | dh |
+00 74 1d 12 | ADD BYTE PTR [0x12 + rbp + rbx * 1] | dh |
+00 74 1e 12 | ADD BYTE PTR [0x12 + rsi + rbx * 1] | dh |
+00 74 1f 12 | ADD BYTE PTR [0x12 + rdi + rbx * 1] | dh |
+
+#TODO
+00 74 20 d2 |
+00 74 21 d2 |
+00 74 22 d2 |
+00 74 23 d2 |
+00 74 24 d2 |
+00 74 25 d2 |
+00 74 26 d2 |
+00 74 27 d2 |
+00 74 28 12 | ADD BYTE PTR [0x12 + rax + rbp * 1] | dh |
+00 74 29 12 | ADD BYTE PTR [0x12 + rcx + rbp * 1] | dh |
+00 74 2a 12 | ADD BYTE PTR [0x12 + rdx + rbp * 1] | dh |
+00 74 2b 12 | ADD BYTE PTR [0x12 + rbx + rbp * 1] | dh |
+00 74 2c 12 | ADD BYTE PTR [0x12 + rsp + rbp * 1] | dh |
+00 74 2d 12 | ADD BYTE PTR [0x12 + rbp + rbp * 1] | dh |
+00 74 2e 12 | ADD BYTE PTR [0x12 + rsi + rbp * 1] | dh |
+00 74 2f 12 | ADD BYTE PTR [0x12 + rdi + rbp * 1] | dh |
+
+00 74 30 12 | ADD BYTE PTR [0x12 + rax + rsi * 1] | dh |
+00 74 31 12 | ADD BYTE PTR [0x12 + rcx + rsi * 1] | dh |
+00 74 32 12 | ADD BYTE PTR [0x12 + rdx + rsi * 1] | dh |
+00 74 33 12 | ADD BYTE PTR [0x12 + rbx + rsi * 1] | dh |
+00 74 34 12 | ADD BYTE PTR [0x12 + rsp + rsi * 1] | dh |
+00 74 35 12 | ADD BYTE PTR [0x12 + rbp + rsi * 1] | dh |
+00 74 36 12 | ADD BYTE PTR [0x12 + rsi + rsi * 1] | dh |
+00 74 37 12 | ADD BYTE PTR [0x12 + rdi + rsi * 1] | dh |
+00 74 38 12 | ADD BYTE PTR [0x12 + rax + rdi * 1] | dh |
+00 74 39 12 | ADD BYTE PTR [0x12 + rcx + rdi * 1] | dh |
+00 74 3a 12 | ADD BYTE PTR [0x12 + rdx + rdi * 1] | dh |
+00 74 3b 12 | ADD BYTE PTR [0x12 + rbx + rdi * 1] | dh |
+00 74 3c 12 | ADD BYTE PTR [0x12 + rsp + rdi * 1] | dh |
+00 74 3d 12 | ADD BYTE PTR [0x12 + rbp + rdi * 1] | dh |
+00 74 3e 12 | ADD BYTE PTR [0x12 + rsi + rdi * 1] | dh |
+00 74 3f 12 | ADD BYTE PTR [0x12 + rdi + rdi * 1] | dh |
+
+00 74 40 12 | ADD BYTE PTR [0x12 + rax + rax * 2] | dh |
+00 74 41 12 | ADD BYTE PTR [0x12 + rcx + rax * 2] | dh |
+00 74 42 12 | ADD BYTE PTR [0x12 + rdx + rax * 2] | dh |
+00 74 43 12 | ADD BYTE PTR [0x12 + rbx + rax * 2] | dh |
+00 74 44 12 | ADD BYTE PTR [0x12 + rsp + rax * 2] | dh |
+00 74 45 12 | ADD BYTE PTR [0x12 + rbp + rax * 2] | dh |
+00 74 46 12 | ADD BYTE PTR [0x12 + rsi + rax * 2] | dh |
+00 74 47 12 | ADD BYTE PTR [0x12 + rdi + rax * 2] | dh |
+00 74 48 12 | ADD BYTE PTR [0x12 + rax + rcx * 2] | dh |
+00 74 49 12 | ADD BYTE PTR [0x12 + rcx + rcx * 2] | dh |
+00 74 4a 12 | ADD BYTE PTR [0x12 + rdx + rcx * 2] | dh |
+00 74 4b 12 | ADD BYTE PTR [0x12 + rbx + rcx * 2] | dh |
+00 74 4c 12 | ADD BYTE PTR [0x12 + rsp + rcx * 2] | dh |
+00 74 4d 12 | ADD BYTE PTR [0x12 + rbp + rcx * 2] | dh |
+00 74 4e 12 | ADD BYTE PTR [0x12 + rsi + rcx * 2] | dh |
+00 74 4f 12 | ADD BYTE PTR [0x12 + rdi + rcx * 2] | dh |
+
+00 74 50 12 | ADD BYTE PTR [0x12 + rax + rdx * 2] | dh |
+00 74 51 12 | ADD BYTE PTR [0x12 + rcx + rdx * 2] | dh |
+00 74 52 12 | ADD BYTE PTR [0x12 + rdx + rdx * 2] | dh |
+00 74 53 12 | ADD BYTE PTR [0x12 + rbx + rdx * 2] | dh |
+00 74 54 12 | ADD BYTE PTR [0x12 + rsp + rdx * 2] | dh |
+00 74 55 12 | ADD BYTE PTR [0x12 + rbp + rdx * 2] | dh |
+00 74 56 12 | ADD BYTE PTR [0x12 + rsi + rdx * 2] | dh |
+00 74 57 12 | ADD BYTE PTR [0x12 + rdi + rdx * 2] | dh |
+00 74 58 12 | ADD BYTE PTR [0x12 + rax + rbx * 2] | dh |
+00 74 59 12 | ADD BYTE PTR [0x12 + rcx + rbx * 2] | dh |
+00 74 5a 12 | ADD BYTE PTR [0x12 + rdx + rbx * 2] | dh |
+00 74 5b 12 | ADD BYTE PTR [0x12 + rbx + rbx * 2] | dh |
+00 74 5c 12 | ADD BYTE PTR [0x12 + rsp + rbx * 2] | dh |
+00 74 5d 12 | ADD BYTE PTR [0x12 + rbp + rbx * 2] | dh |
+00 74 5e 12 | ADD BYTE PTR [0x12 + rsi + rbx * 2] | dh |
+00 74 5f 12 | ADD BYTE PTR [0x12 + rdi + rbx * 2] | dh |
+
+#TODO
+00 74 60 d2 |
+00 74 61 d2 |
+00 74 62 d2 |
+00 74 63 d2 |
+00 74 64 d2 |
+00 74 65 d2 |
+00 74 66 d2 |
+00 74 67 d2 |
+00 74 68 12 | ADD BYTE PTR [0x12 + rax + rbp * 2] | dh |
+00 74 69 12 | ADD BYTE PTR [0x12 + rcx + rbp * 2] | dh |
+00 74 6a 12 | ADD BYTE PTR [0x12 + rdx + rbp * 2] | dh |
+00 74 6b 12 | ADD BYTE PTR [0x12 + rbx + rbp * 2] | dh |
+00 74 6c 12 | ADD BYTE PTR [0x12 + rsp + rbp * 2] | dh |
+00 74 6d 12 | ADD BYTE PTR [0x12 + rbp + rbp * 2] | dh |
+00 74 6e 12 | ADD BYTE PTR [0x12 + rsi + rbp * 2] | dh |
+00 74 6f 12 | ADD BYTE PTR [0x12 + rdi + rbp * 2] | dh |
+
+00 74 70 12 | ADD BYTE PTR [0x12 + rax + rsi * 2] | dh |
+00 74 71 12 | ADD BYTE PTR [0x12 + rcx + rsi * 2] | dh |
+00 74 72 12 | ADD BYTE PTR [0x12 + rdx + rsi * 2] | dh |
+00 74 73 12 | ADD BYTE PTR [0x12 + rbx + rsi * 2] | dh |
+00 74 74 12 | ADD BYTE PTR [0x12 + rsp + rsi * 2] | dh |
+00 74 75 12 | ADD BYTE PTR [0x12 + rbp + rsi * 2] | dh |
+00 74 76 12 | ADD BYTE PTR [0x12 + rsi + rsi * 2] | dh |
+00 74 77 12 | ADD BYTE PTR [0x12 + rdi + rsi * 2] | dh |
+00 74 78 12 | ADD BYTE PTR [0x12 + rax + rdi * 2] | dh |
+00 74 79 12 | ADD BYTE PTR [0x12 + rcx + rdi * 2] | dh |
+00 74 7a 12 | ADD BYTE PTR [0x12 + rdx + rdi * 2] | dh |
+00 74 7b 12 | ADD BYTE PTR [0x12 + rbx + rdi * 2] | dh |
+00 74 7c 12 | ADD BYTE PTR [0x12 + rsp + rdi * 2] | dh |
+00 74 7d 12 | ADD BYTE PTR [0x12 + rbp + rdi * 2] | dh |
+00 74 7e 12 | ADD BYTE PTR [0x12 + rsi + rdi * 2] | dh |
+00 74 7f 12 | ADD BYTE PTR [0x12 + rdi + rdi * 2] | dh |
+
+00 74 80 12 | ADD BYTE PTR [0x12 + rax + rax * 4] | dh |
+00 74 81 12 | ADD BYTE PTR [0x12 + rcx + rax * 4] | dh |
+00 74 82 12 | ADD BYTE PTR [0x12 + rdx + rax * 4] | dh |
+00 74 83 12 | ADD BYTE PTR [0x12 + rbx + rax * 4] | dh |
+00 74 84 12 | ADD BYTE PTR [0x12 + rsp + rax * 4] | dh |
+00 74 85 12 | ADD BYTE PTR [0x12 + rbp + rax * 4] | dh |
+00 74 86 12 | ADD BYTE PTR [0x12 + rsi + rax * 4] | dh |
+00 74 87 12 | ADD BYTE PTR [0x12 + rdi + rax * 4] | dh |
+00 74 88 12 | ADD BYTE PTR [0x12 + rax + rcx * 4] | dh |
+00 74 89 12 | ADD BYTE PTR [0x12 + rcx + rcx * 4] | dh |
+00 74 8a 12 | ADD BYTE PTR [0x12 + rdx + rcx * 4] | dh |
+00 74 8b 12 | ADD BYTE PTR [0x12 + rbx + rcx * 4] | dh |
+00 74 8c 12 | ADD BYTE PTR [0x12 + rsp + rcx * 4] | dh |
+00 74 8d 12 | ADD BYTE PTR [0x12 + rbp + rcx * 4] | dh |
+00 74 8e 12 | ADD BYTE PTR [0x12 + rsi + rcx * 4] | dh |
+00 74 8f 12 | ADD BYTE PTR [0x12 + rdi + rcx * 4] | dh |
+
+00 74 90 12 | ADD BYTE PTR [0x12 + rax + rdx * 4] | dh |
+00 74 91 12 | ADD BYTE PTR [0x12 + rcx + rdx * 4] | dh |
+00 74 92 12 | ADD BYTE PTR [0x12 + rdx + rdx * 4] | dh |
+00 74 93 12 | ADD BYTE PTR [0x12 + rbx + rdx * 4] | dh |
+00 74 94 12 | ADD BYTE PTR [0x12 + rsp + rdx * 4] | dh |
+00 74 95 12 | ADD BYTE PTR [0x12 + rbp + rdx * 4] | dh |
+00 74 96 12 | ADD BYTE PTR [0x12 + rsi + rdx * 4] | dh |
+00 74 97 12 | ADD BYTE PTR [0x12 + rdi + rdx * 4] | dh |
+00 74 98 12 | ADD BYTE PTR [0x12 + rax + rbx * 4] | dh |
+00 74 99 12 | ADD BYTE PTR [0x12 + rcx + rbx * 4] | dh |
+00 74 9a 12 | ADD BYTE PTR [0x12 + rdx + rbx * 4] | dh |
+00 74 9b 12 | ADD BYTE PTR [0x12 + rbx + rbx * 4] | dh |
+00 74 9c 12 | ADD BYTE PTR [0x12 + rsp + rbx * 4] | dh |
+00 74 9d 12 | ADD BYTE PTR [0x12 + rbp + rbx * 4] | dh |
+00 74 9e 12 | ADD BYTE PTR [0x12 + rsi + rbx * 4] | dh |
+00 74 9f 12 | ADD BYTE PTR [0x12 + rdi + rbx * 4] | dh |
+
+#TODO
+00 74 a0 d2 |
+00 74 a1 d2 |
+00 74 a2 d2 |
+00 74 a3 d2 |
+00 74 a4 d2 |
+00 74 a5 d2 |
+00 74 a6 d2 |
+00 74 a7 d2 |
+00 74 a8 12 | ADD BYTE PTR [0x12 + rax + rbp * 4] | dh |
+00 74 a9 12 | ADD BYTE PTR [0x12 + rcx + rbp * 4] | dh |
+00 74 aa 12 | ADD BYTE PTR [0x12 + rdx + rbp * 4] | dh |
+00 74 ab 12 | ADD BYTE PTR [0x12 + rbx + rbp * 4] | dh |
+00 74 ac 12 | ADD BYTE PTR [0x12 + rsp + rbp * 4] | dh |
+00 74 ad 12 | ADD BYTE PTR [0x12 + rbp + rbp * 4] | dh |
+00 74 ae 12 | ADD BYTE PTR [0x12 + rsi + rbp * 4] | dh |
+00 74 af 12 | ADD BYTE PTR [0x12 + rdi + rbp * 4] | dh |
+
+00 74 b0 12 | ADD BYTE PTR [0x12 + rax + rsi * 4] | dh |
+00 74 b1 12 | ADD BYTE PTR [0x12 + rcx + rsi * 4] | dh |
+00 74 b2 12 | ADD BYTE PTR [0x12 + rdx + rsi * 4] | dh |
+00 74 b3 12 | ADD BYTE PTR [0x12 + rbx + rsi * 4] | dh |
+00 74 b4 12 | ADD BYTE PTR [0x12 + rsp + rsi * 4] | dh |
+00 74 b5 12 | ADD BYTE PTR [0x12 + rbp + rsi * 4] | dh |
+00 74 b6 12 | ADD BYTE PTR [0x12 + rsi + rsi * 4] | dh |
+00 74 b7 12 | ADD BYTE PTR [0x12 + rdi + rsi * 4] | dh |
+00 74 b8 12 | ADD BYTE PTR [0x12 + rax + rdi * 4] | dh |
+00 74 b9 12 | ADD BYTE PTR [0x12 + rcx + rdi * 4] | dh |
+00 74 ba 12 | ADD BYTE PTR [0x12 + rdx + rdi * 4] | dh |
+00 74 bb 12 | ADD BYTE PTR [0x12 + rbx + rdi * 4] | dh |
+00 74 bc 12 | ADD BYTE PTR [0x12 + rsp + rdi * 4] | dh |
+00 74 bd 12 | ADD BYTE PTR [0x12 + rbp + rdi * 4] | dh |
+00 74 be 12 | ADD BYTE PTR [0x12 + rsi + rdi * 4] | dh |
+00 74 bf 12 | ADD BYTE PTR [0x12 + rdi + rdi * 4] | dh |
+
+00 74 c0 12 | ADD BYTE PTR [0x12 + rax + rax * 8] | dh |
+00 74 c1 12 | ADD BYTE PTR [0x12 + rcx + rax * 8] | dh |
+00 74 c2 12 | ADD BYTE PTR [0x12 + rdx + rax * 8] | dh |
+00 74 c3 12 | ADD BYTE PTR [0x12 + rbx + rax * 8] | dh |
+00 74 c4 12 | ADD BYTE PTR [0x12 + rsp + rax * 8] | dh |
+00 74 c5 12 | ADD BYTE PTR [0x12 + rbp + rax * 8] | dh |
+00 74 c6 12 | ADD BYTE PTR [0x12 + rsi + rax * 8] | dh |
+00 74 c7 12 | ADD BYTE PTR [0x12 + rdi + rax * 8] | dh |
+00 74 c8 12 | ADD BYTE PTR [0x12 + rax + rcx * 8] | dh |
+00 74 c9 12 | ADD BYTE PTR [0x12 + rcx + rcx * 8] | dh |
+00 74 ca 12 | ADD BYTE PTR [0x12 + rdx + rcx * 8] | dh |
+00 74 cb 12 | ADD BYTE PTR [0x12 + rbx + rcx * 8] | dh |
+00 74 cc 12 | ADD BYTE PTR [0x12 + rsp + rcx * 8] | dh |
+00 74 cd 12 | ADD BYTE PTR [0x12 + rbp + rcx * 8] | dh |
+00 74 ce 12 | ADD BYTE PTR [0x12 + rsi + rcx * 8] | dh |
+00 74 cf 12 | ADD BYTE PTR [0x12 + rdi + rcx * 8] | dh |
+
+00 74 d0 12 | ADD BYTE PTR [0x12 + rax + rdx * 8] | dh |
+00 74 d1 12 | ADD BYTE PTR [0x12 + rcx + rdx * 8] | dh |
+00 74 d2 12 | ADD BYTE PTR [0x12 + rdx + rdx * 8] | dh |
+00 74 d3 12 | ADD BYTE PTR [0x12 + rbx + rdx * 8] | dh |
+00 74 d4 12 | ADD BYTE PTR [0x12 + rsp + rdx * 8] | dh |
+00 74 d5 12 | ADD BYTE PTR [0x12 + rbp + rdx * 8] | dh |
+00 74 d6 12 | ADD BYTE PTR [0x12 + rsi + rdx * 8] | dh |
+00 74 d7 12 | ADD BYTE PTR [0x12 + rdi + rdx * 8] | dh |
+00 74 d8 12 | ADD BYTE PTR [0x12 + rax + rbx * 8] | dh |
+00 74 d9 12 | ADD BYTE PTR [0x12 + rcx + rbx * 8] | dh |
+00 74 da 12 | ADD BYTE PTR [0x12 + rdx + rbx * 8] | dh |
+00 74 db 12 | ADD BYTE PTR [0x12 + rbx + rbx * 8] | dh |
+00 74 dc 12 | ADD BYTE PTR [0x12 + rsp + rbx * 8] | dh |
+00 74 dd 12 | ADD BYTE PTR [0x12 + rbp + rbx * 8] | dh |
+00 74 de 12 | ADD BYTE PTR [0x12 + rsi + rbx * 8] | dh |
+00 74 df 12 | ADD BYTE PTR [0x12 + rdi + rbx * 8] | dh |
+
+#TODO
+00 74 e0 d2 |
+00 74 e1 d2 |
+00 74 e2 d2 |
+00 74 e3 d2 |
+00 74 e4 d2 |
+00 74 e5 d2 |
+00 74 e6 d2 |
+00 74 e7 d2 |
+00 74 e8 12 | ADD BYTE PTR [0x12 + rax + rbp * 8] | dh |
+00 74 e9 12 | ADD BYTE PTR [0x12 + rcx + rbp * 8] | dh |
+00 74 ea 12 | ADD BYTE PTR [0x12 + rdx + rbp * 8] | dh |
+00 74 eb 12 | ADD BYTE PTR [0x12 + rbx + rbp * 8] | dh |
+00 74 ec 12 | ADD BYTE PTR [0x12 + rsp + rbp * 8] | dh |
+00 74 ed 12 | ADD BYTE PTR [0x12 + rbp + rbp * 8] | dh |
+00 74 ee 12 | ADD BYTE PTR [0x12 + rsi + rbp * 8] | dh |
+00 74 ef 12 | ADD BYTE PTR [0x12 + rdi + rbp * 8] | dh |
+
+00 74 f0 12 | ADD BYTE PTR [0x12 + rax + rsi * 8] | dh |
+00 74 f1 12 | ADD BYTE PTR [0x12 + rcx + rsi * 8] | dh |
+00 74 f2 12 | ADD BYTE PTR [0x12 + rdx + rsi * 8] | dh |
+00 74 f3 12 | ADD BYTE PTR [0x12 + rbx + rsi * 8] | dh |
+00 74 f4 12 | ADD BYTE PTR [0x12 + rsp + rsi * 8] | dh |
+00 74 f5 12 | ADD BYTE PTR [0x12 + rbp + rsi * 8] | dh |
+00 74 f6 12 | ADD BYTE PTR [0x12 + rsi + rsi * 8] | dh |
+00 74 f7 12 | ADD BYTE PTR [0x12 + rdi + rsi * 8] | dh |
+00 74 f8 12 | ADD BYTE PTR [0x12 + rax + rdi * 8] | dh |
+00 74 f9 12 | ADD BYTE PTR [0x12 + rcx + rdi * 8] | dh |
+00 74 fa 12 | ADD BYTE PTR [0x12 + rdx + rdi * 8] | dh |
+00 74 fb 12 | ADD BYTE PTR [0x12 + rbx + rdi * 8] | dh |
+00 74 fc 12 | ADD BYTE PTR [0x12 + rsp + rdi * 8] | dh |
+00 74 fd 12 | ADD BYTE PTR [0x12 + rbp + rdi * 8] | dh |
+00 74 fe 12 | ADD BYTE PTR [0x12 + rsi + rdi * 8] | dh |
+00 74 ff 12 | ADD BYTE PTR [0x12 + rdi + rdi * 8] | dh |
