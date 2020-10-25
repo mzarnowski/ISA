@@ -1,0 +1,117 @@
+# OP ModRM
+67 00 00 | BYTE PTR [eax] | al |
+67 00 01 | BYTE PTR [ecx] | al |
+67 00 02 | BYTE PTR [edx] | al |
+67 00 03 | BYTE PTR [ebx] | al |
+67 00 06 | BYTE PTR [esi] | al |
+67 00 07 | BYTE PTR [edi] | al |
+
+67 00 08 | BYTE PTR [eax] | cl |
+67 00 09 | BYTE PTR [ecx] | cl |
+67 00 0a | BYTE PTR [edx] | cl |
+67 00 0b | BYTE PTR [ebx] | cl |
+67 00 0e | BYTE PTR [esi] | cl |
+67 00 0f | BYTE PTR [edx] | cl |
+
+67 00 10 | BYTE PTR [eax] | dl |
+67 00 11 | BYTE PTR [ecx] | dl |
+67 00 12 | BYTE PTR [edx] | dl |
+67 00 13 | BYTE PTR [ebx] | dl |
+67 00 16 | BYTE PTR [esi] | dl |
+67 00 17 | BYTE PTR [edi] | dl |
+
+67 00 18 | BYTE PTR [eax] | bl |
+67 00 19 | BYTE PTR [ecx] | bl |
+67 00 1a | BYTE PTR [edx] | bl |
+67 00 1b | BYTE PTR [ebx] | bl |
+67 00 1e | BYTE PTR [esi] | bl |
+67 00 1f | BYTE PTR [edi] | bl |
+
+67 00 20 | BYTE PTR [eax] | ah |
+67 00 21 | BYTE PTR [ecx] | ah |
+67 00 22 | BYTE PTR [edx] | ah |
+67 00 26 | BYTE PTR [esi] | ah |
+67 00 27 | BYTE PTR [edi] | ah |
+
+67 00 28 | BYTE PTR [eax] | ch |
+67 00 29 | BYTE PTR [ecx] | ch |
+67 00 2a | BYTE PTR [edx] | ch |
+67 00 2b | BYTE PTR [ebx] | ch |
+67 00 2e | BYTE PTR [esi] | ch |
+67 00 2f | BYTE PTR [edi] | ch |
+
+67 00 30 | BYTE PTR [eax] | dh |
+67 00 31 | BYTE PTR [ecx] | dh |
+67 00 32 | BYTE PTR [edx] | dh |
+67 00 33 | BYTE PTR [ebx] | dh |
+67 00 36 | BYTE PTR [esi] | dh |
+67 00 37 | BYTE PTR [edi] | dh |
+
+# values c0 - ff don't suppoet the 0x67 peefix
+67 00 c0 | al | al |
+67 00 c1 | cl | al |
+67 00 c2 | dl | al |
+67 00 c3 | bl | al |
+67 00 c4 | ah | al |
+67 00 c5 | ch | al |
+67 00 c6 | dh | al |
+67 00 c7 | bh | al |
+67 00 c8 | al | cl |
+67 00 c9 | cl | cl |
+67 00 ca | dl | cl |
+67 00 cb | bl | cl |
+67 00 cc | ah | cl |
+67 00 cd | ch | cl |
+67 00 ce | dh | cl |
+67 00 cf | bh | cl |
+
+67 00 d0 | al | dl |
+67 00 d1 | cl | dl |
+67 00 d2 | dl | dl |
+67 00 d3 | bl | dl |
+67 00 d4 | ah | dl |
+67 00 d5 | ch | dl |
+67 00 d6 | dh | dl |
+67 00 d7 | bh | dl |
+67 00 d8 | al | bl |
+67 00 d9 | cl | bl |
+67 00 da | dl | bl |
+67 00 db | bl | bl |
+67 00 dc | ah | bl |
+67 00 dd | ch | bl |
+67 00 de | dh | bl |
+67 00 df | bh | bl |
+
+67 00 e0 | al | ah |
+67 00 e1 | cl | ah |
+67 00 e2 | dl | ah |
+67 00 e3 | bl | ah |
+67 00 e4 | ah | ah |
+67 00 e5 | ch | ah |
+67 00 e6 | dh | ah |
+67 00 e7 | bh | ah |
+67 00 e8 | al | ch |
+67 00 e9 | cl | ch |
+67 00 ea | dl | ch |
+67 00 eb | bl | ch |
+67 00 ec | ah | ch |
+67 00 ed | ch | ch |
+67 00 ee | dh | ch |
+67 00 ef | bh | ch |
+
+67 00 f0 | al | dh |
+67 00 f1 | cl | dh |
+67 00 f2 | dl | dh |
+67 00 f3 | bl | dh |
+67 00 f4 | ah | dh |
+67 00 f5 | ch | dh |
+67 00 f6 | dh | dh |
+67 00 f7 | bh | dh |
+67 00 f8 | al | bh |
+67 00 f9 | cl | bh |
+67 00 fa | dl | bh |
+67 00 fb | bl | bh |
+67 00 fc | ah | bh |
+67 00 fd | ch | bh |
+67 00 fe | dh | bh |
+67 00 ff | bh | bh |

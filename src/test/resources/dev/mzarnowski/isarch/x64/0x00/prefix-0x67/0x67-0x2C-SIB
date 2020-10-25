@@ -1,0 +1,264 @@
+# OP ModRM SIB
+67 00 2c 00 | ADD BYTE PTR [eax + eax * 1] | ch |
+67 00 2c 01 | ADD BYTE PTR [ecx + eax * 1] | ch |
+67 00 2c 02 | ADD BYTE PTR [edx + eax * 1] | ch |
+67 00 2c 03 | ADD BYTE PTR [ebx + eax * 1] | ch |
+67 00 2c 04 | ADD BYTE PTR [esp + eax * 1] | ch |
+67 00 2c 06 | ADD BYTE PTR [esi + eax * 1] | ch |
+67 00 2c 07 | ADD BYTE PTR [edi + eax * 1] | ch |
+
+67 00 2c 08 | ADD BYTE PTR [eax + ecx * 1] | ch |
+67 00 2c 09 | ADD BYTE PTR [ecx + ecx * 1] | ch |
+67 00 2c 0a | ADD BYTE PTR [edx + ecx * 1] | ch |
+67 00 2c 0b | ADD BYTE PTR [ebx + ecx * 1] | ch |
+67 00 2c 0c | ADD BYTE PTR [esp + ecx * 1] | ch |
+67 00 2c 0e | ADD BYTE PTR [esi + ecx * 1] | ch |
+67 00 2c 0f | ADD BYTE PTR [edi + ecx * 1] | ch |
+
+67 00 2c 10 | ADD BYTE PTR [eax + edx * 1] | ch |
+67 00 2c 11 | ADD BYTE PTR [ecx + edx * 1] | ch |
+67 00 2c 12 | ADD BYTE PTR [edx + edx * 1] | ch |
+67 00 2c 13 | ADD BYTE PTR [ebx + edx * 1] | ch |
+67 00 2c 14 | ADD BYTE PTR [esp + edx * 1] | ch |
+67 00 2c 16 | ADD BYTE PTR [esi + edx * 1] | ch |
+67 00 2c 17 | ADD BYTE PTR [edi + edx * 1] | ch |
+
+67 00 2c 18 | ADD BYTE PTR [eax + ebx * 1] | ch |
+67 00 2c 19 | ADD BYTE PTR [ecx + ebx * 1] | ch |
+67 00 2c 1a | ADD BYTE PTR [edx + ebx * 1] | ch |
+67 00 2c 1b | ADD BYTE PTR [ebx + ebx * 1] | ch |
+67 00 2c 1c | ADD BYTE PTR [esp + ebx * 1] | ch |
+67 00 2c 1e | ADD BYTE PTR [esi + ebx * 1] | ch |
+67 00 2c 1f | ADD BYTE PTR [edi + ebx * 1] | ch |
+
+#TODO
+67 00 2c 20 |
+67 00 2c 21 |
+67 00 2c 22 |
+67 00 2c 23 |
+67 00 2c 24 |
+67 00 2c 25 |
+67 00 2c 26 |
+67 00 2c 27 |
+
+67 00 2c 28 | ADD BYTE PTR [eax + ebp * 1] | ch |
+67 00 2c 29 | ADD BYTE PTR [ecx + ebp * 1] | ch |
+67 00 2c 2a | ADD BYTE PTR [edx + ebp * 1] | ch |
+67 00 2c 2b | ADD BYTE PTR [ebx + ebp * 1] | ch |
+67 00 2c 2c | ADD BYTE PTR [esp + ebp * 1] | ch |
+67 00 2c 2e | ADD BYTE PTR [esi + ebp * 1] | ch |
+67 00 2c 2f | ADD BYTE PTR [edi + ebp * 1] | ch |
+
+67 00 2c 30 | ADD BYTE PTR [eax + esi * 1] | ch |
+67 00 2c 31 | ADD BYTE PTR [ecx + esi * 1] | ch |
+67 00 2c 32 | ADD BYTE PTR [edx + esi * 1] | ch |
+67 00 2c 33 | ADD BYTE PTR [ebx + esi * 1] | ch |
+67 00 2c 34 | ADD BYTE PTR [esp + esi * 1] | ch |
+67 00 2c 36 | ADD BYTE PTR [esi + esi * 1] | ch |
+67 00 2c 37 | ADD BYTE PTR [edi + esi * 1] | ch |
+
+67 00 2c 38 | ADD BYTE PTR [eax + edi * 1] | ch |
+67 00 2c 39 | ADD BYTE PTR [ecx + edi * 1] | ch |
+67 00 2c 3a | ADD BYTE PTR [edx + edi * 1] | ch |
+67 00 2c 3b | ADD BYTE PTR [ebx + edi * 1] | ch |
+67 00 2c 3c | ADD BYTE PTR [esp + edi * 1] | ch |
+67 00 2c 3e | ADD BYTE PTR [esi + edi * 1] | ch |
+67 00 2c 3f | ADD BYTE PTR [edi + edi * 1] | ch |
+
+67 00 2c 40 | ADD BYTE PTR [eax + eax * 2] | ch |
+67 00 2c 41 | ADD BYTE PTR [ecx + eax * 2] | ch |
+67 00 2c 42 | ADD BYTE PTR [edx + eax * 2] | ch |
+67 00 2c 43 | ADD BYTE PTR [ebx + eax * 2] | ch |
+67 00 2c 44 | ADD BYTE PTR [esp + eax * 2] | ch |
+67 00 2c 46 | ADD BYTE PTR [esi + eax * 2] | ch |
+67 00 2c 47 | ADD BYTE PTR [edi + eax * 2] | ch |
+
+67 00 2c 48 | ADD BYTE PTR [eax + ecx * 2] | ch |
+67 00 2c 49 | ADD BYTE PTR [ecx + ecx * 2] | ch |
+67 00 2c 4a | ADD BYTE PTR [edx + ecx * 2] | ch |
+67 00 2c 4b | ADD BYTE PTR [ebx + ecx * 2] | ch |
+67 00 2c 4c | ADD BYTE PTR [esp + ecx * 2] | ch |
+67 00 2c 4e | ADD BYTE PTR [esi + ecx * 2] | ch |
+67 00 2c 4f | ADD BYTE PTR [edi + ecx * 2] | ch |
+
+67 00 2c 50 | ADD BYTE PTR [eax + edx * 2] | ch |
+67 00 2c 51 | ADD BYTE PTR [ecx + edx * 2] | ch |
+67 00 2c 52 | ADD BYTE PTR [edx + edx * 2] | ch |
+67 00 2c 53 | ADD BYTE PTR [ebx + edx * 2] | ch |
+67 00 2c 54 | ADD BYTE PTR [esp + edx * 2] | ch |
+67 00 2c 56 | ADD BYTE PTR [esi + edx * 2] | ch |
+67 00 2c 57 | ADD BYTE PTR [edi + edx * 2] | ch |
+
+67 00 2c 58 | ADD BYTE PTR [eax + ebx * 2] | ch |
+67 00 2c 59 | ADD BYTE PTR [ecx + ebx * 2] | ch |
+67 00 2c 5a | ADD BYTE PTR [edx + ebx * 2] | ch |
+67 00 2c 5b | ADD BYTE PTR [ebx + ebx * 2] | ch |
+67 00 2c 5c | ADD BYTE PTR [esp + ebx * 2] | ch |
+67 00 2c 5e | ADD BYTE PTR [esi + ebx * 2] | ch |
+67 00 2c 5f | ADD BYTE PTR [edi + ebx * 2] | ch |
+
+# TODO
+67 00 2c 60 |
+67 00 2c 61 |
+67 00 2c 62 |
+67 00 2c 63 |
+67 00 2c 64 |
+67 00 2c 65 |
+67 00 2c 66 |
+67 00 2c 67 |
+
+67 00 2c 68 | ADD BYTE PTR [eax + ebp * 2] | ch |
+67 00 2c 69 | ADD BYTE PTR [ecx + ebp * 2] | ch |
+67 00 2c 6a | ADD BYTE PTR [edx + ebp * 2] | ch |
+67 00 2c 6b | ADD BYTE PTR [ebx + ebp * 2] | ch |
+67 00 2c 6c | ADD BYTE PTR [esp + ebp * 2] | ch |
+67 00 2c 6e | ADD BYTE PTR [esi + ebp * 2] | ch |
+67 00 2c 6f | ADD BYTE PTR [edi + ebp * 2] | ch |
+
+67 00 2c 70 | ADD BYTE PTR [eax + esi * 2] | ch |
+67 00 2c 71 | ADD BYTE PTR [ecx + esi * 2] | ch |
+67 00 2c 72 | ADD BYTE PTR [edx + esi * 2] | ch |
+67 00 2c 73 | ADD BYTE PTR [ebx + esi * 2] | ch |
+67 00 2c 74 | ADD BYTE PTR [esp + esi * 2] | ch |
+67 00 2c 76 | ADD BYTE PTR [esi + esi * 2] | ch |
+67 00 2c 77 | ADD BYTE PTR [edi + esi * 2] | ch |
+
+67 00 2c 78 | ADD BYTE PTR [eax + edi * 2] | ch |
+67 00 2c 79 | ADD BYTE PTR [ecx + edi * 2] | ch |
+67 00 2c 7a | ADD BYTE PTR [edx + edi * 2] | ch |
+67 00 2c 7b | ADD BYTE PTR [ebx + edi * 2] | ch |
+67 00 2c 7c | ADD BYTE PTR [esp + edi * 2] | ch |
+67 00 2c 7e | ADD BYTE PTR [esi + edi * 2] | ch |
+67 00 2c 7f | ADD BYTE PTR [edi + edi * 2] | ch |
+
+67 00 2c 80 | ADD BYTE PTR [eax + eax * 4] | ch |
+67 00 2c 81 | ADD BYTE PTR [ecx + eax * 4] | ch |
+67 00 2c 82 | ADD BYTE PTR [edx + eax * 4] | ch |
+67 00 2c 83 | ADD BYTE PTR [ebx + eax * 4] | ch |
+67 00 2c 84 | ADD BYTE PTR [esp + eax * 4] | ch |
+67 00 2c 86 | ADD BYTE PTR [esi + eax * 4] | ch |
+67 00 2c 87 | ADD BYTE PTR [edi + eax * 4] | ch |
+
+67 00 2c 88 | ADD BYTE PTR [eax + ecx * 4] | ch |
+67 00 2c 89 | ADD BYTE PTR [ecx + ecx * 4] | ch |
+67 00 2c 8a | ADD BYTE PTR [edx + ecx * 4] | ch |
+67 00 2c 8b | ADD BYTE PTR [ebx + ecx * 4] | ch |
+67 00 2c 8c | ADD BYTE PTR [esp + ecx * 4] | ch |
+67 00 2c 8e | ADD BYTE PTR [esi + ecx * 4] | ch |
+67 00 2c 8f | ADD BYTE PTR [edi + ecx * 4] | ch |
+
+67 00 2c 90 | ADD BYTE PTR [eax + edx * 4] | ch |
+67 00 2c 91 | ADD BYTE PTR [ecx + edx * 4] | ch |
+67 00 2c 92 | ADD BYTE PTR [edx + edx * 4] | ch |
+67 00 2c 93 | ADD BYTE PTR [ebx + edx * 4] | ch |
+67 00 2c 94 | ADD BYTE PTR [esp + edx * 4] | ch |
+67 00 2c 96 | ADD BYTE PTR [esi + edx * 4] | ch |
+67 00 2c 97 | ADD BYTE PTR [edi + edx * 4] | ch |
+
+67 00 2c 98 | ADD BYTE PTR [eax + ebx * 4] | ch |
+67 00 2c 99 | ADD BYTE PTR [ecx + ebx * 4] | ch |
+67 00 2c 9a | ADD BYTE PTR [edx + ebx * 4] | ch |
+67 00 2c 9b | ADD BYTE PTR [ebx + ebx * 4] | ch |
+67 00 2c 9c | ADD BYTE PTR [esp + ebx * 4] | ch |
+67 00 2c 9e | ADD BYTE PTR [esi + ebx * 4] | ch |
+67 00 2c 9f | ADD BYTE PTR [edi + ebx * 4] | ch |
+
+# TODO
+67 00 2c a0 |
+67 00 2c a1 |
+67 00 2c a2 |
+67 00 2c a3 |
+67 00 2c a4 |
+67 00 2c a5 |
+67 00 2c a6 |
+67 00 2c a7 |
+
+67 00 2c a8 | ADD BYTE PTR [eax + ebp * 4] | ch |
+67 00 2c a9 | ADD BYTE PTR [ecx + ebp * 4] | ch |
+67 00 2c aa | ADD BYTE PTR [edx + ebp * 4] | ch |
+67 00 2c ab | ADD BYTE PTR [ebx + ebp * 4] | ch |
+67 00 2c ac | ADD BYTE PTR [esp + ebp * 4] | ch |
+67 00 2c ae | ADD BYTE PTR [esi + ebp * 4] | ch |
+67 00 2c af | ADD BYTE PTR [edi + ebp * 4] | ch |
+
+67 00 2c b0 | ADD BYTE PTR [eax + esi * 4] | ch |
+67 00 2c b1 | ADD BYTE PTR [ecx + esi * 4] | ch |
+67 00 2c b2 | ADD BYTE PTR [edx + esi * 4] | ch |
+67 00 2c b3 | ADD BYTE PTR [ebx + esi * 4] | ch |
+67 00 2c b4 | ADD BYTE PTR [esp + esi * 4] | ch |
+67 00 2c b6 | ADD BYTE PTR [esi + esi * 4] | ch |
+67 00 2c b7 | ADD BYTE PTR [edi + esi * 4] | ch |
+
+67 00 2c b8 | ADD BYTE PTR [eax + edi * 4] | ch |
+67 00 2c b9 | ADD BYTE PTR [ecx + edi * 4] | ch |
+67 00 2c ba | ADD BYTE PTR [edx + edi * 4] | ch |
+67 00 2c bb | ADD BYTE PTR [ebx + edi * 4] | ch |
+67 00 2c bc | ADD BYTE PTR [esp + edi * 4] | ch |
+67 00 2c be | ADD BYTE PTR [esi + edi * 4] | ch |
+67 00 2c bf | ADD BYTE PTR [edi + edi * 4] | ch |
+
+67 00 2c c0 | ADD BYTE PTR [eax + eax * 8] | ch |
+67 00 2c c1 | ADD BYTE PTR [ecx + eax * 8] | ch |
+67 00 2c c2 | ADD BYTE PTR [edx + eax * 8] | ch |
+67 00 2c c3 | ADD BYTE PTR [ebx + eax * 8] | ch |
+67 00 2c c4 | ADD BYTE PTR [esp + eax * 8] | ch |
+67 00 2c c6 | ADD BYTE PTR [esi + eax * 8] | ch |
+67 00 2c c7 | ADD BYTE PTR [edi + eax * 8] | ch |
+
+67 00 2c c8 | ADD BYTE PTR [eax + ecx * 8] | ch |
+67 00 2c c9 | ADD BYTE PTR [ecx + ecx * 8] | ch |
+67 00 2c ca | ADD BYTE PTR [edx + ecx * 8] | ch |
+67 00 2c cb | ADD BYTE PTR [ebx + ecx * 8] | ch |
+67 00 2c cc | ADD BYTE PTR [esp + ecx * 8] | ch |
+67 00 2c ce | ADD BYTE PTR [esi + ecx * 8] | ch |
+67 00 2c cf | ADD BYTE PTR [edi + ecx * 8] | ch |
+
+67 00 2c d0 | ADD BYTE PTR [eax + edx * 8] | ch |
+67 00 2c d1 | ADD BYTE PTR [ecx + edx * 8] | ch |
+67 00 2c d2 | ADD BYTE PTR [edx + edx * 8] | ch |
+67 00 2c d3 | ADD BYTE PTR [ebx + edx * 8] | ch |
+67 00 2c d4 | ADD BYTE PTR [esp + edx * 8] | ch |
+67 00 2c d6 | ADD BYTE PTR [esi + edx * 8] | ch |
+67 00 2c d7 | ADD BYTE PTR [edi + edx * 8] | ch |
+
+67 00 2c d8 | ADD BYTE PTR [eax + ebx * 8] | ch |
+67 00 2c d9 | ADD BYTE PTR [ecx + ebx * 8] | ch |
+67 00 2c da | ADD BYTE PTR [edx + ebx * 8] | ch |
+67 00 2c db | ADD BYTE PTR [ebx + ebx * 8] | ch |
+67 00 2c dc | ADD BYTE PTR [esp + ebx * 8] | ch |
+67 00 2c de | ADD BYTE PTR [esi + ebx * 8] | ch |
+67 00 2c df | ADD BYTE PTR [edi + ebx * 8] | ch |
+
+# TODO
+67 00 2c e0 |
+67 00 2c e1 |
+67 00 2c e2 |
+67 00 2c e3 |
+67 00 2c e4 |
+67 00 2c e5 |
+67 00 2c e6 |
+67 00 2c e7 |
+
+67 00 2c e8 | ADD BYTE PTR [eax + ebp * 8] | ch |
+67 00 2c e9 | ADD BYTE PTR [ecx + ebp * 8] | ch |
+67 00 2c ea | ADD BYTE PTR [edx + ebp * 8] | ch |
+67 00 2c eb | ADD BYTE PTR [ebx + ebp * 8] | ch |
+67 00 2c ec | ADD BYTE PTR [esp + ebp * 8] | ch |
+67 00 2c ee | ADD BYTE PTR [esi + ebp * 8] | ch |
+67 00 2c ef | ADD BYTE PTR [edi + ebp * 8] | ch |
+
+67 00 2c f0 | ADD BYTE PTR [eax + esi * 8] | ch |
+67 00 2c f1 | ADD BYTE PTR [ecx + esi * 8] | ch |
+67 00 2c f2 | ADD BYTE PTR [edx + esi * 8] | ch |
+67 00 2c f3 | ADD BYTE PTR [ebx + esi * 8] | ch |
+67 00 2c f4 | ADD BYTE PTR [esp + esi * 8] | ch |
+67 00 2c f6 | ADD BYTE PTR [esi + esi * 8] | ch |
+67 00 2c f7 | ADD BYTE PTR [edi + esi * 8] | ch |
+
+67 00 2c f8 | ADD BYTE PTR [eax + edi * 8] | ch |
+67 00 2c f9 | ADD BYTE PTR [ecx + edi * 8] | ch |
+67 00 2c fa | ADD BYTE PTR [edx + edi * 8] | ch |
+67 00 2c fb | ADD BYTE PTR [ebx + edi * 8] | ch |
+67 00 2c fc | ADD BYTE PTR [esp + edi * 8] | ch |
+67 00 2c fe | ADD BYTE PTR [esi + edi * 8] | ch |
+67 00 2c ff | ADD BYTE PTR [edi + edi * 8] | ch |
