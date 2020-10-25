@@ -1,0 +1,266 @@
+# OP ModRM SIB disp32
+
+00 8c 00 12 34 56 78 | ADD BYTE PTR [rax + rax * 1 + 0x78563412] | cl |
+00 8c 01 12 34 56 78 | ADD BYTE PTR [rcx + rax * 1 + 0x78563412] | cl |
+00 8c 02 12 34 56 78 | ADD BYTE PTR [rdx + rax * 1 + 0x78563412] | cl |
+00 8c 03 12 34 56 78 | ADD BYTE PTR [rbx + rax * 1 + 0x78563412] | cl |
+00 8c 04 12 34 56 78 | ADD BYTE PTR [rsp + rax * 1 + 0x78563412] | cl |
+00 8c 06 12 34 56 78 | ADD BYTE PTR [rsi + rax * 1 + 0x78563412] | cl |
+00 8c 07 12 34 56 78 | ADD BYTE PTR [rdi + rax * 1 + 0x78563412] | cl |
+
+00 8c 08 12 34 56 78 | ADD BYTE PTR [rax + rcx * 1 + 0x78563412] | cl |
+00 8c 09 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 1 + 0x78563412] | cl |
+00 8c 0a 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 1 + 0x78563412] | cl |
+00 8c 0b 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 1 + 0x78563412] | cl |
+00 8c 0c 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 1 + 0x78563412] | cl |
+00 8c 0e 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 1 + 0x78563412] | cl |
+00 8c 0f 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 1 + 0x78563412] | cl |
+
+00 8c 10 12 34 56 78 | ADD BYTE PTR [rax + rdx * 1 + 0x78563412] | cl |
+00 8c 11 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 1 + 0x78563412] | cl |
+00 8c 12 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 1 + 0x78563412] | cl |
+00 8c 13 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 1 + 0x78563412] | cl |
+00 8c 14 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 1 + 0x78563412] | cl |
+00 8c 16 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 1 + 0x78563412] | cl |
+00 8c 17 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 1 + 0x78563412] | cl |
+
+00 8c 18 12 34 56 78 | ADD BYTE PTR [rax + rbx * 1 + 0x78563412] | cl |
+00 8c 19 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 1 + 0x78563412] | cl |
+00 8c 1a 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 1 + 0x78563412] | cl |
+00 8c 1b 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 1 + 0x78563412] | cl |
+00 8c 1c 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 1 + 0x78563412] | cl |
+00 8c 1e 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 1 + 0x78563412] | cl |
+00 8c 1f 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 1 + 0x78563412] | cl |
+
+#TODO
+00 8c 20 12 34 56 78 |
+00 8c 21 12 34 56 78 |
+00 8c 22 12 34 56 78 |
+00 8c 23 12 34 56 78 |
+00 8c 24 12 34 56 78 |
+00 8c 25 12 34 56 78 |
+00 8c 26 12 34 56 78 |
+00 8c 27 12 34 56 78 |
+
+00 8c 28 12 34 56 78 | ADD BYTE PTR [rax + rbp * 1 + 0x78563412] | cl |
+00 8c 29 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 1 + 0x78563412] | cl |
+00 8c 2a 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 1 + 0x78563412] | cl |
+00 8c 2b 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 1 + 0x78563412] | cl |
+00 8c 2c 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 1 + 0x78563412] | cl |
+00 8c 2e 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 1 + 0x78563412] | cl |
+00 8c 2f 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 1 + 0x78563412] | cl |
+
+00 8c 30 12 34 56 78 | ADD BYTE PTR [rax + rsi * 1 + 0x78563412] | cl |
+00 8c 31 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 1 + 0x78563412] | cl |
+00 8c 32 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 1 + 0x78563412] | cl |
+00 8c 33 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 1 + 0x78563412] | cl |
+00 8c 34 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 1 + 0x78563412] | cl |
+00 8c 36 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 1 + 0x78563412] | cl |
+00 8c 37 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 1 + 0x78563412] | cl |
+
+00 8c 38 12 34 56 78 | ADD BYTE PTR [rax + rdi * 1 + 0x78563412] | cl |
+00 8c 39 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 1 + 0x78563412] | cl |
+00 8c 3a 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 1 + 0x78563412] | cl |
+00 8c 3b 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 1 + 0x78563412] | cl |
+00 8c 3c 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 1 + 0x78563412] | cl |
+00 8c 3e 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 1 + 0x78563412] | cl |
+00 8c 3f 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 1 + 0x78563412] | cl |
+
+00 8c 40 12 34 56 78 | ADD BYTE PTR [rax + rax * 2 + 0x78563412] | cl |
+00 8c 41 12 34 56 78 | ADD BYTE PTR [rcx + rax * 2 + 0x78563412] | cl |
+00 8c 42 12 34 56 78 | ADD BYTE PTR [rdx + rax * 2 + 0x78563412] | cl |
+00 8c 43 12 34 56 78 | ADD BYTE PTR [rbx + rax * 2 + 0x78563412] | cl |
+00 8c 44 12 34 56 78 | ADD BYTE PTR [rsp + rax * 2 + 0x78563412] | cl |
+00 8c 46 12 34 56 78 | ADD BYTE PTR [rsi + rax * 2 + 0x78563412] | cl |
+00 8c 47 12 34 56 78 | ADD BYTE PTR [rdi + rax * 2 + 0x78563412] | cl |
+
+00 8c 48 12 34 56 78 | ADD BYTE PTR [rax + rcx * 2 + 0x78563412] | cl |
+00 8c 49 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 2 + 0x78563412] | cl |
+00 8c 4a 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 2 + 0x78563412] | cl |
+00 8c 4b 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 2 + 0x78563412] | cl |
+00 8c 4c 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 2 + 0x78563412] | cl |
+00 8c 4e 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 2 + 0x78563412] | cl |
+00 8c 4f 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 2 + 0x78563412] | cl |
+
+00 8c 50 12 34 56 78 | ADD BYTE PTR [rax + rdx * 2 + 0x78563412] | cl |
+00 8c 51 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 2 + 0x78563412] | cl |
+00 8c 52 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 2 + 0x78563412] | cl |
+00 8c 53 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 2 + 0x78563412] | cl |
+00 8c 54 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 2 + 0x78563412] | cl |
+00 8c 56 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 2 + 0x78563412] | cl |
+00 8c 57 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 2 + 0x78563412] | cl |
+
+00 8c 58 12 34 56 78 | ADD BYTE PTR [rax + rbx * 2 + 0x78563412] | cl |
+00 8c 59 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 2 + 0x78563412] | cl |
+00 8c 5a 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 2 + 0x78563412] | cl |
+00 8c 5b 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 2 + 0x78563412] | cl |
+00 8c 5c 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 2 + 0x78563412] | cl |
+00 8c 5e 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 2 + 0x78563412] | cl |
+00 8c 5f 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 2 + 0x78563412] | cl |
+
+# TODO
+00 8c 60 12 34 56 78 |
+00 8c 61 12 34 56 78 |
+00 8c 62 12 34 56 78 |
+00 8c 63 12 34 56 78 |
+00 8c 64 12 34 56 78 |
+00 8c 65 12 34 56 78 |
+00 8c 66 12 34 56 78 |
+00 8c 67 12 34 56 78 |
+
+00 8c 68 12 34 56 78 | ADD BYTE PTR [rax + rbp * 2 + 0x78563412] | cl |
+00 8c 69 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 2 + 0x78563412] | cl |
+00 8c 6a 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 2 + 0x78563412] | cl |
+00 8c 6b 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 2 + 0x78563412] | cl |
+00 8c 6c 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 2 + 0x78563412] | cl |
+00 8c 6e 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 2 + 0x78563412] | cl |
+00 8c 6f 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 2 + 0x78563412] | cl |
+
+00 8c 70 12 34 56 78 | ADD BYTE PTR [rax + rsi * 2 + 0x78563412] | cl |
+00 8c 71 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 2 + 0x78563412] | cl |
+00 8c 72 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 2 + 0x78563412] | cl |
+00 8c 73 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 2 + 0x78563412] | cl |
+00 8c 74 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 2 + 0x78563412] | cl |
+00 8c 76 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 2 + 0x78563412] | cl |
+00 8c 77 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 2 + 0x78563412] | cl |
+
+00 8c 78 12 34 56 78 | ADD BYTE PTR [rax + rdi * 2 + 0x78563412] | cl |
+00 8c 79 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 2 + 0x78563412] | cl |
+00 8c 7a 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 2 + 0x78563412] | cl |
+00 8c 7b 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 2 + 0x78563412] | cl |
+00 8c 7c 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 2 + 0x78563412] | cl |
+00 8c 7e 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 2 + 0x78563412] | cl |
+00 8c 7f 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 2 + 0x78563412] | cl |
+
+00 8c 80 12 34 56 78 | ADD BYTE PTR [rax + rax * 4 + 0x78563412] | cl |
+00 8c 81 12 34 56 78 | ADD BYTE PTR [rcx + rax * 4 + 0x78563412] | cl |
+00 8c 82 12 34 56 78 | ADD BYTE PTR [rdx + rax * 4 + 0x78563412] | cl |
+00 8c 83 12 34 56 78 | ADD BYTE PTR [rbx + rax * 4 + 0x78563412] | cl |
+00 8c 84 12 34 56 78 | ADD BYTE PTR [rsp + rax * 4 + 0x78563412] | cl |
+00 8c 86 12 34 56 78 | ADD BYTE PTR [rsi + rax * 4 + 0x78563412] | cl |
+00 8c 87 12 34 56 78 | ADD BYTE PTR [rdi + rax * 4 + 0x78563412] | cl |
+
+00 8c 88 12 34 56 78 | ADD BYTE PTR [rax + rcx * 4 + 0x78563412] | cl |
+00 8c 89 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 4 + 0x78563412] | cl |
+00 8c 8a 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 4 + 0x78563412] | cl |
+00 8c 8b 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 4 + 0x78563412] | cl |
+00 8c 8c 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 4 + 0x78563412] | cl |
+00 8c 8e 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 4 + 0x78563412] | cl |
+00 8c 8f 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 4 + 0x78563412] | cl |
+
+00 8c 90 12 34 56 78 | ADD BYTE PTR [rax + rdx * 4 + 0x78563412] | cl |
+00 8c 91 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 4 + 0x78563412] | cl |
+00 8c 92 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 4 + 0x78563412] | cl |
+00 8c 93 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 4 + 0x78563412] | cl |
+00 8c 94 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 4 + 0x78563412] | cl |
+00 8c 96 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 4 + 0x78563412] | cl |
+00 8c 97 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 4 + 0x78563412] | cl |
+
+00 8c 98 12 34 56 78 | ADD BYTE PTR [rax + rbx * 4 + 0x78563412] | cl |
+00 8c 99 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 4 + 0x78563412] | cl |
+00 8c 9a 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 4 + 0x78563412] | cl |
+00 8c 9b 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 4 + 0x78563412] | cl |
+00 8c 9c 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 4 + 0x78563412] | cl |
+00 8c 9e 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 4 + 0x78563412] | cl |
+00 8c 9f 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 4 + 0x78563412] | cl |
+
+# TODO
+00 8c a0 12 34 56 78 |
+00 8c a1 12 34 56 78 |
+00 8c a2 12 34 56 78 |
+00 8c a3 12 34 56 78 |
+00 8c a4 12 34 56 78 |
+00 8c a5 12 34 56 78 |
+00 8c a6 12 34 56 78 |
+00 8c a7 12 34 56 78 |
+
+00 8c a8 12 34 56 78 | ADD BYTE PTR [rax + rbp * 4 + 0x78563412] | cl |
+00 8c a9 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 4 + 0x78563412] | cl |
+00 8c aa 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 4 + 0x78563412] | cl |
+00 8c ab 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 4 + 0x78563412] | cl |
+00 8c ac 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 4 + 0x78563412] | cl |
+00 8c ae 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 4 + 0x78563412] | cl |
+00 8c af 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 4 + 0x78563412] | cl |
+
+00 8c b0 12 34 56 78 | ADD BYTE PTR [rax + rsi * 4 + 0x78563412] | cl |
+00 8c b1 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 4 + 0x78563412] | cl |
+00 8c b2 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 4 + 0x78563412] | cl |
+00 8c b3 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 4 + 0x78563412] | cl |
+00 8c b4 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 4 + 0x78563412] | cl |
+00 8c b6 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 4 + 0x78563412] | cl |
+00 8c b7 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 4 + 0x78563412] | cl |
+
+00 8c b8 12 34 56 78 | ADD BYTE PTR [rax + rdi * 4 + 0x78563412] | cl |
+00 8c b9 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 4 + 0x78563412] | cl |
+00 8c ba 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 4 + 0x78563412] | cl |
+00 8c bb 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 4 + 0x78563412] | cl |
+00 8c bc 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 4 + 0x78563412] | cl |
+00 8c be 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 4 + 0x78563412] | cl |
+00 8c bf 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 4 + 0x78563412] | cl |
+
+
+00 8c c0 12 34 56 78 | ADD BYTE PTR [rax + rax * 8 + 0x78563412] | cl |
+00 8c c1 12 34 56 78 | ADD BYTE PTR [rcx + rax * 8 + 0x78563412] | cl |
+00 8c c2 12 34 56 78 | ADD BYTE PTR [rdx + rax * 8 + 0x78563412] | cl |
+00 8c c3 12 34 56 78 | ADD BYTE PTR [rbx + rax * 8 + 0x78563412] | cl |
+00 8c c4 12 34 56 78 | ADD BYTE PTR [rsp + rax * 8 + 0x78563412] | cl |
+00 8c c6 12 34 56 78 | ADD BYTE PTR [rsi + rax * 8 + 0x78563412] | cl |
+00 8c c7 12 34 56 78 | ADD BYTE PTR [rdi + rax * 8 + 0x78563412] | cl |
+
+00 8c c8 12 34 56 78 | ADD BYTE PTR [rax + rcx * 8 + 0x78563412] | cl |
+00 8c c9 12 34 56 78 | ADD BYTE PTR [rcx + rcx * 8 + 0x78563412] | cl |
+00 8c ca 12 34 56 78 | ADD BYTE PTR [rdx + rcx * 8 + 0x78563412] | cl |
+00 8c cb 12 34 56 78 | ADD BYTE PTR [rbx + rcx * 8 + 0x78563412] | cl |
+00 8c cc 12 34 56 78 | ADD BYTE PTR [rsp + rcx * 8 + 0x78563412] | cl |
+00 8c ce 12 34 56 78 | ADD BYTE PTR [rsi + rcx * 8 + 0x78563412] | cl |
+00 8c cf 12 34 56 78 | ADD BYTE PTR [rdi + rcx * 8 + 0x78563412] | cl |
+
+00 8c d0 12 34 56 78 | ADD BYTE PTR [rax + rdx * 8 + 0x78563412] | cl |
+00 8c d1 12 34 56 78 | ADD BYTE PTR [rcx + rdx * 8 + 0x78563412] | cl |
+00 8c d2 12 34 56 78 | ADD BYTE PTR [rdx + rdx * 8 + 0x78563412] | cl |
+00 8c d3 12 34 56 78 | ADD BYTE PTR [rbx + rdx * 8 + 0x78563412] | cl |
+00 8c d4 12 34 56 78 | ADD BYTE PTR [rsp + rdx * 8 + 0x78563412] | cl |
+00 8c d6 12 34 56 78 | ADD BYTE PTR [rsi + rdx * 8 + 0x78563412] | cl |
+00 8c d7 12 34 56 78 | ADD BYTE PTR [rdi + rdx * 8 + 0x78563412] | cl |
+
+00 8c d8 12 34 56 78 | ADD BYTE PTR [rax + rbx * 8 + 0x78563412] | cl |
+00 8c d9 12 34 56 78 | ADD BYTE PTR [rcx + rbx * 8 + 0x78563412] | cl |
+00 8c da 12 34 56 78 | ADD BYTE PTR [rdx + rbx * 8 + 0x78563412] | cl |
+00 8c db 12 34 56 78 | ADD BYTE PTR [rbx + rbx * 8 + 0x78563412] | cl |
+00 8c dc 12 34 56 78 | ADD BYTE PTR [rsp + rbx * 8 + 0x78563412] | cl |
+00 8c de 12 34 56 78 | ADD BYTE PTR [rsi + rbx * 8 + 0x78563412] | cl |
+00 8c df 12 34 56 78 | ADD BYTE PTR [rdi + rbx * 8 + 0x78563412] | cl |
+
+# TODO
+00 8c e0 12 34 56 78 |
+00 8c e1 12 34 56 78 |
+00 8c e2 12 34 56 78 |
+00 8c e3 12 34 56 78 |
+00 8c e4 12 34 56 78 |
+00 8c e5 12 34 56 78 |
+00 8c e6 12 34 56 78 |
+00 8c e7 12 34 56 78 |
+
+00 8c e8 12 34 56 78 | ADD BYTE PTR [rax + rbp * 8 + 0x78563412] | cl |
+00 8c e9 12 34 56 78 | ADD BYTE PTR [rcx + rbp * 8 + 0x78563412] | cl |
+00 8c ea 12 34 56 78 | ADD BYTE PTR [rdx + rbp * 8 + 0x78563412] | cl |
+00 8c eb 12 34 56 78 | ADD BYTE PTR [rbx + rbp * 8 + 0x78563412] | cl |
+00 8c ec 12 34 56 78 | ADD BYTE PTR [rsp + rbp * 8 + 0x78563412] | cl |
+00 8c ee 12 34 56 78 | ADD BYTE PTR [rsi + rbp * 8 + 0x78563412] | cl |
+00 8c ef 12 34 56 78 | ADD BYTE PTR [rdi + rbp * 8 + 0x78563412] | cl |
+
+00 8c f0 12 34 56 78 | ADD BYTE PTR [rax + rsi * 8 + 0x78563412] | cl |
+00 8c f1 12 34 56 78 | ADD BYTE PTR [rcx + rsi * 8 + 0x78563412] | cl |
+00 8c f2 12 34 56 78 | ADD BYTE PTR [rdx + rsi * 8 + 0x78563412] | cl |
+00 8c f3 12 34 56 78 | ADD BYTE PTR [rbx + rsi * 8 + 0x78563412] | cl |
+00 8c f4 12 34 56 78 | ADD BYTE PTR [rsp + rsi * 8 + 0x78563412] | cl |
+00 8c f6 12 34 56 78 | ADD BYTE PTR [rsi + rsi * 8 + 0x78563412] | cl |
+00 8c f7 12 34 56 78 | ADD BYTE PTR [rdi + rsi * 8 + 0x78563412] | cl |
+
+00 8c f8 12 34 56 78 | ADD BYTE PTR [rax + rdi * 8 + 0x78563412] | cl |
+00 8c f9 12 34 56 78 | ADD BYTE PTR [rcx + rdi * 8 + 0x78563412] | cl |
+00 8c fa 12 34 56 78 | ADD BYTE PTR [rdx + rdi * 8 + 0x78563412] | cl |
+00 8c fb 12 34 56 78 | ADD BYTE PTR [rbx + rdi * 8 + 0x78563412] | cl |
+00 8c fc 12 34 56 78 | ADD BYTE PTR [rsp + rdi * 8 + 0x78563412] | cl |
+00 8c fe 12 34 56 78 | ADD BYTE PTR [rsi + rdi * 8 + 0x78563412] | cl |
+00 8c ff 12 34 56 78 | ADD BYTE PTR [rdi + rdi * 8 + 0x78563412] | cl |
