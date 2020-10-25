@@ -1,0 +1,36 @@
+# 00 14 25 12 34 56 78 | TODO
+# 00 14 65 12 34 56 78 | TODO
+# 00 14 A5 12 34 56 78 | TODO
+# 00 14 E5 12 34 56 78 | TODO
+
+00 14 05 12 34 56 78 | ADD BYTE PTR [0x78563412 + rax * 1] | dl |
+00 14 0d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rcx * 1] | dl |
+00 14 15 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdx * 1] | dl |
+00 14 1d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbx * 1] | dl |
+00 14 2d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbp * 1] | dl |
+00 14 35 12 34 56 78 | ADD BYTE PTR [0x78563412 + rsi * 1] | dl |
+00 14 3d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdi * 1] | dl |
+
+00 14 45 12 34 56 78 | ADD BYTE PTR [0x78563412 + rax * 2] | dl |
+00 14 4d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rcx * 2] | dl |
+00 14 55 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdx * 2] | dl |
+00 14 5d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbx * 2] | dl |
+00 14 6d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbp * 2] | dl |
+00 14 75 12 34 56 78 | ADD BYTE PTR [0x78563412 + rsi * 2] | dl |
+00 14 7d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdi * 2] | dl |
+
+00 14 85 12 34 56 78 | ADD BYTE PTR [0x78563412 + rax * 4] | dl |
+00 14 8d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rcx * 4] | dl |
+00 14 95 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdx * 4] | dl |
+00 14 9d 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbx * 4] | dl |
+00 14 ad 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbp * 4] | dl |
+00 14 b5 12 34 56 78 | ADD BYTE PTR [0x78563412 + rsi * 4] | dl |
+00 14 bd 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdi * 4] | dl |
+
+00 14 c5 12 34 56 78 | ADD BYTE PTR [0x78563412 + rax * 8] | dl |
+00 14 cd 12 34 56 78 | ADD BYTE PTR [0x78563412 + rcx * 8] | dl |
+00 14 d5 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdx * 8] | dl |
+00 14 dd 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbx * 8] | dl |
+00 14 ed 12 34 56 78 | ADD BYTE PTR [0x78563412 + rbp * 8] | dl |
+00 14 f5 12 34 56 78 | ADD BYTE PTR [0x78563412 + rsi * 8] | dl |
+00 14 fd 12 34 56 78 | ADD BYTE PTR [0x78563412 + rdi * 8] | dl |
