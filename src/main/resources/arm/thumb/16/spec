@@ -1,0 +1,63 @@
+if(word[15:13] == 7 && word[12:11] != 0) parse32
+else parse16
+
+when([15:11]){
+    0b11100 -> 16bit
+    0b111?? -> 32bit
+    else    -> 16bit
+}
+
+
+000111ABBBCCCDDD
+000AABBBBBCCCDDD
+001AABBBCCCCCCCC
+010000AAAABBBCCC
+010001AABCDDDEEE
+01001AAABBBBBBBB
+0101LB0AAABBBCCC
+0101HS1AAABBBCCC
+011BLAAAAABBBCCC
+1000LAAAAABBBCCC
+1001LAAABBBBBBBB
+1010SAAABBBBBBBB
+10110000SAAAAAAA
+1011L10RAAAAAAAA
+1100LAAABBBBBBBB
+1101AAAABBBBBBBB
+11011111AAAAAAAA
+11100AAAAAAAAAAA
+1110HAAAAAAAAAAA
+
+
+
+
+00 011 000 || 030 //   Shift by immediate, move register
+    2533
+    0-2 0-32 0-8 0-8
+    0:2 0:32 0:8 0:8
+
+    00 00000 M/3 D/3 -> ADD D, M, shl I
+    00 I/5 M/3 D/3 -> LSL D, M, shl I
+    01 I/5 M/3 D/3 -> LSR D, M, shl I
+    10 I/5 M/3 D/3 -> ASR D, M, shl I
+
+00 011 100 || 034 || 033 //   Add/Subtract register
+00 100 000 || 040 || 037 //   Add/Subtract immediate
+01 000 000 || 100 || 077 //   Add/Subtract/Compare/Move immediate
+01 000 100 || 104 || 103 //   Data-processing register
+01 000 111 || 107 || 106 //   Special data processing
+01 001 000 || 110 || 107 //   Branch/Exchange
+01 010 000 || 120 || 117 //   Load from literal pool
+01 100 000 || 140 || 137 //   Load/Store register offset
+10 000 000 || 200 || 177 //   Load/Store word/byte immediate offset
+10 010 000 || 220 || 217 //   Load/Store half-word immediate offset
+10 100 000 || 240 || 237 //   Load/Store with stack
+11 000 000 || 300 || 277 //   Miscellaneous
+11 010 000 || 320 || 317 //   Load/Store multiple
+11 011 110 || 336 || 335 //   Conditional branch
+11 011 111 || 337 || 336 //   Undefined
+11 100 000 || 340 || 337 //   Service/System call
+11 101 000 || 350 || 347 //   Unconditional branch
+
+
+
