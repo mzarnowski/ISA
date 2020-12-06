@@ -60,6 +60,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
 
         bytes.position(offset)
         return when (op) {
+            in (0x90..0x98) -> parse220(op - 0x90)
             0xe8 -> parse350()
             0x0f_1f -> parse17_037()
             else -> TODO("Unsupported op: ${op.toHex()}")
@@ -71,6 +72,11 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         val operand = byte.addressOrRegister()
         val ignored = byte.opcodeExtension()
         return "NOP $operand"
+    }
+
+    private fun parse220(regBase: Int): String {
+        val reg = regBase + (extension[0] shl 3)
+        return "XCHG r$reg, r0"
     }
 
     private fun parse350(): String {
