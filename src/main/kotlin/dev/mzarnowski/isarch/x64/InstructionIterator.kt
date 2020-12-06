@@ -64,6 +64,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
             in (0x58..0x5f) -> parse130(op - 0x58)
             in (0x90..0x97) -> parse220(op - 0x90)
             0x81 -> parse201()
+            0x89 -> parse211()
             0xe8 -> parse350()
             0x0f_1f -> parse17_037()
             else -> TODO("Unsupported op: ${op.toHex()}")
@@ -96,6 +97,14 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         return instruction("ALU/$op $target $immediate")
     }
 
+    private fun parse211(): Instruction {
+        val byte = nextByte()
+        val target = byte.addressOrRegister()
+        val source = byte.register()
+
+        return instruction("MOV, $target, $source")
+    }
+
     private fun parse220(regBase: Int): Instruction {
         val reg = regBase + (extension[0] shl 3)
         return instruction("XCHG r$reg, r0")
@@ -126,6 +135,8 @@ class InstructionIterator(private val bytes: ByteBuffer) {
     }
 
     private fun Int.opcodeExtension(): Int = this[3..5]
+
+    private fun Int.register(): Register = Register(this[3..5] + (extension[2] shl 3))
 
     private fun Int.addressOrRegister(): Operand {
         val mod = this[6..7]
