@@ -53,13 +53,24 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         while (readPrefix(byte(at = offset))) offset++
         if (readExtension(byte(at = offset))) offset++
 
-        val op = byte(at = offset++)
+        var op = byte(at = offset++)
+        if (op == 0x0F) {
+            op = (op shl 8) + byte(at = offset++)
+        }
 
         bytes.position(offset)
         return when (op) {
             0xe8 -> parse350()
-            else -> TODO()
+            0x0f_1f -> parse17_037()
+            else -> TODO("Unsupported op: ${op.toHex()}")
         }
+    }
+
+    private fun parse17_037(): String {
+        val byte = nextByte()
+        val operand = byte.addressOrRegister()
+        val ignored = byte.opcodeExtension()
+        return "NOP $operand"
     }
 
     private fun parse350(): String {
