@@ -1,5 +1,6 @@
 package dev.mzarnowski.isarch.x64
 
+import dev.mzarnowski.isarch.toHex
 import dev.mzarnowski.os.elf.Executable
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
@@ -54,7 +55,13 @@ class InstructionIterator(private val bytes: ByteBuffer) {
 
         bytes.position(offset)
         return when (op) {
+            0xe8 -> parse350()
             else -> TODO()
         }
+    }
+
+    private fun parse350(): String {
+        val target = (bytes.int + bytes.position()).toLong()
+        return "CALL ${target.toHex()}"
     }
 }
