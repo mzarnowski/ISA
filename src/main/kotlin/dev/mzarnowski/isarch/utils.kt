@@ -9,5 +9,6 @@ fun IntRange.toBitMask(): Int {
     return mask
 }
 
-internal  fun Int.toBinary() = Integer.toBinaryString(this)
+internal fun Int.toBinary() = Integer.toBinaryString(this)
 internal fun Int.toHex() = Integer.toHexString(this)
+internal fun Long.toHex() = java.lang.Long.toHexString(this)

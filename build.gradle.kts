@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation("dev.mzarnowski.os.executable:elf:0.0.1")
 
     testImplementation("org.assertj:assertj-core:3.12.2")
 
