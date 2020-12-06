@@ -143,18 +143,16 @@ class InstructionIterator(private val bytes: ByteBuffer) {
 
         if (sib < 0) return Address.Indirect(name, displacement, scale = 0, index = 0)
 
-        val scale = 1 shl sib[6..7]
         val index = sib[3..5] + (extension[1] shl 3)
+        val scale = if (index == 4) 0 else 1 shl sib[6..7]
         val base = sib[0..2] + (extension[2] shl 3)
-
-        val noIndex = index == 4
 
         return when {
             (base and 5) != 5 -> Address.Indirect(base, displacement, scale, index)
             mod != 0 -> Address.Indirect(base, displacement, scale, index)
             else -> {
                 val displacement = bytes.int.toLong() // only case when it has not yet been read
-                if (noIndex) Address.Direct(displacement)
+                if (scale == 0) Address.Direct(displacement)
                 else Address.Direct(displacement, scale, index)
             }
         }
