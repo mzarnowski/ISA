@@ -65,6 +65,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
             in (0x90..0x97) -> parse220(op - 0x90)
             0x81 -> parse201()
             0x89 -> parse211()
+            0x8d -> parse215()
             0xe8 -> parse350()
             0x0f_1f -> parse17_037()
             else -> TODO("Unsupported op: ${op.toHex()}")
@@ -102,7 +103,15 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         val target = byte.addressOrRegister()
         val source = byte.register()
 
-        return instruction("MOV, $target, $source")
+        return instruction("MOV $target, $source")
+    }
+
+    private fun parse215(): Instruction {
+        val byte = nextByte()
+        val target = byte.register()
+        val source = byte.addressOrRegister()
+
+        return instruction("LEA $target, $source")
     }
 
     private fun parse220(regBase: Int): Instruction {
@@ -112,7 +121,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
 
     private fun parse350(): Instruction {
         val target = (bytes.int + bytes.position()).toLong()
-        return instruction("CALL ${target.toHex()}")
+        return instruction("CALL 0x${target.toHex()}")
     }
 
     private fun dataSize(default: Int = 32): Int {
@@ -177,10 +186,10 @@ sealed class Operand {
         is Address.Indirect -> when {
             (offset == 0L) and (scale == 0) -> "[r$base]"
             (offset == 0L) -> "[r$base + r$index * $scale]"
-            (scale == 0) -> "[r$base + $offset]"
-            else -> "[r$base + $offset + r$index * $scale]"
+            (scale == 0) -> "[r$base + 0x${offset.toHex()}]"
+            else -> "[r$base + 0x${offset.toHex()} + r$index * $scale]"
         }
-        is Address.IpRelative -> "[ip + $offset]"
+        is Address.IpRelative -> "[ip + 0x${offset.toHex()}]"
     }
 }
 
