@@ -1,5 +1,6 @@
 package dev.mzarnowski.isarch.x64
 
+import dev.mzarnowski.isarch.get
 import dev.mzarnowski.isarch.toHex
 import dev.mzarnowski.os.elf.Executable
 import java.nio.ByteBuffer
@@ -28,6 +29,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
     private var prefix = IntArray(4)
     private var extension = 0
 
+    private fun nextByte(): Int = bytes.get().toInt() and 0xFF
     private fun byte(at: Int): Int = bytes.get(at).toInt() and 0xFF
 
     private fun readPrefix(value: Int): Boolean {
@@ -64,4 +66,61 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         val target = (bytes.int + bytes.position()).toLong()
         return "CALL ${target.toHex()}"
     }
+
+    private fun Int.opcodeExtension(): Int = this[3..6]
+
+    private fun Int.addressOrRegister(): Operand {
+        val mod = this[6..8]
+        val name = this[0..2] + (extension[0] shl 3)
+
+        if (mod == 3) return Register(name)
+        if (name == 5 && mod == 1) return Address.IpRelative(bytes.int.toLong())
+
+        val sib = if (name == 4) nextByte() else -1
+        val displacement = when (mod) {
+            0 -> 0
+            1 -> nextByte().toLong()
+            else -> bytes.int.toLong()
+        }
+
+        if (sib < 0) return Address.Indirect(name, displacement, scale = 0, index = 0)
+
+        val scale = 1 shl sib[6..8]
+        val index = sib[3..6] + (extension[1] shl 3)
+        val base = sib[0..3] + (extension[2] shl 3)
+
+        val noIndex = index == 4
+
+        return when {
+            (base and 5) != 5 -> Address.Indirect(base, displacement, scale, index)
+            mod != 0 -> Address.Indirect(base, displacement, scale, index)
+            else -> {
+                val displacement = bytes.int.toLong() // only case when it has not yet been read
+                if (noIndex) Address.Direct(displacement)
+                else Address.Direct(displacement, scale, index)
+            }
+        }
+    }
 }
+
+sealed class Operand {
+    final override fun toString(): String = when (this) {
+        is Register -> "r$name"
+        is Address.Direct -> if (scale == 0) "[$offset]" else "[$offset + r$index * $scale]"
+        is Address.Indirect -> when {
+            (offset == 0L) and (scale == 0) -> "[r$base]"
+            (offset == 0L) -> "[r$base + r$index * $scale]"
+            (scale == 0) -> "[r$base + $offset]"
+            else -> "[r$base + $offset + r$index * $scale]"
+        }
+        is Address.IpRelative -> "[ip + $offset]"
+    }
+}
+
+sealed class Address : Operand() {
+    data class Direct(val offset: Long, val scale: Int = 0, val index: Int = 0) : Address()
+    data class Indirect(val base: Int, val offset: Long, val scale: Int, val index: Int) : Address()
+    data class IpRelative(val offset: Long) : Address()
+}
+
+data class Register(val name: Int) : Operand()
