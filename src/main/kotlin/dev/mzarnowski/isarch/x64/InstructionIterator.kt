@@ -61,6 +61,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         bytes.position(offset)
         return when (op) {
             in (0x50..0x57) -> parse120(op - 0x50)
+            in (0x58..0x5f) -> parse130(op - 0x58)
             in (0x90..0x97) -> parse220(op - 0x90)
             0xe8 -> parse350()
             0x0f_1f -> parse17_037()
@@ -78,6 +79,11 @@ class InstructionIterator(private val bytes: ByteBuffer) {
     private fun parse120(regBase: Int): String {
         val reg = regBase + (extension[0] shl 3)
         return "PUSH r$reg"
+    }
+
+    private fun parse130(regBase: Int): String {
+        val reg = regBase + (extension[0] shl 3)
+        return "POP r$reg"
     }
 
     private fun parse220(regBase: Int): String {
