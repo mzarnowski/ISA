@@ -143,7 +143,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         val name = this[0..2] + (extension[0] shl 3)
 
         if (mod == 3) return Register(name)
-        if (name == 5 && mod == 1) return Address.IpRelative(bytes.int.toLong())
+        if (name == 5 && mod == 0) return Address.IpRelative(bytes.int.toLong() + bytes.position())
 
         val sib = if (name == 4) nextByte() else -1
         val displacement = when (mod) {
