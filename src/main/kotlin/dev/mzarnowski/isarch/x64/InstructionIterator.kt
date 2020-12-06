@@ -45,7 +45,7 @@ class InstructionIterator(private val bytes: ByteBuffer) {
         }
     }
 
-    fun next(): String {
+    fun next(): Instruction {
         if (!hasNext()) throw NoSuchElementException()
         var offset = bytes.position()
 
@@ -63,43 +63,72 @@ class InstructionIterator(private val bytes: ByteBuffer) {
             in (0x50..0x57) -> parse120(op - 0x50)
             in (0x58..0x5f) -> parse130(op - 0x58)
             in (0x90..0x97) -> parse220(op - 0x90)
+            0x81 -> parse201()
             0xe8 -> parse350()
             0x0f_1f -> parse17_037()
             else -> TODO("Unsupported op: ${op.toHex()}")
         }
     }
 
-    private fun parse17_037(): String {
+    private fun parse17_037(): Instruction {
         val byte = nextByte()
         val operand = byte.addressOrRegister()
         val ignored = byte.opcodeExtension()
-        return "NOP $operand"
+        return instruction("NOP $operand")
     }
 
-    private fun parse120(regBase: Int): String {
+    private fun parse120(regBase: Int): Instruction {
         val reg = regBase + (extension[0] shl 3)
-        return "PUSH r$reg"
+        return instruction("PUSH r$reg")
     }
 
-    private fun parse130(regBase: Int): String {
+    private fun parse130(regBase: Int): Instruction {
         val reg = regBase + (extension[0] shl 3)
-        return "POP r$reg"
+        return instruction("POP r$reg")
     }
 
-    private fun parse220(regBase: Int): String {
+    private fun parse201(): Instruction {
+        val byte = nextByte()
+        val target = byte.addressOrRegister()
+        val op = byte.opcodeExtension()
+        val immediate = immediate(dataSize(32))
+
+        return instruction("ALU/$op $target $immediate")
+    }
+
+    private fun parse220(regBase: Int): Instruction {
         val reg = regBase + (extension[0] shl 3)
-        return "XCHG r$reg, r0"
+        return instruction("XCHG r$reg, r0")
     }
 
-    private fun parse350(): String {
+    private fun parse350(): Instruction {
         val target = (bytes.int + bytes.position()).toLong()
-        return "CALL ${target.toHex()}"
+        return instruction("CALL ${target.toHex()}")
     }
 
-    private fun Int.opcodeExtension(): Int = this[3..6]
+    private fun dataSize(default: Int = 32): Int {
+        return when {
+            extension[3] == 1 -> 64
+            prefix[2] == 0 -> default
+            else -> 16
+        }
+    }
+
+    private fun instruction(text: String, defaultDataSize: Int = 32): Instruction {
+        return Instruction(dataSize(defaultDataSize), text)
+    }
+
+    private fun immediate(size: Int): Long = when (size) {
+        8 -> nextByte().toLong()
+        16 -> bytes.short.toLong()
+        else -> bytes.int.toLong()
+        // 64bit immediate happens so seldom, we can ignore it here
+    }
+
+    private fun Int.opcodeExtension(): Int = this[3..5]
 
     private fun Int.addressOrRegister(): Operand {
-        val mod = this[6..8]
+        val mod = this[6..7]
         val name = this[0..2] + (extension[0] shl 3)
 
         if (mod == 3) return Register(name)
@@ -114,9 +143,9 @@ class InstructionIterator(private val bytes: ByteBuffer) {
 
         if (sib < 0) return Address.Indirect(name, displacement, scale = 0, index = 0)
 
-        val scale = 1 shl sib[6..8]
-        val index = sib[3..6] + (extension[1] shl 3)
-        val base = sib[0..3] + (extension[2] shl 3)
+        val scale = 1 shl sib[6..7]
+        val index = sib[3..5] + (extension[1] shl 3)
+        val base = sib[0..2] + (extension[2] shl 3)
 
         val noIndex = index == 4
 
@@ -153,3 +182,7 @@ sealed class Address : Operand() {
 }
 
 data class Register(val name: Int) : Operand()
+
+data class Instruction(val dataSize: Int, val text: String) {
+    override fun toString(): String = text
+}
